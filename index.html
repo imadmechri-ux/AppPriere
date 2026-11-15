@@ -12,13 +12,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+@font-face{font-family:"Amiri Local";src:url("fonts/amiri-arabic-400-normal.woff2") format("woff2");font-display:swap}
 /* Layout: one-screen app. Header (date + city), scrolling view, bottom tab bar. */
 :root{
   --bg:#F2F5F1; --surface:#FFFFFF; --ink:#14302A; --muted:#5C736C; --line:#D9E2DC;
   --accent:#0C6B5B; --accent-ink:#FFFFFF; --accent-soft:#DDEDE7; --gold:#A8771C; --danger:#B3402E;
   --f-display:"Bricolage Grotesque","Figtree",system-ui,sans-serif;
   --f-body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --f-ar:"Amiri","Scheherazade New","Traditional Arabic",serif;
+  --f-ar:"Amiri Local","Amiri","Scheherazade New","Traditional Arabic",serif;
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){
@@ -141,6 +142,15 @@ nav a.on svg{background:var(--accent-soft)}
 .verse .f{font-size:calc(16px * var(--qs,1));max-width:65ch}
 .hide-ar .a,.hide-ph .p,.hide-fr .f{display:none}
 
+/* Apprendre */
+.w{border-radius:6px;padding:0 1px;cursor:pointer}
+.w.on{background:var(--gold);color:var(--surface)}
+.w.m{color:transparent;background:var(--line);cursor:default}
+.verse.cur{background:var(--accent-soft);box-shadow:-8px 0 0 var(--accent-soft),8px 0 0 var(--accent-soft);border-radius:4px}
+.p.veil{display:none}
+.bar{height:8px;border-radius:4px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--gold)}
+#sess{align-items:flex-start}
 /* Audio + Duas */
 .player{display:flex;flex-direction:column;gap:8px}
 .player audio{width:100%;height:40px}
@@ -252,6 +262,7 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
   <section class="view" id="v-coran">
     <div id="q-list" class="stack">
       <button class="resume" id="resume" hidden><span><span class="label">Reprendre la lecture</span><b id="resume-t"></b></span><span aria-hidden="true">→</span></button>
+      <div class="card stack" id="plan"></div>
       <input class="search" id="q-search" type="search" placeholder="Chercher une sourate (nom ou numéro)" aria-label="Chercher une sourate">
       <div class="card slist" id="slist"></div>
     </div>
@@ -265,7 +276,10 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
         <button class="chip" data-sz="1" aria-label="Texte plus grand">A+</button>
       </div>
       <div class="rhead"><div><h2 id="r-title"></h2><div class="note" id="r-sub"></div></div><div class="ar" id="r-ar"></div></div>
-      <div class="card player">
+      <div class="rbar" id="modes"><button class="chip" data-mode="lire">Lire</button><button class="chip" data-mode="suivi">Écoute suivie</button><button class="chip" data-mode="reciter">Réciter</button></div>
+      <div class="card stack" id="lrn" hidden></div>
+      <div class="card stack" id="sess" hidden></div>
+      <div class="card player" id="aud-card">
         <div class="line"><span class="label">Récitation · Mishary Rashid al-Afasy</span></div>
         <audio id="aud" controls preload="none"></audio>
         <div class="line"><span class="note" id="aud-st"></span><button class="chip" id="aud-dl">Garder hors ligne</button></div>
@@ -362,7 +376,7 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
       <div id="msg" role="status"></div>
       <button class="btn warn" id="wipe">Effacer toutes mes données</button>
     </div>
-    <div class="note">Récitation : Mishary Rashid al-Afasy (mp3quran.net, quran.com, archive.org). Invocations du matin et du soir : texte et audio du recueil Hisn al-Muslim (projet Adhkar-json, lecture de Hamad al-Duraihim). Texte du Coran : jeu de données libre quran-json (arabe othmani, phonétique Tanzil, traduction française de M. Hamidullah), gardé sur l'appareil une fois chargé.</div>
+    <div class="note">Récitation : Mishary Rashid al-Afasy (mp3quran.net, quran.com, archive.org). Invocations du matin et du soir : texte et audio du recueil Hisn al-Muslim (projet Adhkar-json, lecture de Hamad al-Duraihim). Minutage mot à mot : projet quran-align (CC BY 4.0), audio everyayah.com. Texte du Coran : jeu de données libre quran-json (arabe othmani, phonétique Tanzil, traduction française de M. Hamidullah), gardé sur l'appareil une fois chargé.</div>
   </section>
 </main>
 
@@ -389,7 +403,7 @@ const TARGETS=[33,99,100,0];
 
 /* ---------- state ---------- */
 const DEF=()=>({v:1,theme:"auto",loc:{name:"Sartrouville",lat:48.9372,lng:2.1594},method:"MF",asr:1,hadj:0,log:{},
-  tasbih:{count:0,target:33,phrase:0,total:0},quran:{s:0,v:0,ar:1,ph:1,fr:1,size:1},duas:{fav:[],day:"",cnt:{}}});
+  tasbih:{count:0,target:33,phrase:0,total:0},quran:{s:0,v:0,ar:1,ph:1,fr:1,size:1},duas:{fav:[],day:"",cnt:{}},learn:{plan:null,v:{},mask:"all",rep:1,rate:1}});
 let S=DEF();
 function merge(d){const b=DEF();if(!d||typeof d!=="object")return b;
   for(const k of Object.keys(b)){if(d[k]==null)continue;
@@ -526,12 +540,12 @@ function importQuran(files,then){const got={};let left=files.length,bad=false;
   const done=()=>{if(--left)return;if(bad||!got.fr){then(false);return}storeAll(got.fr,got.ph||null).then(()=>then(true))};
   Array.from(files).forEach(f=>{const r=new FileReader();r.onerror=()=>{bad=true;done()};r.onload=()=>{try{const all=JSON.parse(String(r.result));
       if(!validQ(all))throw 0;const v=all[0].verses[0];if(v.translation!=null)got.fr=all;else if(v.transliteration!=null)got.ph=all;else throw 0}catch(e){bad=true}done()};r.readAsText(f)})}
-function renderList(){
+function renderList(){renderPlan();
   const q=$("q-search").value.trim().toLowerCase(),L=$("slist");L.textContent="";
   const norm=s=>s.toLowerCase().normalize("NFD").replace(/[̀-ͯ'’-]/g,"");
   SURAHS.forEach((s,i)=>{if(q&&!(String(i+1)===q||norm(s[0]).includes(norm(q))||norm(s[1]).includes(norm(q))))return;
     const b=el("button","sitem");const mid=el("span","mid");mid.append(el("b",null,s[0]),el("span",null,s[1]+" · "+s[3]+" versets"));
-    b.append(el("span","no num",i+1),mid,el("span","ar",s[2]));b.onclick=()=>openSurah(i+1,0);L.append(b)});
+    b.append(el("span","no num",i+1),mid,el("span","ar",s[2]));b.onclick=()=>{rMode="lire";rFilter=null;openSurah(i+1,0)};L.append(b)});
   if(!L.children.length)L.append(el("div","note","Aucune sourate ne correspond."));
   const r=$("resume");if(S.quran.s){r.hidden=false;$("resume-t").textContent=SURAHS[S.quran.s-1][0]+(S.quran.v?" · verset "+S.quran.v:"")}else r.hidden=true}
 let cur=0;
@@ -555,17 +569,112 @@ async function openSurah(n,v){
     f.append(lb,inp,st);const b=el("button","btn ghost","Réessayer en ligne");b.onclick=()=>openSurah(n,v);box.append(a,a2,f,b);V.append(box);return}
   if(cur!==n)return;V.textContent="";
   if(S.quran.s!==n){S.quran.s=n;S.quran.v=v||0;save()}
-  d.forEach((x,i)=>{const w=el("div","verse"+(S.quran.s===n&&S.quran.v===i+1?" marked":""));w.id="v"+(i+1);
-    const h=el("div","vh");const mk=el("button","mk",S.quran.v===i+1?"Marque-page ici":"Marquer");
-    mk.onclick=()=>{S.quran.s=n;S.quran.v=i+1;save();V.querySelectorAll(".verse").forEach(e=>{e.classList.remove("marked");e.querySelector(".mk").textContent="Marquer"});
-      w.classList.add("marked");mk.textContent="Marque-page ici"};
-    h.append(el("span","vn num",n+":"+(i+1)),mk);
-    const a=el("div","a",x[0]);a.lang="ar";w.append(h,a,el("div","p",x[1]),el("div","f",x[2]));V.append(w)});
+  drawVerses();
   if(v){const t=$("v"+v);if(t)t.scrollIntoView()}}
+/* ---------- Apprendre : écoute suivie mot à mot, récitation guidée, parcours ---------- */
+let rMode="lire",rFilter=null,raf=0;
+const TK=/^[ۖ-ۭؕ-ؚ\s]+$/;
+const toks=t=>{const o=[];for(const w of t.split(" ")){if(!w)continue;if(TK.test(w)&&o.length)o[o.length-1]+=" "+w;else o.push(w)}return o};
+const k6=(s,v)=>String(s).padStart(3,"0")+String(v).padStart(3,"0");
+const eaPart=(s,v)=>({key:"ea"+k6(s,v),urls:["https://everyayah.com/data/Alafasy_128kbps/"+k6(s,v)+".mp3","https://verses.quran.com/Alafasy/mp3/"+k6(s,v)+".mp3"]});
+const TIM={};
+async function timing(n){if(n in TIM)return TIM[n];try{const r=await fetch("timing/"+n+".json");if(!r.ok)throw 0;TIM[n]=await r.json()}catch(e){TIM[n]=null}return TIM[n]}
+const SIL="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=";
+const la=new Audio();la.preload="auto";
+const L={s:0,v:0,rep:0,one:false,unlocked:false,url:null,u:0,part:null,token:0,want:false,local:false};
+function lrnBtn(){const b=$("l-play");if(b)b.textContent=L.want?"❚❚ Pause":"▶ Écouter"}
+function lrnClear(){document.querySelectorAll("#verses .cur").forEach(e=>e.classList.remove("cur"));document.querySelectorAll("#verses .w.on").forEach(e=>e.classList.remove("on"))}
+function lrnStop(){L.want=false;L.token++;cancelAnimationFrame(raf);try{la.pause()}catch(e){}lrnClear();lrnBtn()}
+function shown(){const n=mem[cur]?mem[cur].length:0,a=[];for(let i=1;i<=n;i++)if(!rFilter||rFilter.includes(i))a.push(i);return a}
+function tick2(){cancelAnimationFrame(raf);const step=()=>{if(!L.want)return;const tm=TIM[L.s]&&TIM[L.s][L.v-1],box=$("v"+L.v);
+    if(tm&&box){const t=la.currentTime*1000,ws=box.querySelectorAll(".w");let k=-1;for(let i=0;i<ws.length;i++){if(tm[2*i]<=t)k=i;else break}
+      ws.forEach((w,i)=>w.classList.toggle("on",i===k))}
+    raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}
+async function playVerse(v,one,seek){
+  if(!L.unlocked){L.unlocked=true;try{la.src=SIL;la.play().catch(()=>{})}catch(e){}}
+  const s=cur,tk=++L.token;L.s=s;L.v=v;L.one=!!one;L.want=true;L.u=0;L.part=eaPart(s,v);lrnBtn();
+  document.querySelectorAll("audio").forEach(x=>x.pause());lrnClear();
+  const box=$("v"+v);if(box){box.classList.add("cur");box.scrollIntoView({block:"center",behavior:"smooth"})}
+  const blob=await dbGet("a",L.part.key);await timing(s);if(tk!==L.token)return;
+  if(L.url){URL.revokeObjectURL(L.url);L.url=null}
+  if(blob){L.url=URL.createObjectURL(blob);la.src=L.url;L.local=true}else{la.src=L.part.urls[0];L.local=false}
+  la.playbackRate=S.learn.rate;if(seek)la.addEventListener("loadedmetadata",()=>{try{la.currentTime=seek}catch(e){}},{once:true});
+  la.play().catch(()=>{});tick2()}
+la.addEventListener("error",()=>{if(!L.want||L.local||!L.part||la.src.startsWith("data:"))return;
+  if(L.u<L.part.urls.length-1){L.u++;la.src=L.part.urls[L.u];la.playbackRate=S.learn.rate;la.play().catch(()=>{})}
+  else{lrnStop();const n=$("l-st");if(n)n.textContent="Audio indisponible. Vérifiez la connexion ou enregistrez ces versets hors ligne."}});
+la.addEventListener("ended",()=>{if(!L.want||la.src.startsWith("data:"))return;if(L.one){lrnStop();return}
+  if(++L.rep<S.learn.rep){playVerse(L.v);return}
+  L.rep=0;const a=shown(),i=a.indexOf(L.v);if(i>=0&&i<a.length-1)playVerse(a[i+1]);else lrnStop()});
+const dueTxt=e=>e.due<=keyOf(today())?"aujourd'hui":"le "+new Intl.DateTimeFormat("fr-FR",{day:"numeric",month:"short"}).format(new Date(e.due+"T12:00:00"));
+const lvl=e=>["À revoir","Hésitant","Su"][e.r]+" · révision "+dueTxt(e);
+function rate(s,v,r){const k=s+":"+v,e=S.learn.v[k]||{i:0,first:keyOf(today())};
+  e.i=r===2?(e.i?Math.min(60,e.i*2):1):r===1?1:0;e.r=r;e.d=keyOf(today());e.due=keyOf(addDays(today(),e.i));S.learn.v[k]=e;save()}
+const rangeTxt=a=>a.length>1&&a[a.length-1]-a[0]===a.length-1?a[0]+" à "+a[a.length-1]:a.join(", ");
+function sessCheck(){const B=$("sess");if(!rFilter||rMode!=="reciter"){B.hidden=true;return}
+  const k=keyOf(today()),done=rFilter.every(v=>{const e=S.learn.v[cur+":"+v];return e&&e.d===k});B.hidden=!done;B.textContent="";
+  if(done){B.append(el("b",null,"Session terminée"));const b=el("button","btn","Retour au parcours");b.onclick=()=>$("back").click();B.append(b)}}
+function drawLrn(){const B=$("lrn");B.hidden=rMode==="lire";B.textContent="";if(rMode==="lire")return;
+  const chips=(label,opts,get,set,redraw)=>{const r=el("div","rbar");r.append(el("span","label",label));
+    opts.forEach(([t,v])=>{const b=el("button","chip",t);b.setAttribute("aria-pressed",get()===v?"true":"false");b.onclick=()=>{set(v);save();drawLrn();if(redraw)drawVerses()};r.append(b)});return r};
+  if(rFilter){const r=el("div","line");r.append(el("span","note","Session : verset"+(rFilter.length>1?"s ":" ")+rangeTxt(rFilter)));
+    const b=el("button","chip","Toute la sourate");b.onclick=()=>{rFilter=null;drawVerses()};r.append(b);B.append(r)}
+  if(rMode==="suivi"){const pl=el("button","btn","▶ Écouter");pl.id="l-play";
+    pl.onclick=()=>{if(L.want){L.want=false;la.pause();lrnBtn()}
+      else if(la.paused&&L.s===cur&&L.v&&la.currentTime>0&&!la.ended&&shown().includes(L.v)){L.want=true;la.play().catch(()=>{});lrnBtn();tick2()}
+      else{L.rep=0;const a=shown();if(a.length)playVerse(a[0])}};
+    B.append(pl,chips("Vitesse",[["0,75×",.75],["1×",1],["1,25×",1.25]],()=>S.learn.rate,v=>{S.learn.rate=v;la.playbackRate=v}),
+      chips("Répéter chaque verset",[["1",1],["3",3],["5",5],["10",10]],()=>S.learn.rep,v=>{S.learn.rep=v}),
+      el("div","note","Le mot récité s'allume. Touchez un mot pour reprendre l'écoute à cet endroit."))}
+  else B.append(chips("Masquage",[["Tout","all"],["1 mot sur 2","half"],["Sauf le 1er mot","first"]],()=>S.learn.mask,v=>{S.learn.mask=v},true),
+    el("div","note","Récitez le verset de mémoire, puis dévoilez-le et notez-vous. La note fixe la prochaine révision."));
+  const st=el("span","note");st.id="l-st";const dlb=el("button","chip","Enregistrer l'audio de ces versets"),r2=el("div","line");
+  dlb.onclick=async()=>{const a=shown();let ok=0;for(let i=0;i<a.length;i++){st.textContent="Téléchargement… "+(i+1)+" sur "+a.length;if(await savePart(eaPart(cur,a[i])))ok++}
+    st.textContent=ok===a.length?"Audio enregistré sur l'appareil.":ok+" sur "+a.length+" enregistrés."};
+  r2.append(st,dlb);B.append(r2);lrnBtn()}
+function drawVerses(){const n=cur,d=mem[n],V=$("verses");if(!d)return;V.textContent="";lrnStop();
+  document.querySelectorAll("[data-mode]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.mode===rMode?"true":"false"));
+  $("aud-card").hidden=rMode!=="lire";if(rMode!=="lire"){try{$("aud").pause()}catch(e){}timing(n)}
+  drawLrn();sessCheck();
+  shown().forEach(vn=>{const i=vn-1,x=d[i],w=el("div","verse"+(rMode==="lire"&&S.quran.s===n&&S.quran.v===vn?" marked":""));w.id="v"+vn;
+    const h=el("div","vh");h.append(el("span","vn num",n+":"+vn));const a=el("div","a");a.lang="ar";const p=el("div","p",x[1]),f=el("div","f",x[2]);
+    if(rMode==="lire"){const mk=el("button","mk",S.quran.v===vn&&S.quran.s===n?"Marque-page ici":"Marquer");
+      mk.onclick=()=>{S.quran.s=n;S.quran.v=vn;save();V.querySelectorAll(".verse").forEach(e=>{e.classList.remove("marked");e.querySelector(".mk").textContent="Marquer"});w.classList.add("marked");mk.textContent="Marque-page ici"};
+      h.append(mk);a.textContent=x[0];w.append(h,a,p,f)}
+    else{toks(x[0]).forEach((t,j)=>{const sp=el("span","w",t);sp.onclick=()=>{if(sp.classList.contains("m"))return;const tm=TIM[n]&&TIM[n][i];L.rep=0;playVerse(vn,rMode==="reciter",tm?tm[2*j]/1000:0)};a.append(sp," ")});
+      if(rMode==="suivi"){const pb=el("button","mk","▶ Depuis ce verset");pb.onclick=()=>{L.rep=0;playVerse(vn)};h.append(pb);w.append(h,a,p,f)}
+      else{const e=S.learn.v[n+":"+vn],stt=el("span","note",e?lvl(e):"Nouveau");h.append(stt);
+        a.querySelectorAll(".w").forEach((sp,j)=>sp.classList.toggle("m",S.learn.mask==="all"||(S.learn.mask==="half"&&j%2===1)||(S.learn.mask==="first"&&j>0)));p.classList.add("veil");
+        const bar=el("div","rbar"),hear=el("button","chip","Écouter"),rev=el("button","chip","Dévoiler");hear.onclick=()=>{L.rep=0;playVerse(vn,true)};
+        rev.onclick=()=>{a.querySelectorAll(".w").forEach(sp=>sp.classList.remove("m"));p.classList.remove("veil");bar.textContent="";bar.append(hear);
+          [["Su",2],["Hésitant",1],["À revoir",0]].forEach(([t,r])=>{const b=el("button","chip",t);b.onclick=()=>{rate(n,vn,r);stt.textContent=lvl(S.learn.v[n+":"+vn]);
+            bar.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",c===b?"true":"false"));sessCheck()};bar.append(b)})};
+        bar.append(hear,rev);w.append(h,a,p,f,bar)}}
+    V.append(w)})}
+document.querySelectorAll("[data-mode]").forEach(b=>b.onclick=()=>{rMode=b.dataset.mode;if(rMode==="lire")rFilter=null;drawVerses()});
+function dueBySurah(){const k=keyOf(today()),o={};for(const id in S.learn.v){const e=S.learn.v[id];if(e.due<=k){const p=id.split(":");(o[+p[0]]=o[+p[0]]||[]).push(+p[1])}}for(const s in o)o[s].sort((a,b)=>a-b);return o}
+function openLearn(s,mode,filter){rMode=mode;rFilter=filter&&filter.length?filter:null;openSurah(s,0)}
+let planPer=3;
+function renderPlan(){const P=$("plan");P.textContent="";const pl=S.learn.plan,k=keyOf(today()),due=dueBySurah(),ds=Object.keys(due).map(Number),dueN=ds.reduce((a,s)=>a+due[s].length,0);
+  P.append(el("div","label","Apprendre"));
+  if(!pl){P.append(el("b",null,"Choisissez la sourate à apprendre"));const f=el("div","field"),sel=el("select");sel.id="plan-s";sel.setAttribute("aria-label","Sourate à apprendre");
+    SURAHS.forEach((s,i)=>{const o=el("option",null,(i+1)+". "+s[0]+" ("+s[3]+" versets)");o.value=i+1;if(i===66)o.selected=true;sel.append(o)});f.append(sel);
+    const r=el("div","rbar");r.append(el("span","label","Versets par jour"));[1,3,5,10].forEach(n=>{const b=el("button","chip",String(n));b.setAttribute("aria-pressed",n===planPer?"true":"false");b.onclick=()=>{planPer=n;const v=sel.value;renderPlan();$("plan-s").value=v};r.append(b)});
+    const go=el("button","btn","Commencer le parcours");go.onclick=()=>{S.learn.plan={s:+$("plan-s").value,per:planPer};save();renderPlan()};P.append(f,r,go)}
+  else{const N=SURAHS[pl.s-1][3],un=[];let learned=0,newToday=0;for(let v=1;v<=N;v++){const e=S.learn.v[pl.s+":"+v];if(e){learned++;if(e.first===k)newToday++}else un.push(v)}
+    const bar=el("div","bar"),fill=el("i");fill.style.width=Math.round(learned/N*100)+"%";bar.append(fill);
+    P.append(el("b",null,pl.s+". "+SURAHS[pl.s-1][0]),bar,el("div","note",learned+" versets appris sur "+N+" · "+pl.per+" par jour"));
+    const btns=el("div","btns"),todo=un.slice(0,Math.max(0,pl.per-newToday));
+    if(!un.length)P.append(el("div","note","Sourate entièrement parcourue. Choisissez la suivante quand vous voulez."));
+    else if(todo.length){const b1=el("button","btn","Écouter les versets "+rangeTxt(todo)),b2=el("button","btn ghost","Les réciter");b1.onclick=()=>openLearn(pl.s,"suivi",todo);b2.onclick=()=>openLearn(pl.s,"reciter",todo);btns.append(b1,b2)}
+    else{P.append(el("div","note","Objectif du jour atteint."));const b=el("button","btn ghost","Apprendre "+pl.per+" de plus");b.onclick=()=>openLearn(pl.s,"suivi",un.slice(0,pl.per));btns.append(b)}
+    P.append(btns);const ch=el("button","chip","Changer de sourate");ch.onclick=()=>{S.learn.plan=null;save();renderPlan()};P.append(ch)}
+  if(dueN){const s=ds[0],b=el("button","btn ghost","Réviser "+dueN+" verset"+(dueN>1?"s":"")+(ds.length>1?" (d'abord "+SURAHS[s-1][0]+")":""));b.onclick=()=>openLearn(s,"reciter",due[s]);P.append(b)}}
+
 $("q-search").oninput=renderList;
-$("resume").onclick=()=>openSurah(S.quran.s,S.quran.v);
-$("back").onclick=()=>{cur=0;try{$("aud").pause()}catch(e){}$("q-read").hidden=true;$("q-list").hidden=false;renderList()};
-$("prev-s").onclick=()=>cur>1&&openSurah(cur-1,0);$("next-s").onclick=()=>cur<114&&openSurah(cur+1,0);
+$("resume").onclick=()=>{rMode="lire";rFilter=null;openSurah(S.quran.s,S.quran.v)};
+$("back").onclick=()=>{lrnStop();cur=0;try{$("aud").pause()}catch(e){}$("q-read").hidden=true;$("q-list").hidden=false;renderList()};
+$("prev-s").onclick=()=>{rFilter=null;cur>1&&openSurah(cur-1,0)};$("next-s").onclick=()=>{rFilter=null;cur<114&&openSurah(cur+1,0)};
 document.querySelectorAll("[data-show]").forEach(b=>b.onclick=()=>{const k=b.dataset.show;S.quran[k]=S.quran[k]?0:1;
   if(!S.quran.ar&&!S.quran.ph&&!S.quran.fr)S.quran[k]=1;save();applyShow()});
 document.querySelectorAll("[data-sz]").forEach(b=>b.onclick=()=>{S.quran.size=Math.min(1.6,Math.max(.8,+(S.quran.size+.1*b.dataset.sz).toFixed(1)));save();applyShow()});
@@ -833,7 +942,7 @@ $("wipe").onclick=()=>{const b=$("wipe");if(!armed){armed=1;b.textContent="Confi
 
 /* ---------- routing ---------- */
 const VIEWS=["prieres","qibla","coran","duas","tasbih","donnees"];
-function route(){let h=location.hash.slice(1);if(!VIEWS.includes(h))h="prieres";
+function route(){try{lrnStop()}catch(e){}let h=location.hash.slice(1);if(!VIEWS.includes(h))h="prieres";
   VIEWS.forEach(v=>$("v-"+v).classList.toggle("on",v===h));
   document.querySelectorAll("#nav a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+h));
   if(h==="prieres"){sel=today();renderPrayers()}else{sel=today();renderHead()}
