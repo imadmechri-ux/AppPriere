@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Carnet de prière</title>
+<title>Rahim</title>
 <meta name="theme-color" content="#0C6B5B">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Carnet">
+<meta name="apple-mobile-web-app-title" content="Rahim">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -796,19 +796,19 @@ async function deliver(filename,data,mime){
   $("outwrap").hidden=false;$("out").value=data;say("Téléchargement indisponible ici : copiez le texte ci-dessous.")}
 const stamp=()=>keyOf(today());
 $("ics").onclick=()=>{const z=d=>d.getUTCFullYear()+pad(d.getUTCMonth()+1)+pad(d.getUTCDate())+"T"+pad(d.getUTCHours())+pad(d.getUTCMinutes())+"00Z";
-  const app=location.href.split("#")[0]+"#duas",now=z(new Date()),t0=today(),L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Carnet de priere//FR","CALSCALE:GREGORIAN"];
+  const app=location.href.split("#")[0]+"#duas",now=z(new Date()),t0=today(),L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Rahim//FR","CALSCALE:GREGORIAN"];
   const ev=(uid,start,sum,extra)=>L.push("BEGIN:VEVENT","UID:"+uid+"@carnet-priere","DTSTAMP:"+now,start,"DURATION:PT10M","SUMMARY:"+sum,"URL:"+app,...(extra||[]),
     "BEGIN:VALARM","ACTION:DISPLAY","DESCRIPTION:"+sum,"TRIGGER:PT0S","END:VALARM","END:VEVENT");
   for(let i=0;i<365;i++){const d=addDays(t0,i);ev("fajr-"+keyOf(d),"DTSTART:"+z(T(d).fajr),"Fajr · invocations du matin")}
   ev("soir-23h","DTSTART:"+keyOf(t0).replace(/-/g,"")+"T230000","Invocations du soir",["RRULE:FREQ=DAILY"]);
-  L.push("END:VCALENDAR");deliver("rappels-carnet-priere.ics",L.join("\r\n"),"text/calendar")};
-$("exp-json").onclick=()=>deliver("carnet-priere-"+stamp()+".json",JSON.stringify(Object.assign({exported:new Date().toISOString()},S),null,1));
+  L.push("END:VCALENDAR");deliver("rahim-rappels.ics",L.join("\r\n"),"text/calendar")};
+$("exp-json").onclick=()=>deliver("rahim-"+stamp()+".json",JSON.stringify(Object.assign({exported:new Date().toISOString()},S),null,1));
 $("exp-csv").onclick=()=>{const rows=["date;fajr;dhuhr;asr;maghrib;isha;jeune;tasbih"];
   Object.keys(S.log).sort().forEach(k=>{const e=S.log[k];rows.push([k,...e.p,e.f?1:0,e.t||0].join(";"))});
-  deliver("journal-prieres-"+stamp()+".csv",rows.join("\n"))};
+  deliver("rahim-journal-"+stamp()+".csv",rows.join("\n"))};
 $("copy").onclick=async()=>{try{await navigator.clipboard.writeText($("out").value);say("Copié.")}catch(e){$("out").select();say("Sélectionné : utilisez Copier dans le menu.")}};
 function doImport(txt){try{const d=JSON.parse(txt);if(!d||typeof d!=="object"||!d.log)throw 0;delete d.exported;S=merge(d);save();sel=today();renderData();renderHead();
-  say("Sauvegarde importée : "+Object.keys(S.log).length+" jours de journal.")}catch(e){say("Ce contenu n'est pas une sauvegarde valide du carnet.")}}
+  say("Sauvegarde importée : "+Object.keys(S.log).length+" jours de journal.")}catch(e){say("Ce contenu n'est pas une sauvegarde valide de Rahim.")}}
 $("imp-file").onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>doImport(String(r.result));r.readAsText(f)};
 $("imp-go").onclick=()=>doImport($("imp-txt").value);
 let armed=0;

@@ -1,4 +1,4 @@
-Carnet de prière : version installable, lisible hors ligne
+Rahim : version installable, lisible hors ligne
 
 Mise en ligne (5 minutes, depuis un ordinateur) :
 1. Créez un compte gratuit sur un hébergeur statique (Netlify, Cloudflare Pages ou GitHub Pages).
