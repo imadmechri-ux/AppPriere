@@ -1,0 +1,18 @@
+Carnet de prière : version installable, lisible hors ligne
+
+Mise en ligne (5 minutes, depuis un ordinateur) :
+1. Créez un compte gratuit sur un hébergeur statique (Netlify, Cloudflare Pages ou GitHub Pages).
+2. Déposez-y ce dossier tel quel (index.html doit être à la racine).
+3. Ouvrez l'adresse obtenue sur le téléphone, puis :
+   - iPhone (Safari) : Partager > Sur l'écran d'accueil
+   - Android (Chrome) : menu > Installer l'application
+4. Avec du réseau, ouvrez une fois l'onglet Coran et une sourate : le texte complet
+   (arabe, phonétique, français, 5 Mo) se télécharge et reste sur l'appareil.
+   Ensuite tout fonctionne en mode avion.
+
+Facultatif : pour ne dépendre d'aucun serveur tiers, créez un dossier "data" à côté
+de index.html et placez-y quran_fr.json et quran_transliteration.json
+(projet libre quran-json, https://github.com/risan/quran-json). L'appli les utilise en priorité.
+
+Vos données (journal, tasbih, marque-page) restent dans le navigateur du téléphone.
+Exportez-les de temps en temps depuis l'onglet Données.

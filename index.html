@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carnet de prière</title>
+<meta name="theme-color" content="#0C6B5B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Carnet">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: one-screen app. Header (date + city), scrolling view, bottom tab bar. */
+:root{
+  --bg:#F2F5F1; --surface:#FFFFFF; --ink:#14302A; --muted:#5C736C; --line:#D9E2DC;
+  --accent:#0C6B5B; --accent-ink:#FFFFFF; --accent-soft:#DDEDE7; --gold:#A8771C; --danger:#B3402E;
+  --f-display:"Bricolage Grotesque","Figtree",system-ui,sans-serif;
+  --f-body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-ar:"Amiri","Scheherazade New","Traditional Arabic",serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1917; --surface:#172522; --ink:#E4EEE9; --muted:#8FA59D; --line:#294039;
+    --accent:#56C7AC; --accent-ink:#082019; --accent-soft:#1D3A33; --gold:#E2B55B; --danger:#F08A76;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1917; --surface:#172522; --ink:#E4EEE9; --muted:#8FA59D; --line:#294039;
+  --accent:#56C7AC; --accent-ink:#082019; --accent-soft:#1D3A33; --gold:#E2B55B; --danger:#F08A76;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.45;
+  display:flex;flex-direction:column;-webkit-tap-highlight-color:transparent}
+button,select,input,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+h1,h2{font-family:var(--f-display);margin:0;text-wrap:balance}
+.num{font-variant-numeric:tabular-nums}
+
+header{padding:14px 16px 10px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;
+  max-width:560px;width:100%;margin:0 auto}
+header .greg{font-family:var(--f-display);font-weight:700;font-size:20px;line-height:1.15}
+header .hij{color:var(--gold);font-weight:600;font-size:14px}
+.citybtn{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 12px;font-size:14px;
+  font-weight:500;white-space:nowrap;max-width:45vw;color:var(--ink);text-decoration:none;overflow:hidden;text-overflow:ellipsis}
+
+main{flex:1;overflow-y:auto;padding:4px 16px 20px}
+.view{display:none;max-width:560px;margin:0 auto;flex-direction:column;gap:14px}
+.view.on{display:flex}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px}
+.label{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+
+nav{display:flex;border-top:1px solid var(--line);background:var(--surface)}
+nav a{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 2px 10px;font-size:11.5px;
+  font-weight:500;color:var(--muted);text-decoration:none}
+nav a svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+nav a.on{color:var(--accent);font-weight:600}
+
+/* Prières */
+.next{background:var(--accent);color:var(--accent-ink);border-radius:18px;padding:16px;display:flex;
+  justify-content:space-between;align-items:center;gap:12px}
+.next .lbl{font-size:12px;letter-spacing:.06em;text-transform:uppercase;opacity:.85;font-weight:600}
+.next .name{font-family:var(--f-display);font-weight:700;font-size:30px;line-height:1.1}
+.next .cd{font-family:var(--f-display);font-size:26px;font-weight:500;text-align:right}
+.next .at{font-size:14px;opacity:.85;text-align:right}
+.rows{padding:4px 14px}
+.row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row .n{flex:1;font-weight:600}
+.row .n small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+.row .t{font-family:var(--f-display);font-size:19px;font-weight:500}
+.row.cur .n,.row.cur .t{color:var(--accent)}
+.row.sun .n,.row.sun .t{color:var(--muted);font-weight:400}
+.chk{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--line);background:transparent;display:grid;
+  place-items:center;flex:none;padding:0}
+.chk svg{width:18px;height:18px;stroke:var(--accent-ink);stroke-width:2.6;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:0}
+.chk[aria-pressed="true"]{background:var(--accent);border-color:var(--accent)}
+.chk[aria-pressed="true"] svg{opacity:1}
+.spacer{width:34px;flex:none}
+.switch{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.tog{width:52px;height:30px;border-radius:999px;border:1.5px solid var(--line);background:var(--bg);position:relative;flex:none;padding:0}
+.tog::after{content:"";position:absolute;top:3px;left:3px;width:21px;height:21px;border-radius:50%;background:var(--muted);transition:transform .15s}
+.tog[aria-pressed="true"]{background:var(--gold);border-color:var(--gold)}
+.tog[aria-pressed="true"]::after{transform:translateX(22px);background:var(--surface)}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:10px}
+.day{border:1px solid var(--line);background:transparent;border-radius:12px;padding:7px 0 6px;display:flex;flex-direction:column;
+  align-items:center;gap:4px;font-size:12px;color:var(--muted)}
+.day b{font-family:var(--f-display);font-size:15px;color:var(--ink)}
+.day.sel{border-color:var(--accent);background:var(--accent-soft)}
+.pips{display:flex;gap:2px}
+.pips i{width:5px;height:5px;border-radius:50%;background:var(--line)}
+.pips i.d{background:var(--accent)}
+.day .f{height:4px;width:16px;border-radius:2px;background:transparent}
+.day .f.y{background:var(--gold)}
+.sum{color:var(--muted);font-size:14px;margin-top:10px}
+
+/* Qibla */
+.dialwrap{display:flex;flex-direction:column;align-items:center;gap:10px}
+#dial{width:min(78vw,300px);height:auto}
+.big{font-family:var(--f-display);font-weight:700;font-size:40px;line-height:1}
+.center{text-align:center}
+.note{color:var(--muted);font-size:14px}
+
+/* Coran */
+.search{width:100%;padding:11px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface)}
+.slist{padding:0 14px}
+.sitem{display:flex;align-items:center;gap:12px;width:100%;background:none;border:0;border-bottom:1px solid var(--line);
+  padding:11px 0;text-align:left}
+.sitem:last-child{border-bottom:0}
+.sitem .no{width:30px;color:var(--muted);font-size:14px}
+.sitem .mid{flex:1;min-width:0}
+.sitem .mid b{display:block;font-weight:600}
+.sitem .mid span{color:var(--muted);font-size:13px}
+.sitem .ar{font-family:var(--f-ar);font-size:21px}
+.resume{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;text-align:left;
+  background:var(--accent-soft);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.resume b{display:block}
+.rbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 13px;font-size:14px;font-weight:500}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.rhead{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.rhead h2{font-size:24px}
+.rhead .ar{font-family:var(--f-ar);font-size:28px}
+.verse{padding:14px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:8px;scroll-margin-top:8px}
+.verse .vh{display:flex;justify-content:space-between;align-items:center}
+.verse .vn{font-size:13px;font-weight:600;color:var(--muted)}
+.verse .mk{border:0;background:none;color:var(--muted);font-size:13px;padding:4px 0}
+.verse.marked .vn,.verse.marked .mk{color:var(--gold)}
+.verse .a{font-family:var(--f-ar);direction:rtl;text-align:right;font-size:calc(26px * var(--qs,1));line-height:1.95}
+.verse .p{font-style:italic;color:var(--muted);font-size:calc(15px * var(--qs,1))}
+.verse .f{font-size:calc(16px * var(--qs,1));max-width:65ch}
+.hide-ar .a,.hide-ph .p,.hide-fr .f{display:none}
+
+/* Tasbih */
+.ringwrap{position:relative;width:min(72vw,280px);aspect-ratio:1;margin:6px auto}
+.ringwrap svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+#tap{position:absolute;inset:9%;border-radius:50%;border:0;background:var(--accent);color:var(--accent-ink);display:flex;
+  flex-direction:column;align-items:center;justify-content:center;gap:2px;touch-action:manipulation;user-select:none;-webkit-user-select:none}
+#tap:active{transform:scale(.97)}
+#tap .c{font-family:var(--f-display);font-weight:700;font-size:64px;line-height:1}
+#tap .of{opacity:.85;font-size:15px}
+.phrase{font-family:var(--f-ar);font-size:30px;text-align:center;line-height:1.5}
+.phrase small{display:block;font-family:var(--f-body);font-size:14px;color:var(--muted)}
+
+/* Données */
+.field{display:flex;flex-direction:column;gap:5px}
+.field label{font-size:13px;font-weight:600;color:var(--muted)}
+.field select,.field input,.field textarea{padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);width:100%}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stack{display:flex;flex-direction:column;gap:12px}
+.btn{border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);border-radius:12px;padding:11px 14px;font-weight:600}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn.warn{background:transparent;border-color:var(--danger);color:var(--danger)}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+.btns .btn{flex:1 1 150px}
+#msg{font-size:14px;color:var(--gold);min-height:1.3em}
+textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12px}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <div class="greg" id="greg"></div>
+    <div class="hij" id="hij"></div>
+  </div>
+  <a class="citybtn" href="#donnees" id="citybtn"></a>
+</header>
+
+<main id="main">
+  <!-- PRIÈRES -->
+  <section class="view" id="v-prieres">
+    <div class="next">
+      <div><div class="lbl">Prochaine prière</div><div class="name" id="nx-name"></div></div>
+      <div><div class="cd num" id="nx-cd"></div><div class="at num" id="nx-at"></div></div>
+    </div>
+    <div class="card rows" id="rows"></div>
+    <div class="card switch">
+      <div><b>Jeûne</b><div class="note" id="fast-note">Marquer ce jour comme jeûné</div></div>
+      <button class="tog" id="fast" aria-pressed="false" aria-label="Jour de jeûne"></button>
+    </div>
+    <div class="card">
+      <div class="label">7 derniers jours</div>
+      <div class="week" id="week"></div>
+      <div class="sum" id="sum"></div>
+    </div>
+  </section>
+
+  <!-- QIBLA -->
+  <section class="view" id="v-qibla">
+    <div class="card dialwrap">
+      <svg id="dial" viewBox="0 0 300 300" role="img" aria-label="Direction de la Qibla">
+        <g id="rose">
+          <circle cx="150" cy="150" r="138" fill="none" stroke="var(--line)" stroke-width="2"/>
+          <g id="ticks" stroke="var(--muted)"></g>
+          <g font-family="Bricolage Grotesque, sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="var(--muted)">
+            <text x="150" y="42" fill="var(--danger)">N</text><text x="264" y="156">E</text><text x="150" y="270">S</text><text x="36" y="156">O</text>
+          </g>
+          <g id="needle">
+            <line x1="150" y1="150" x2="150" y2="42" stroke="var(--accent)" stroke-width="5" stroke-linecap="round"/>
+            <rect x="138" y="14" width="24" height="24" rx="4" fill="var(--ink)"/>
+            <rect x="138" y="20" width="24" height="4" fill="var(--gold)"/>
+          </g>
+          <circle cx="150" cy="150" r="7" fill="var(--accent)"/>
+        </g>
+      </svg>
+      <div class="center"><div class="big num" id="q-deg"></div><div class="note" id="q-txt"></div></div>
+    </div>
+    <div class="card stack">
+      <div class="note" id="q-help">Sans boussole : tenez le téléphone à plat, le haut vers le nord. La flèche indique la Qibla.</div>
+      <button class="btn ghost" id="q-live">Activer la boussole du téléphone</button>
+    </div>
+  </section>
+
+  <!-- CORAN -->
+  <section class="view" id="v-coran">
+    <div id="q-list" class="stack">
+      <button class="resume" id="resume" hidden><span><span class="label">Reprendre la lecture</span><b id="resume-t"></b></span><span aria-hidden="true">→</span></button>
+      <input class="search" id="q-search" type="search" placeholder="Chercher une sourate (nom ou numéro)" aria-label="Chercher une sourate">
+      <div class="card slist" id="slist"></div>
+    </div>
+    <div id="q-read" class="stack" hidden>
+      <div class="rbar">
+        <button class="chip" id="back">← Sourates</button>
+        <button class="chip" data-show="ar" aria-pressed="true">Arabe</button>
+        <button class="chip" data-show="ph" aria-pressed="true">Phonétique</button>
+        <button class="chip" data-show="fr" aria-pressed="true">Français</button>
+        <button class="chip" id="sz-" aria-label="Texte plus petit">A−</button>
+        <button class="chip" id="sz+" aria-label="Texte plus grand">A+</button>
+      </div>
+      <div class="rhead"><div><h2 id="r-title"></h2><div class="note" id="r-sub"></div></div><div class="ar" id="r-ar"></div></div>
+      <div id="verses"></div>
+      <div class="btns"><button class="btn ghost" id="prev-s">← Précédente</button><button class="btn ghost" id="next-s">Suivante →</button></div>
+    </div>
+  </section>
+
+  <!-- TASBIH -->
+  <section class="view" id="v-tasbih">
+    <div class="phrase" id="ph"></div>
+    <div class="ringwrap">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="47" fill="none" stroke="var(--line)" stroke-width="3"/>
+        <circle id="ring" cx="50" cy="50" r="47" fill="none" stroke="var(--gold)" stroke-width="3" stroke-linecap="round" stroke-dasharray="295.3" stroke-dashoffset="295.3"/>
+      </svg>
+      <button id="tap" aria-label="Compter"><span class="c num" id="t-c">0</span><span class="of" id="t-of"></span></button>
+    </div>
+    <div class="rbar" id="phr" style="justify-content:center"></div>
+    <div class="rbar" id="tgt" style="justify-content:center"></div>
+    <div class="card switch"><div><b class="num" id="t-day">0</b> aujourd'hui · <b class="num" id="t-all">0</b> au total</div>
+      <button class="chip" id="t-reset">Remettre à zéro</button></div>
+  </section>
+
+  <!-- DONNÉES -->
+  <section class="view" id="v-donnees">
+    <div class="card stack">
+      <h2 style="font-size:18px">Horaires</h2>
+      <div class="field"><label for="city">Ville</label><select id="city"></select></div>
+      <div class="grid2" id="custom" hidden>
+        <div class="field"><label for="lat">Latitude</label><input id="lat" inputmode="decimal" placeholder="48.94"></div>
+        <div class="field"><label for="lng">Longitude</label><input id="lng" inputmode="decimal" placeholder="2.16"></div>
+      </div>
+      <div class="field"><label for="method">Méthode de calcul</label><select id="method"></select></div>
+      <div class="grid2">
+        <div class="field"><label for="asr">Asr</label><select id="asr"><option value="1">Standard</option><option value="2">Hanafite</option></select></div>
+        <div class="field"><label for="hadj">Date hégirienne</label><select id="hadj"><option value="-1">−1 jour</option><option value="0">Sans décalage</option><option value="1">+1 jour</option></select></div>
+      </div>
+      <div class="note">Les heures s'affichent dans le fuseau horaire de cet appareil.</div>
+    </div>
+    <div class="card stack">
+      <h2 style="font-size:18px">Mes données</h2>
+      <div class="note">Tout reste sur cet appareil, dans ce navigateur. Exportez régulièrement pour garder une copie.</div>
+      <div class="btns">
+        <button class="btn" id="exp-json">Exporter tout (JSON)</button>
+        <button class="btn ghost" id="exp-csv">Exporter le journal (CSV)</button>
+      </div>
+      <div class="field" id="outwrap" hidden><label for="out">Copie à coller où vous voulez</label><textarea id="out" readonly></textarea>
+        <button class="btn ghost" id="copy">Copier</button></div>
+      <div class="field"><label for="imp-file">Importer une sauvegarde JSON</label><input type="file" id="imp-file" accept=".json,application/json"></div>
+      <div class="field"><label for="imp-txt">ou coller son contenu</label><textarea id="imp-txt" placeholder='{"v":1, ...}'></textarea>
+        <button class="btn ghost" id="imp-go">Importer le texte collé</button></div>
+      <div id="msg" role="status"></div>
+      <button class="btn warn" id="wipe">Effacer toutes mes données</button>
+    </div>
+    <div class="note">Texte du Coran : jeu de données libre quran-json (arabe othmani, phonétique Tanzil, traduction française de M. Hamidullah), gardé sur l'appareil une fois chargé.</div>
+  </section>
+</main>
+
+<nav id="nav">
+  <a href="#prieres"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Prières</a>
+  <a href="#qibla"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>Qibla</a>
+  <a href="#coran"><svg viewBox="0 0 24 24"><path d="M12 6c-2-1.5-5-2-8-1.5v13c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5v-13c-3-.5-6 0-8 1.5zM12 6v13"/></svg>Coran</a>
+  <a href="#tasbih"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="18" cy="9" r="2"/><circle cx="17" cy="16" r="2"/><circle cx="7" cy="16" r="2"/><circle cx="6" cy="9" r="2"/><path d="M12 19v3"/></svg>Tasbih</a>
+  <a href="#donnees"><svg viewBox="0 0 24 24"><path d="M4 7c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3zM4 7v10c0 1.7 3.6 3 8 3s8-1.3 8-3V7M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>Données</a>
+</nav>
+
+<script>
+"use strict";
+const $=id=>document.getElementById(id);
+const el=(t,c,txt)=>{const e=document.createElement(t);if(c)e.className=c;if(txt!=null)e.textContent=txt;return e};
+const KEY="carnet-priere-v1";
+const SURAHS=[["Al-Fatihah","L'ouverture","الفاتحة",7,1],["Al-Baqarah","La vache","البقرة",286,0],["Ali 'Imran","La famille de 'imran","آل عمران",200,0],["An-Nisa","Les femmes","النساء",176,0],["Al-Ma'idah","La table servie","المائدة",120,0],["Al-An'am","Les bestiaux","الأنعام",165,1],["Al-A'raf","Al-A'raf","الأعراف",206,1],["Al-Anfal","Le butin","الأنفال",75,0],["At-Tawbah","Le repentir","التوبة",129,0],["Yunus","Jonas","يونس",109,1],["Hud","Houd","هود",123,1],["Yusuf","Joseph","يوسف",111,1],["Ar-Ra'd","Le tonnerre","الرعد",43,0],["Ibrahim","Abraham","ابراهيم",52,1],["Al-Hijr","Al-Hijr","الحجر",99,1],["An-Nahl","Les abeilles","النحل",128,1],["Al-Isra","Le voyage nocturne","الإسراء",111,1],["Al-Kahf","La caverne","الكهف",110,1],["Maryam","Marie","مريم",98,1],["Taha","Ta-Ha","طه",135,1],["Al-Anbya","Les prophètes","الأنبياء",112,1],["Al-Hajj","Le pèlerinage","الحج",78,0],["Al-Mu'minun","Les croyants","المؤمنون",118,1],["An-Nur","La lumière","النور",64,0],["Al-Furqan","Le discernement","الفرقان",77,1],["Ash-Shu'ara","Les poètes","الشعراء",227,1],["An-Naml","Les fourmis","النمل",93,1],["Al-Qasas","Le récit","القصص",88,1],["Al-'Ankabut","L'araignée","العنكبوت",69,1],["Ar-Rum","Les romains","الروم",60,1],["Luqman","Louqman","لقمان",34,1],["As-Sajdah","La prosternation","السجدة",30,1],["Al-Ahzab","Les coalisés","الأحزاب",73,0],["Saba","Saba'","سبإ",54,1],["Fatir","Le Créateur","فاطر",45,1],["Ya-Sin","Ya-Sin","يس",83,1],["As-Saffat","Les rangés","الصافات",182,1],["Sad","Sad","ص",88,1],["Az-Zumar","Les groupes","الزمر",75,1],["Ghafir","Le Pardonneur","غافر",85,1],["Fussilat","Les versets explicites","فصلت",54,1],["Ash-Shuraa","La concertation","الشورى",53,1],["Az-Zukhruf","L'ornement","الزخرف",89,1],["Ad-Dukhan","La fumée","الدخان",59,1],["Al-Jathiyah","L'agenouillée","الجاثية",37,1],["Al-Ahqaf","Al-Ahqaf","الأحقاف",35,1],["Muhammad","Mouhammad","محمد",38,0],["Al-Fath","La victoire éclatante","الفتح",29,0],["Al-Hujurat","Les appartements","الحجرات",18,0],["Qaf","Qaf","ق",45,1],["Adh-Dhariyat","Qui éparpillent","الذاريات",60,1],["At-Tur","Le mont At-Tour","الطور",49,1],["An-Najm","L'étoile","النجم",62,1],["Al-Qamar","La lune","القمر",55,1],["Ar-Rahman","Le Tout Miséricordieux","الرحمن",78,0],["Al-Waqi'ah","L'inévitable","الواقعة",96,1],["Al-Hadid","Le fer","الحديد",29,0],["Al-Mujadila","La discussion","المجادلة",22,0],["Al-Hashr","L'exode","الحشر",24,0],["Al-Mumtahanah","L'éprouvée","الممتحنة",13,0],["As-Saf","Le rang","الصف",14,0],["Al-Jumu'ah","Le vendredi","الجمعة",11,0],["Al-Munafiqun","Les hypocrites","المنافقون",11,0],["At-Taghabun","La grande perte","التغابن",18,0],["At-Talaq","Le divorce","الطلاق",12,0],["At-Tahrim","L'interdiction","التحريم",12,0],["Al-Mulk","La royauté","الملك",30,1],["Al-Qalam","La plume","القلم",52,1],["Al-Haqqah","L'inéluctable","الحاقة",52,1],["Al-Ma'arij","Les voies d'ascension","المعارج",44,1],["Nuh","Noé","نوح",28,1],["Al-Jinn","Les djinns","الجن",28,1],["Al-Muzzammil","L'enveloppé","المزمل",20,1],["Al-Muddaththir","Celui qui se couvre","المدثر",56,1],["Al-Qiyamah","La résurrection","القيامة",40,1],["Al-Insan","L'homme","الانسان",31,0],["Al-Mursalat","Les envoyés","المرسلات",50,1],["An-Naba","La nouvelle","النبإ",40,1],["An-Nazi'at","Ceux qui arrachent","النازعات",46,1],["'Abasa","Il s'est renfrogné","عبس",42,1],["At-Takwir","L'obscurcissement","التكوير",29,1],["Al-Infitar","La rupture","الإنفطار",19,1],["Al-Mutaffifin","Les fraudeurs","المطففين",36,1],["Al-Inshiqaq","La déchirure","الإنشقاق",25,1],["Al-Buruj","Les constellations","البروج",22,1],["At-Tariq","L'astre nocturne","الطارق",17,1],["Al-A'la","Le Très-Haut","الأعلى",19,1],["Al-Ghashiyah","L'enveloppante","الغاشية",26,1],["Al-Fajr","L'aube","الفجر",30,1],["Al-Balad","La cité","البلد",20,1],["Ash-Shams","Le soleil","الشمس",15,1],["Al-Layl","La nuit","الليل",21,1],["Ad-Duhaa","Le jour montant","الضحى",11,1],["Ash-Sharh","L'ouverture","الشرح",8,1],["At-Tin","Les figues","التين",8,1],["Al-'Alaq","L'adhérence","العلق",19,1],["Al-Qadr","La destinée","القدر",5,1],["Al-Bayyinah","La preuve","البينة",8,0],["Az-Zalzalah","Le séisme","الزلزلة",8,0],["Al-'Adiyat","Les coursiers","العاديات",11,1],["Al-Qari'ah","Le fracas","القارعة",11,1],["At-Takathur","La course aux richesses","التكاثر",8,1],["Al-'Asr","Le temps","العصر",3,1],["Al-Humazah","Les calomniateurs","الهمزة",9,1],["Al-Fil","L'éléphant","الفيل",5,1],["Quraysh","Les Quraysh","قريش",4,1],["Al-Ma'un","L'entraide","الماعون",7,1],["Al-Kawthar","L'abondance","الكوثر",3,1],["Al-Kafirun","Les mécréants","الكافرون",6,1],["An-Nasr","Le secours","النصر",3,0],["Al-Masad","Les fibres","المسد",5,1],["Al-Ikhlas","La sincérité","الإخلاص",4,1],["Al-Falaq","L'aube naissante","الفلق",5,1],["An-Nas","Les humains","الناس",6,1]];
+const CITIES=[["Sartrouville",48.9372,2.1594],["Paris",48.8566,2.3522],["Marseille",43.2965,5.3698],["Lyon",45.764,4.8357],["Toulouse",43.6047,1.4442],["Nice",43.7102,7.262],["Nantes",47.2184,-1.5536],["Strasbourg",48.5734,7.7521],["Montpellier",43.6108,3.8767],["Bordeaux",44.8378,-0.5792],["Lille",50.6292,3.0573],["Rennes",48.1173,-1.6778],["Grenoble",45.1885,5.7245],["Bruxelles",50.8503,4.3517],["Genève",46.2044,6.1432],["Casablanca",33.5731,-7.5898],["Alger",36.7538,3.0588],["Tunis",36.8065,10.1815]];
+const METHODS={MF:["Musulmans de France (12°)",12,12],GMP:["Grande Mosquée de Paris (18°)",18,18],MWL:["Ligue islamique mondiale (18° / 17°)",18,17],EGY:["Égypte (19,5° / 17,5°)",19.5,17.5],ISNA:["Amérique du Nord (15°)",15,15],UQ:["Umm al-Qura (18,5° / 90 min)",18.5,null]};
+const PR=["Fajr","Dhuhr","Asr","Maghrib","Isha"];
+const PHRASES=[["سُبْحَانَ ٱللَّٰه","Subhânallâh"],["ٱلْحَمْدُ لِلَّٰه","Alhamdulillâh"],["ٱللَّٰهُ أَكْبَر","Allâhu akbar"],["أَسْتَغْفِرُ ٱللَّٰه","Astaghfirullâh"],["لَا إِلَٰهَ إِلَّا ٱللَّٰه","Lâ ilâha illallâh"]];
+const TARGETS=[33,99,100,0];
+
+/* ---------- state ---------- */
+const DEF=()=>({v:1,loc:{name:"Sartrouville",lat:48.9372,lng:2.1594},method:"MF",asr:1,hadj:0,log:{},
+  tasbih:{count:0,target:33,phrase:0,total:0},quran:{s:0,v:0,ar:1,ph:1,fr:1,size:1}});
+let S=DEF();
+function merge(d){const b=DEF();if(!d||typeof d!=="object")return b;
+  for(const k of Object.keys(b)){if(d[k]==null)continue;
+    if(typeof b[k]==="object"&&k!=="log")b[k]=Object.assign(b[k],d[k]);else b[k]=d[k];}
+  if(!METHODS[b.method])b.method="MF";return b}
+try{const r=localStorage.getItem(KEY);if(r)S=merge(JSON.parse(r))}catch(e){}
+let saveOK=true;
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));saveOK=true}catch(e){saveOK=false}}
+
+/* ---------- dates ---------- */
+const pad=n=>String(n).padStart(2,"0");
+const keyOf=d=>d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
+const addDays=(d,n)=>{const x=new Date(d.getFullYear(),d.getMonth(),d.getDate()+n);return x};
+const today=()=>{const n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate())};
+let sel=today();
+const hm=d=>pad(d.getHours())+":"+pad(d.getMinutes());
+function hijri(d){try{return new Intl.DateTimeFormat("fr-FR-u-ca-islamic-umalqura",{day:"numeric",month:"long",year:"numeric"}).format(addDays(d,+S.hadj))}catch(e){return""}}
+const entry=(k,make)=>{let e=S.log[k];if(!e&&make){e=S.log[k]={p:[0,0,0,0,0],f:0,t:0}}return e||{p:[0,0,0,0,0],f:0,t:0}};
+
+/* ---------- prayer times (standard solar formulas) ---------- */
+const R=Math.PI/180,ds=x=>Math.sin(x*R),dc=x=>Math.cos(x*R),dt=x=>Math.tan(x*R);
+const fix=(a,b)=>{a=a-b*Math.floor(a/b);return a<0?a+b:a};
+function julian(y,m,d){if(m<=2){y--;m+=12}const A=Math.floor(y/100),B=2-A+Math.floor(A/4);
+  return Math.floor(365.25*(y+4716))+Math.floor(30.6001*(m+1))+d+B-1524.5}
+function sun(jd){const D=jd-2451545,g=fix(357.529+.98560028*D,360),q=fix(280.459+.98564736*D,360),
+  L=fix(q+1.915*ds(g)+.02*ds(2*g),360),e=23.439-36e-8*D,
+  RA=fix(Math.atan2(dc(e)*ds(L),dc(L))/R,360)/15;
+  return{decl:Math.asin(ds(e)*ds(L))/R,eqt:q/15-fix(RA,24)}}
+function times(date,lat,lng,method,asrF){
+  const y=date.getFullYear(),m=date.getMonth()+1,d=date.getDate(),jd=julian(y,m,d)-lng/360;
+  const mid=t=>fix(12-sun(jd+t).eqt,24);
+  const sat=(ang,t,dir)=>{const de=sun(jd+t).decl,x=(-ds(ang)-ds(de)*ds(lat))/(dc(de)*dc(lat));
+    return mid(t)+dir*Math.acos(x)/R/15};
+  const M=METHODS[method],sr=sat(.833,6/24,-1),ss=sat(.833,18/24,1),dh=mid(.5);
+  const asrAng=-Math.atan(1/(asrF+dt(Math.abs(lat-sun(jd+13/24).decl))))/R;
+  let fj=sat(M[1],5/24,-1),as=sat(asrAng,13/24,1),is=M[2]==null?ss+1.5:sat(M[2],18/24,1);
+  const night=fix(sr-ss,24);
+  const pf=M[1]/60*night;if(isNaN(fj)||sr-fj>pf)fj=sr-pf;
+  if(M[2]!=null){const pi=M[2]/60*night;if(isNaN(is)||is-ss>pi)is=ss+pi}
+  const base=Date.UTC(y,m-1,d);
+  const D=h=>new Date(Math.round((base+(h-lng/15)*36e5)/6e4)*6e4);
+  return{fajr:D(fj),sunrise:D(sr),dhuhr:D(dh+1/60),asr:D(as),maghrib:D(ss),isha:D(is)}}
+const T=d=>times(d,S.loc.lat,S.loc.lng,S.method,+S.asr);
+const five=t=>[t.fajr,t.dhuhr,t.asr,t.maghrib,t.isha];
+
+/* ---------- Prières view ---------- */
+const CHECK='<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+function nextPrayer(){const now=new Date(),t=five(T(today()));
+  for(let i=0;i<5;i++)if(t[i]>now)return{i,at:t[i]};
+  return{i:0,at:T(addDays(today(),1)).fajr,tomorrow:true}}
+function renderHead(){
+  $("greg").textContent=new Intl.DateTimeFormat("fr-FR",{weekday:"long",day:"numeric",month:"long"}).format(sel).replace(/^./,c=>c.toUpperCase());
+  $("hij").textContent=hijri(sel);$("citybtn").textContent=S.loc.name}
+function tick(){const n=nextPrayer(),ms=n.at-new Date(),h=Math.floor(ms/36e5),m=Math.floor(ms%36e5/6e4),s=Math.floor(ms%6e4/1e3);
+  $("nx-name").textContent=PR[n.i];$("nx-cd").textContent=(h?h+" h "+pad(m):m+" min "+pad(s)+" s");
+  $("nx-at").textContent=(n.tomorrow?"demain à ":"à ")+hm(n.at)}
+function renderPrayers(){
+  renderHead();
+  const t=T(sel),k=keyOf(sel),e=entry(k),isToday=k===keyOf(today()),n=nextPrayer(),rows=$("rows");rows.textContent="";
+  const list=[["Fajr",t.fajr,0],["Lever du soleil",t.sunrise,-1],["Dhuhr",t.dhuhr,1],["Asr",t.asr,2],["Maghrib",t.maghrib,3],["Isha",t.isha,4]];
+  for(const[name,at,i]of list){
+    const r=el("div","row"+(i<0?" sun":"")+(isToday&&!n.tomorrow&&i===n.i?" cur":""));
+    r.append(el("div","n",name),el("div","t num",hm(at)));
+    if(i<0)r.append(el("span","spacer"));
+    else{const b=el("button","chk");b.innerHTML=CHECK;b.setAttribute("aria-pressed",e.p[i]?"true":"false");
+      b.setAttribute("aria-label",name+(e.p[i]?" : faite":" : marquer comme faite"));
+      b.onclick=()=>{const x=entry(k,true);x.p[i]=x.p[i]?0:1;save();renderPrayers()};r.append(b)}
+    rows.append(r)}
+  $("fast").setAttribute("aria-pressed",e.f?"true":"false");
+  $("fast-note").textContent=isToday?"Marquer aujourd'hui comme jeûné":"Marquer ce jour comme jeûné";
+  const w=$("week");w.textContent="";let done=0,fasts=0;
+  for(let i=6;i>=0;i--){const d=addDays(today(),-i),kk=keyOf(d),x=entry(kk),c=x.p.reduce((a,b)=>a+b,0);done+=c;fasts+=x.f?1:0;
+    const b=el("button","day"+(kk===k?" sel":""));
+    b.append(el("span",null,new Intl.DateTimeFormat("fr-FR",{weekday:"narrow"}).format(d)),el("b","num",d.getDate()));
+    const p=el("span","pips");for(let j=0;j<5;j++)p.append(el("i",x.p[j]?"d":""));b.append(p,el("span","f"+(x.f?" y":"")));
+    b.setAttribute("aria-label",new Intl.DateTimeFormat("fr-FR",{weekday:"long",day:"numeric"}).format(d)+", "+c+" prières sur 5"+(x.f?", jeûne":""));
+    b.onclick=()=>{sel=d;renderPrayers()};w.append(b)}
+  $("sum").textContent=done+" prières sur 35 cette semaine · "+fasts+(fasts>1?" jours de jeûne":" jour de jeûne")+(saveOK?"":" · enregistrement indisponible ici");
+  tick()}
+$("fast").onclick=()=>{const x=entry(keyOf(sel),true);x.f=x.f?0:1;save();renderPrayers()};
+
+/* ---------- Qibla ---------- */
+function qibla(){const la=S.loc.lat*R,lo=S.loc.lng*R,kl=21.4225*R,ko=39.8262*R,dl=ko-lo;
+  const b=fix(Math.atan2(Math.sin(dl),Math.cos(la)*Math.tan(kl)-Math.sin(la)*Math.cos(dl))/R,360);
+  const a=Math.sin((kl-la)/2)**2+Math.cos(la)*Math.cos(kl)*Math.sin(dl/2)**2;
+  return{b,km:Math.round(12742*Math.asin(Math.sqrt(a)))}}
+let heading=null;
+function renderQibla(){const q=qibla(),dirs=["nord","nord-est","est","sud-est","sud","sud-ouest","ouest","nord-ouest"];
+  $("q-deg").textContent=Math.round(q.b)+"°";
+  $("q-txt").textContent="depuis le nord, vers le "+dirs[Math.round(q.b/45)%8]+" · La Mecque à "+q.km.toLocaleString("fr-FR")+" km de "+S.loc.name;
+  $("needle").setAttribute("transform","rotate("+q.b+" 150 150)");
+  $("rose").setAttribute("transform","rotate("+(heading==null?0:-heading)+" 150 150)")}
+(function(){const g=$("ticks");for(let a=0;a<360;a+=15){const l=document.createElementNS("http://www.w3.org/2000/svg","line");
+  l.setAttribute("x1",150);l.setAttribute("x2",150);l.setAttribute("y1",12);l.setAttribute("y2",a%90?20:26);
+  l.setAttribute("stroke-width",a%90?1:2);l.setAttribute("transform","rotate("+a+" 150 150)");g.append(l)}})();
+$("q-live").onclick=async()=>{
+  const help=$("q-help");let got=false;
+  const on=e=>{let h=null;if(typeof e.webkitCompassHeading==="number")h=e.webkitCompassHeading;
+    else if(e.absolute&&typeof e.alpha==="number")h=360-e.alpha;
+    if(h==null)return;got=true;heading=h;help.textContent="Boussole active : tournez-vous jusqu'à ce que la flèche pointe vers le haut.";renderQibla()};
+  try{if(window.DeviceOrientationEvent&&DeviceOrientationEvent.requestPermission){
+      const r=await DeviceOrientationEvent.requestPermission();if(r!=="granted")throw 0}
+    window.addEventListener("deviceorientationabsolute",on);window.addEventListener("deviceorientation",on)}catch(e){}
+  setTimeout(()=>{if(!got)help.textContent="La boussole du téléphone n'est pas accessible depuis cette page. Utilisez l'angle ci-dessus avec l'application Boussole de votre téléphone."},1500)};
+
+/* ---------- Coran ---------- */
+const CDN="https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/";
+const mem={};
+function idb(){return new Promise((ok,no)=>{try{const r=indexedDB.open("carnet-coran",1);
+  r.onupgradeneeded=()=>r.result.createObjectStore("s");r.onsuccess=()=>ok(r.result);r.onerror=()=>no()}catch(e){no()}})}
+async function cacheGet(n){try{const db=await idb();return await new Promise(ok=>{const q=db.transaction("s").objectStore("s").get(n);q.onsuccess=()=>ok(q.result);q.onerror=()=>ok(null)})}catch(e){return null}}
+async function cachePut(n,v){try{const db=await idb();db.transaction("s","readwrite").objectStore("s").put(v,n)}catch(e){}}
+const SRC=["data/",CDN];
+const validQ=all=>Array.isArray(all)&&all.length===114&&all.every((c,i)=>Array.isArray(c.verses)&&c.verses.length===SURAHS[i][3]);
+async function storeAll(fr,ph){
+  for(let i=0;i<114;i++)mem[i+1]=fr[i].verses.map((v,j)=>[String(v.text||""),String(ph?ph[i].verses[j].transliteration||"":""),String(v.translation||"")]);
+  try{const db=await idb(),tx=db.transaction("s","readwrite"),st=tx.objectStore("s");for(let i=1;i<=114;i++)st.put(mem[i],i);
+    await new Promise((ok,no)=>{tx.oncomplete=ok;tx.onerror=no;tx.onabort=no});
+    try{navigator.storage&&navigator.storage.persist&&navigator.storage.persist()}catch(e){}}catch(e){}}
+let dlAll=null;
+function downloadAll(){return dlAll||(dlAll=(async()=>{for(const b of SRC){try{
+    const get=(f,need)=>fetch(b+f).then(r=>{if(!r.ok)throw 0;return r.json()}).catch(e=>{if(need)throw e;return null});
+    const [fr,ph]=await Promise.all([get("quran_fr.json",true),get("quran_transliteration.json",false)]);
+    if(!validQ(fr))throw 0;await storeAll(fr,validQ(ph)?ph:null);return true}catch(e){}}
+  dlAll=null;throw new Error("offline")})())}
+async function loadSurah(n){if(mem[n])return mem[n];const d=await cacheGet(n);if(d)return mem[n]=d;await downloadAll();return mem[n]}
+function importQuran(files,then){const got={};let left=files.length,bad=false;
+  const done=()=>{if(--left)return;if(bad||!got.fr){then(false);return}storeAll(got.fr,got.ph||null).then(()=>then(true))};
+  Array.from(files).forEach(f=>{const r=new FileReader();r.onerror=()=>{bad=true;done()};r.onload=()=>{try{const all=JSON.parse(String(r.result));
+      if(!validQ(all))throw 0;const v=all[0].verses[0];if(v.translation!=null)got.fr=all;else if(v.transliteration!=null)got.ph=all;else throw 0}catch(e){bad=true}done()};r.readAsText(f)})}
+function renderList(){
+  const q=$("q-search").value.trim().toLowerCase(),L=$("slist");L.textContent="";
+  const norm=s=>s.toLowerCase().normalize("NFD").replace(/[̀-ͯ'’-]/g,"");
+  SURAHS.forEach((s,i)=>{if(q&&!(String(i+1)===q||norm(s[0]).includes(norm(q))||norm(s[1]).includes(norm(q))))return;
+    const b=el("button","sitem");const mid=el("span","mid");mid.append(el("b",null,s[0]),el("span",null,s[1]+" · "+s[3]+" versets"));
+    b.append(el("span","no num",i+1),mid,el("span","ar",s[2]));b.onclick=()=>openSurah(i+1,0);L.append(b)});
+  if(!L.children.length)L.append(el("div","note","Aucune sourate ne correspond."));
+  const r=$("resume");if(S.quran.s){r.hidden=false;$("resume-t").textContent=SURAHS[S.quran.s-1][0]+(S.quran.v?" · verset "+S.quran.v:"")}else r.hidden=true}
+let cur=0;
+function applyShow(){const R_=$("q-read");for(const k of["ar","ph","fr"]){R_.classList.toggle("hide-"+k,!S.quran[k]);
+  document.querySelector('[data-show="'+k+'"]').setAttribute("aria-pressed",S.quran[k]?"true":"false")}
+  R_.style.setProperty("--qs",S.quran.size)}
+async function openSurah(n,v){
+  cur=n;const s=SURAHS[n-1];$("q-list").hidden=true;$("q-read").hidden=false;applyShow();
+  $("r-title").textContent=n+". "+s[0];$("r-sub").textContent=s[1]+" · "+s[3]+" versets · "+(s[4]?"mecquoise":"médinoise");$("r-ar").textContent=s[2];
+  $("prev-s").disabled=n===1;$("next-s").disabled=n===114;
+  const V=$("verses");V.textContent="";V.append(el("div","note","Chargement… À la première lecture, le texte complet (5 Mo) est téléchargé puis gardé sur l'appareil pour le hors-ligne."));$("main").scrollTop=0;
+  let d;try{d=await loadSurah(n)}catch(e){if(cur!==n)return;V.textContent="";
+    const box=el("div","card stack");
+    box.append(el("b",null,"Installer le texte du Coran sur cet appareil"),
+      el("div","note","Cette page ne peut pas le charger en ligne. À faire une seule fois : téléchargez les fichiers, puis choisissez-les ci-dessous. Le texte reste ensuite sur l'appareil, lisible hors ligne."));
+    const mk=(t,file)=>{const a=el("a","btn ghost",t);a.href=CDN+file;a.target="_blank";a.rel="noopener";a.style.textAlign="center";a.style.textDecoration="none";return a};
+    const a=mk("1. Télécharger arabe + français (2,5 Mo)","quran_fr.json"),a2=mk("1 bis. Télécharger la phonétique (2,2 Mo, facultatif)","quran_transliteration.json");
+    const f=el("div","field");const lb=el("label",null,"2. Choisir le ou les fichiers téléchargés");lb.htmlFor="q-file";
+    const inp=el("input");inp.type="file";inp.id="q-file";inp.multiple=true;inp.accept=".json,application/json";const st=el("div","note");
+    inp.onchange=()=>{if(!inp.files.length)return;st.textContent="Lecture…";importQuran(inp.files,ok=>{if(ok)openSurah(n,v);else st.textContent="Fichier non reconnu. Il faut au moins quran_fr.json."})};
+    f.append(lb,inp,st);const b=el("button","btn ghost","Réessayer en ligne");b.onclick=()=>openSurah(n,v);box.append(a,a2,f,b);V.append(box);return}
+  if(cur!==n)return;V.textContent="";
+  if(S.quran.s!==n){S.quran.s=n;S.quran.v=v||0;save()}
+  d.forEach((x,i)=>{const w=el("div","verse"+(S.quran.s===n&&S.quran.v===i+1?" marked":""));w.id="v"+(i+1);
+    const h=el("div","vh");const mk=el("button","mk",S.quran.v===i+1?"Marque-page ici":"Marquer");
+    mk.onclick=()=>{S.quran.s=n;S.quran.v=i+1;save();V.querySelectorAll(".verse").forEach(e=>{e.classList.remove("marked");e.querySelector(".mk").textContent="Marquer"});
+      w.classList.add("marked");mk.textContent="Marque-page ici"};
+    h.append(el("span","vn num",n+":"+(i+1)),mk);
+    const a=el("div","a",x[0]);a.lang="ar";w.append(h,a,el("div","p",x[1]),el("div","f",x[2]));V.append(w)});
+  if(v){const t=$("v"+v);if(t)t.scrollIntoView()}}
+$("q-search").oninput=renderList;
+$("resume").onclick=()=>openSurah(S.quran.s,S.quran.v);
+$("back").onclick=()=>{cur=0;$("q-read").hidden=true;$("q-list").hidden=false;renderList()};
+$("prev-s").onclick=()=>cur>1&&openSurah(cur-1,0);$("next-s").onclick=()=>cur<114&&openSurah(cur+1,0);
+document.querySelectorAll("[data-show]").forEach(b=>b.onclick=()=>{const k=b.dataset.show;S.quran[k]=S.quran[k]?0:1;
+  if(!S.quran.ar&&!S.quran.ph&&!S.quran.fr)S.quran[k]=1;save();applyShow()});
+$("sz-").onclick=()=>{S.quran.size=Math.max(.8,+(S.quran.size-.1).toFixed(1));save();applyShow()};
+$("sz+").onclick=()=>{S.quran.size=Math.min(1.6,+(S.quran.size+.1).toFixed(1));save();applyShow()};
+
+/* ---------- Tasbih ---------- */
+function renderTasbih(){const t=S.tasbih,p=PHRASES[t.phrase]||PHRASES[0];
+  $("ph").textContent=p[0];$("ph").append(el("small",null,p[1]));
+  $("t-c").textContent=t.count;$("t-of").textContent=t.target?"sur "+t.target:"sans limite";
+  const f=t.target?Math.min(1,t.count/t.target):0;$("ring").setAttribute("stroke-dashoffset",(295.3*(1-f)).toFixed(1));
+  $("t-day").textContent=entry(keyOf(today())).t||0;$("t-all").textContent=t.total;
+  const P=$("phr");P.textContent="";PHRASES.forEach((x,i)=>{const b=el("button","chip",x[1]);b.setAttribute("aria-pressed",i===t.phrase?"true":"false");
+    b.onclick=()=>{t.phrase=i;t.count=0;save();renderTasbih()};P.append(b)});
+  const G=$("tgt");G.textContent="";TARGETS.forEach(n=>{const b=el("button","chip",n?String(n):"∞");b.setAttribute("aria-pressed",n===t.target?"true":"false");
+    b.setAttribute("aria-label",n?"Objectif "+n:"Sans limite");b.onclick=()=>{t.target=n;t.count=0;save();renderTasbih()};G.append(b)})}
+$("tap").onclick=()=>{const t=S.tasbih;if(t.target&&t.count>=t.target)t.count=0;t.count++;t.total++;entry(keyOf(today()),true).t++;
+  if(t.target&&t.count===t.target){try{navigator.vibrate&&navigator.vibrate(200)}catch(e){}}save();
+  $("t-c").textContent=t.count;$("t-day").textContent=entry(keyOf(today())).t;$("t-all").textContent=t.total;
+  const f=t.target?Math.min(1,t.count/t.target):0;$("ring").setAttribute("stroke-dashoffset",(295.3*(1-f)).toFixed(1))};
+$("t-reset").onclick=()=>{S.tasbih.count=0;save();renderTasbih()};
+
+/* ---------- Données ---------- */
+const say=m=>{$("msg").textContent=m};
+function renderData(){const c=$("city");c.textContent="";let found=false;
+  CITIES.forEach((x,i)=>{const o=el("option",null,x[0]);o.value=i;if(x[0]===S.loc.name&&Math.abs(x[1]-S.loc.lat)<.01){o.selected=true;found=true}c.append(o)});
+  const o=el("option",null,"Autre lieu (coordonnées)");o.value="x";if(!found)o.selected=true;c.append(o);
+  $("custom").hidden=found;$("lat").value=S.loc.lat;$("lng").value=S.loc.lng;
+  const m=$("method");m.textContent="";for(const k in METHODS){const p=el("option",null,METHODS[k][0]);p.value=k;p.selected=k===S.method;m.append(p)}
+  $("asr").value=S.asr;$("hadj").value=S.hadj}
+$("city").onchange=e=>{const v=e.target.value;if(v==="x"){$("custom").hidden=false;S.loc.name="Lieu personnalisé"}
+  else{const x=CITIES[+v];S.loc={name:x[0],lat:x[1],lng:x[2]};$("custom").hidden=true}save();renderHead()};
+function custom(){const a=parseFloat($("lat").value.replace(",",".")),b=parseFloat($("lng").value.replace(",","."));
+  if(a>=-66&&a<=66&&b>=-180&&b<=180){S.loc={name:"Lieu personnalisé",lat:a,lng:b};save();renderHead();say("")}
+  else say("Coordonnées non valides. Latitude entre −66 et 66, longitude entre −180 et 180.")}
+$("lat").onchange=custom;$("lng").onchange=custom;
+$("method").onchange=e=>{S.method=e.target.value;save()};
+$("asr").onchange=e=>{S.asr=+e.target.value;save()};
+$("hadj").onchange=e=>{S.hadj=+e.target.value;save();renderHead()};
+
+let dl=null;
+try{if(window.claude&&claude.use)claude.use("downloads").then(d=>{dl=d}).catch(()=>{})}catch(e){}
+async function deliver(filename,data){
+  if(dl){try{await dl.save({filename,data});say("Fichier "+filename+" proposé au téléchargement.");return}catch(e){}}
+  $("outwrap").hidden=false;$("out").value=data;say("Téléchargement indisponible ici : copiez le texte ci-dessous.")}
+const stamp=()=>keyOf(today());
+$("exp-json").onclick=()=>deliver("carnet-priere-"+stamp()+".json",JSON.stringify(Object.assign({exported:new Date().toISOString()},S),null,1));
+$("exp-csv").onclick=()=>{const rows=["date;fajr;dhuhr;asr;maghrib;isha;jeune;tasbih"];
+  Object.keys(S.log).sort().forEach(k=>{const e=S.log[k];rows.push([k,...e.p,e.f?1:0,e.t||0].join(";"))});
+  deliver("journal-prieres-"+stamp()+".csv",rows.join("\n"))};
+$("copy").onclick=async()=>{try{await navigator.clipboard.writeText($("out").value);say("Copié.")}catch(e){$("out").select();say("Sélectionné : utilisez Copier dans le menu.")}};
+function doImport(txt){try{const d=JSON.parse(txt);if(!d||typeof d!=="object"||!d.log)throw 0;delete d.exported;S=merge(d);save();sel=today();renderData();renderHead();
+  say("Sauvegarde importée : "+Object.keys(S.log).length+" jours de journal.")}catch(e){say("Ce contenu n'est pas une sauvegarde valide du carnet.")}}
+$("imp-file").onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>doImport(String(r.result));r.readAsText(f)};
+$("imp-go").onclick=()=>doImport($("imp-txt").value);
+let armed=0;
+$("wipe").onclick=()=>{const b=$("wipe");if(!armed){armed=1;b.textContent="Confirmer : tout effacer définitivement";setTimeout(()=>{armed=0;b.textContent="Effacer toutes mes données"},5000);return}
+  armed=0;S=DEF();save();try{indexedDB.deleteDatabase("carnet-coran")}catch(e){}b.textContent="Effacer toutes mes données";renderData();renderHead();say("Données effacées.")};
+
+/* ---------- routing ---------- */
+const VIEWS=["prieres","qibla","coran","tasbih","donnees"];
+function route(){let h=location.hash.slice(1);if(!VIEWS.includes(h))h="prieres";
+  VIEWS.forEach(v=>$("v-"+v).classList.toggle("on",v===h));
+  document.querySelectorAll("#nav a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+h));
+  if(h==="prieres"){sel=today();renderPrayers()}else{sel=today();renderHead()}
+  if(h==="qibla")renderQibla();if(h==="coran"&&$("q-read").hidden)renderList();if(h==="tasbih")renderTasbih();if(h==="donnees")renderData();
+  $("main").scrollTop=0}
+window.addEventListener("hashchange",route);route();
+let lastDay=keyOf(today());
+setInterval(()=>{if($("v-prieres").classList.contains("on")){const k=keyOf(today());if(k!==lastDay){lastDay=k;sel=today();renderPrayers()}else tick()}},1000);
+</script>
+<script>
+/* Offline shell: only where the host allows a service worker. */
+try{if("serviceWorker" in navigator&&location.protocol==="https:"||location.hostname==="127.0.0.1")navigator.serviceWorker.register("sw.js").catch(function(){})}catch(e){}
+</script>
+</body>
+</html>
