@@ -137,6 +137,20 @@ nav a.on{color:var(--accent);font-weight:600}
 .verse .f{font-size:calc(16px * var(--qs,1));max-width:65ch}
 .hide-ar .a,.hide-ph .p,.hide-fr .f{display:none}
 
+/* Audio + Duas */
+.player{display:flex;flex-direction:column;gap:8px}
+.player audio{width:100%;height:40px}
+.player .line{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.dua{display:flex;flex-direction:column;gap:6px}
+.dua .dh{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.dua .dh b{font-family:var(--f-display);font-size:17px;line-height:1.25}
+.dua .star{border:0;background:none;font-size:22px;line-height:1;color:var(--muted);padding:2px 4px}
+.dua .star[aria-pressed="true"]{color:var(--gold)}
+.dua .verse{border:0;padding:4px 0 0}
+.dua .df{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px}
+.dua .cnt[data-done="1"]{background:var(--gold);border-color:var(--gold);color:var(--surface)}
+.hide-ar .a,.hide-ph .p,.hide-fr .f{display:none}
+
 /* Tasbih */
 .ringwrap{position:relative;width:min(72vw,280px);aspect-ratio:1;margin:6px auto}
 .ringwrap svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
@@ -232,12 +246,40 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
         <button class="chip" data-show="ar" aria-pressed="true">Arabe</button>
         <button class="chip" data-show="ph" aria-pressed="true">Phonétique</button>
         <button class="chip" data-show="fr" aria-pressed="true">Français</button>
-        <button class="chip" id="sz-" aria-label="Texte plus petit">A−</button>
-        <button class="chip" id="sz+" aria-label="Texte plus grand">A+</button>
+        <button class="chip" data-sz="-1" aria-label="Texte plus petit">A−</button>
+        <button class="chip" data-sz="1" aria-label="Texte plus grand">A+</button>
       </div>
       <div class="rhead"><div><h2 id="r-title"></h2><div class="note" id="r-sub"></div></div><div class="ar" id="r-ar"></div></div>
+      <div class="card player">
+        <div class="line"><span class="label">Récitation · Mishary Rashid al-Afasy</span></div>
+        <audio id="aud" controls preload="none"></audio>
+        <div class="line"><span class="note" id="aud-st"></span><button class="chip" id="aud-dl">Garder hors ligne</button></div>
+      </div>
       <div id="verses"></div>
       <div class="btns"><button class="btn ghost" id="prev-s">← Précédente</button><button class="btn ghost" id="next-s">Suivante →</button></div>
+    </div>
+  </section>
+
+  <!-- DUAS -->
+  <section class="view" id="v-duas">
+    <div class="rbar">
+      <button class="chip" id="d-back" hidden>← Catégories</button>
+      <button class="chip" data-show="ar" aria-pressed="true">Arabe</button>
+      <button class="chip" data-show="ph" aria-pressed="true">Phonétique</button>
+      <button class="chip" data-show="fr" aria-pressed="true">Français</button>
+      <button class="chip" data-sz="-1" aria-label="Texte plus petit">A−</button>
+      <button class="chip" data-sz="1" aria-label="Texte plus grand">A+</button>
+    </div>
+    <div id="d-home" class="stack">
+      <input class="search" id="d-search" type="search" placeholder="Chercher une invocation" aria-label="Chercher une invocation">
+      <div class="rbar"><button class="chip" id="d-favs" aria-pressed="false">★ Mes favoris</button></div>
+      <div id="d-today" class="stack"></div>
+      <div class="card slist" id="d-cats"></div>
+      <div id="d-results" class="stack"></div>
+    </div>
+    <div id="d-cat" class="stack" hidden>
+      <h2 id="d-title" style="font-size:24px"></h2>
+      <div id="d-list" class="stack"></div>
     </div>
   </section>
 
@@ -288,7 +330,7 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
       <div id="msg" role="status"></div>
       <button class="btn warn" id="wipe">Effacer toutes mes données</button>
     </div>
-    <div class="note">Texte du Coran : jeu de données libre quran-json (arabe othmani, phonétique Tanzil, traduction française de M. Hamidullah), gardé sur l'appareil une fois chargé.</div>
+    <div class="note">Récitation : Mishary Rashid al-Afasy (mp3quran.net). Texte du Coran : jeu de données libre quran-json (arabe othmani, phonétique Tanzil, traduction française de M. Hamidullah), gardé sur l'appareil une fois chargé.</div>
   </section>
 </main>
 
@@ -296,6 +338,7 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
   <a href="#prieres"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Prières</a>
   <a href="#qibla"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>Qibla</a>
   <a href="#coran"><svg viewBox="0 0 24 24"><path d="M12 6c-2-1.5-5-2-8-1.5v13c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5v-13c-3-.5-6 0-8 1.5zM12 6v13"/></svg>Coran</a>
+  <a href="#duas"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg>Duas</a>
   <a href="#tasbih"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="18" cy="9" r="2"/><circle cx="17" cy="16" r="2"/><circle cx="7" cy="16" r="2"/><circle cx="6" cy="9" r="2"/><path d="M12 19v3"/></svg>Tasbih</a>
   <a href="#donnees"><svg viewBox="0 0 24 24"><path d="M4 7c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3zM4 7v10c0 1.7 3.6 3 8 3s8-1.3 8-3V7M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>Données</a>
 </nav>
@@ -314,12 +357,12 @@ const TARGETS=[33,99,100,0];
 
 /* ---------- state ---------- */
 const DEF=()=>({v:1,loc:{name:"Sartrouville",lat:48.9372,lng:2.1594},method:"MF",asr:1,hadj:0,log:{},
-  tasbih:{count:0,target:33,phrase:0,total:0},quran:{s:0,v:0,ar:1,ph:1,fr:1,size:1}});
+  tasbih:{count:0,target:33,phrase:0,total:0},quran:{s:0,v:0,ar:1,ph:1,fr:1,size:1},duas:{fav:[]}});
 let S=DEF();
 function merge(d){const b=DEF();if(!d||typeof d!=="object")return b;
   for(const k of Object.keys(b)){if(d[k]==null)continue;
     if(typeof b[k]==="object"&&k!=="log")b[k]=Object.assign(b[k],d[k]);else b[k]=d[k];}
-  if(!METHODS[b.method])b.method="MF";return b}
+  if(!METHODS[b.method])b.method="MF";if(!Array.isArray(b.duas.fav))b.duas.fav=[];return b}
 try{const r=localStorage.getItem(KEY);if(r)S=merge(JSON.parse(r))}catch(e){}
 let saveOK=true;
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));saveOK=true}catch(e){saveOK=false}}
@@ -423,8 +466,8 @@ $("q-live").onclick=async()=>{
 /* ---------- Coran ---------- */
 const CDN="https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/";
 const mem={};
-function idb(){return new Promise((ok,no)=>{try{const r=indexedDB.open("carnet-coran",1);
-  r.onupgradeneeded=()=>r.result.createObjectStore("s");r.onsuccess=()=>ok(r.result);r.onerror=()=>no()}catch(e){no()}})}
+function idb(){return new Promise((ok,no)=>{try{const r=indexedDB.open("carnet-coran",2);
+  r.onupgradeneeded=()=>{const n=r.result.objectStoreNames;if(!n.contains("s"))r.result.createObjectStore("s");if(!n.contains("a"))r.result.createObjectStore("a")};r.onsuccess=()=>ok(r.result);r.onerror=()=>no()}catch(e){no()}})}
 async function cacheGet(n){try{const db=await idb();return await new Promise(ok=>{const q=db.transaction("s").objectStore("s").get(n);q.onsuccess=()=>ok(q.result);q.onerror=()=>ok(null)})}catch(e){return null}}
 async function cachePut(n,v){try{const db=await idb();db.transaction("s","readwrite").objectStore("s").put(v,n)}catch(e){}}
 const SRC=["data/",CDN];
@@ -454,13 +497,13 @@ function renderList(){
   if(!L.children.length)L.append(el("div","note","Aucune sourate ne correspond."));
   const r=$("resume");if(S.quran.s){r.hidden=false;$("resume-t").textContent=SURAHS[S.quran.s-1][0]+(S.quran.v?" · verset "+S.quran.v:"")}else r.hidden=true}
 let cur=0;
-function applyShow(){const R_=$("q-read");for(const k of["ar","ph","fr"]){R_.classList.toggle("hide-"+k,!S.quran[k]);
-  document.querySelector('[data-show="'+k+'"]').setAttribute("aria-pressed",S.quran[k]?"true":"false")}
-  R_.style.setProperty("--qs",S.quran.size)}
+function applyShow(){for(const box of[$("q-read"),$("v-duas")]){
+    for(const k of["ar","ph","fr"])box.classList.toggle("hide-"+k,!S.quran[k]);box.style.setProperty("--qs",S.quran.size)}
+  document.querySelectorAll("[data-show]").forEach(b=>b.setAttribute("aria-pressed",S.quran[b.dataset.show]?"true":"false"))}
 async function openSurah(n,v){
   cur=n;const s=SURAHS[n-1];$("q-list").hidden=true;$("q-read").hidden=false;applyShow();
   $("r-title").textContent=n+". "+s[0];$("r-sub").textContent=s[1]+" · "+s[3]+" versets · "+(s[4]?"mecquoise":"médinoise");$("r-ar").textContent=s[2];
-  $("prev-s").disabled=n===1;$("next-s").disabled=n===114;
+  $("prev-s").disabled=n===1;$("next-s").disabled=n===114;setupAudio(n);
   const V=$("verses");V.textContent="";V.append(el("div","note","Chargement… À la première lecture, le texte complet (5 Mo) est téléchargé puis gardé sur l'appareil pour le hors-ligne."));$("main").scrollTop=0;
   let d;try{d=await loadSurah(n)}catch(e){if(cur!==n)return;V.textContent="";
     const box=el("div","card stack");
@@ -483,12 +526,162 @@ async function openSurah(n,v){
   if(v){const t=$("v"+v);if(t)t.scrollIntoView()}}
 $("q-search").oninput=renderList;
 $("resume").onclick=()=>openSurah(S.quran.s,S.quran.v);
-$("back").onclick=()=>{cur=0;$("q-read").hidden=true;$("q-list").hidden=false;renderList()};
+$("back").onclick=()=>{cur=0;try{$("aud").pause()}catch(e){}$("q-read").hidden=true;$("q-list").hidden=false;renderList()};
 $("prev-s").onclick=()=>cur>1&&openSurah(cur-1,0);$("next-s").onclick=()=>cur<114&&openSurah(cur+1,0);
 document.querySelectorAll("[data-show]").forEach(b=>b.onclick=()=>{const k=b.dataset.show;S.quran[k]=S.quran[k]?0:1;
   if(!S.quran.ar&&!S.quran.ph&&!S.quran.fr)S.quran[k]=1;save();applyShow()});
-$("sz-").onclick=()=>{S.quran.size=Math.max(.8,+(S.quran.size-.1).toFixed(1));save();applyShow()};
-$("sz+").onclick=()=>{S.quran.size=Math.min(1.6,+(S.quran.size+.1).toFixed(1));save();applyShow()};
+document.querySelectorAll("[data-sz]").forEach(b=>b.onclick=()=>{S.quran.size=Math.min(1.6,Math.max(.8,+(S.quran.size+.1*b.dataset.sz).toFixed(1)));save();applyShow()});
+
+/* ---------- Audio (Mishary Rashid al-Afasy) ---------- */
+const AUD=[n=>"https://server8.mp3quran.net/afs/"+String(n).padStart(3,"0")+".mp3",n=>"https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/"+n+".mp3"];
+async function dbGet(st,k){try{const db=await idb();return await new Promise(ok=>{const q=db.transaction(st).objectStore(st).get(k);q.onsuccess=()=>ok(q.result);q.onerror=()=>ok(null)})}catch(e){return null}}
+async function dbPut(st,k,v){const db=await idb();return new Promise((ok,no)=>{const tx=db.transaction(st,"readwrite");tx.objectStore(st).put(v,k);tx.oncomplete=()=>ok();tx.onerror=no;tx.onabort=no})}
+async function dbDel(st,k){try{const db=await idb();db.transaction(st,"readwrite").objectStore(st).delete(k)}catch(e){}}
+let audN=0,audIdx=0,audLocal=false,audBlobUrl=null,audWant=false,audBusy=false;
+const aud=$("aud"),audSt=t=>{$("aud-st").textContent=t};
+async function setupAudio(n){
+  audN=n;audIdx=0;audWant=false;try{aud.pause()}catch(e){}
+  if(audBlobUrl){URL.revokeObjectURL(audBlobUrl);audBlobUrl=null}
+  const blob=await dbGet("a",n);if(audN!==n)return;
+  if(blob){audLocal=true;audBlobUrl=URL.createObjectURL(blob);aud.src=audBlobUrl;audSt("Enregistrée sur l'appareil ("+Math.round(blob.size/1048576*10)/10+" Mo)");$("aud-dl").textContent="Supprimer de l'appareil"}
+  else{audLocal=false;aud.src=AUD[0](n);audSt("Lecture en ligne");$("aud-dl").textContent="Garder hors ligne"}
+  try{if("mediaSession" in navigator)navigator.mediaSession.metadata=new MediaMetadata({title:SURAHS[n-1][0],artist:"Mishary Rashid al-Afasy",album:"Coran"})}catch(e){}}
+aud.addEventListener("play",()=>{audWant=true});aud.addEventListener("pause",()=>{if(!aud.ended)audWant=false});
+aud.addEventListener("error",()=>{if(audLocal||!audN)return;
+  if(audIdx<AUD.length-1){audIdx++;aud.src=AUD[audIdx](audN);if(audWant)aud.play().catch(()=>{})}
+  else audSt("Audio indisponible. Vérifiez la connexion, ou enregistrez la sourate pour l'écouter hors ligne.")});
+aud.addEventListener("ended",()=>{if(audN<114&&cur===audN){openSurah(audN+1,0).then(()=>aud.play().catch(()=>{}))}});
+$("aud-dl").onclick=async()=>{const n=audN;if(!n||audBusy)return;
+  if(audLocal){await dbDel("a",n);setupAudio(n);return}
+  audBusy=true;let ok=false;
+  for(const src of AUD){try{const r=await fetch(src(n));if(!r.ok)throw 0;let blob;
+      if(r.body&&r.body.getReader){const rd=r.body.getReader(),parts=[];let got=0;for(;;){const x=await rd.read();if(x.done)break;parts.push(x.value);got+=x.value.length;if(audN===n)audSt("Téléchargement… "+Math.round(got/1048576)+" Mo")}
+        blob=new Blob(parts,{type:"audio/mpeg"})}else blob=await r.blob();
+      if(blob.size<10000)throw 0;await dbPut("a",n,blob);ok=true;break}catch(e){}}
+  audBusy=false;if(audN!==n)return;
+  if(ok){const t=aud.currentTime,w=audWant;await setupAudio(n);if(w){aud.currentTime=t;aud.play().catch(()=>{})}}
+  else audSt("Enregistrement impossible pour cette sourate (connexion coupée ou serveur qui le refuse). L'écoute en ligne reste possible.")};
+
+/* ---------- Duas ---------- */
+/* Invocations : textes arabes du Coran et de la Sunna, phonétique et traduction française rédigées pour cette appli.
+   q:[sourate, du verset, au verset] = texte tiré du Coran installé sur l'appareil. n = nombre de répétitions. */
+const DUAS=[
+{c:"Matin et soir",d:[
+ {id:"ms1",t:"La meilleure demande de pardon",a:"اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَٰهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَىٰ عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ",p:"Allâhumma anta rabbî, lâ ilâha illâ anta, khalaqtanî wa anâ 'abduka, wa anâ 'alâ 'ahdika wa wa'dika mâ-stata'tu. A'ûdhu bika min sharri mâ sana'tu, abû'u laka bi-ni'matika 'alayya, wa abû'u bi-dhanbî, fa-ghfir lî, fa-innahu lâ yaghfiru-dh-dhunûba illâ anta.",f:"Ô Allah, Tu es mon Seigneur, nulle divinité sauf Toi. Tu m'as créé et je suis Ton serviteur. Je tiens mon engagement et ma promesse envers Toi autant que je le peux. Je cherche refuge auprès de Toi contre le mal que j'ai commis. Je reconnais Ton bienfait sur moi et je reconnais mon péché. Pardonne-moi, car nul ne pardonne les péchés sauf Toi.",s:"Al-Bukhârî"},
+ {id:"ms2",t:"Protection par le nom d'Allah",n:3,a:"بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",p:"Bismillâhi-lladhî lâ yadurru ma'a-smihi shay'un fi-l-ardi wa lâ fi-s-samâ', wa huwa-s-samî'u-l-'alîm.",f:"Au nom d'Allah, Celui dont le nom protège de tout mal sur terre et dans le ciel. Il est Celui qui entend tout, l'Omniscient.",s:"Abû Dâwud, At-Tirmidhî"},
+ {id:"ms3",t:"Refuge par les paroles parfaites",n:3,a:"أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",p:"A'ûdhu bi-kalimâti-llâhi-t-tâmmâti min sharri mâ khalaq.",f:"Je cherche refuge dans les paroles parfaites d'Allah contre le mal de ce qu'Il a créé.",s:"Muslim (le soir)"},
+ {id:"ms4",t:"Au lever du jour",a:"اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ",p:"Allâhumma bika asbahnâ, wa bika amsaynâ, wa bika nahyâ, wa bika namûtu, wa ilayka-n-nushûr.",f:"Ô Allah, c'est par Toi que nous atteignons le matin et par Toi que nous atteignons le soir, par Toi que nous vivons et par Toi que nous mourons, et c'est vers Toi qu'est la résurrection.",s:"At-Tirmidhî"},
+ {id:"ms5",t:"Allah me suffit",n:7,a:"حَسْبِيَ اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ، عَلَيْهِ تَوَكَّلْتُ، وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ",p:"Hasbiya-llâhu, lâ ilâha illâ huwa, 'alayhi tawakkaltu, wa huwa rabbu-l-'arshi-l-'azîm.",f:"Allah me suffit. Nulle divinité sauf Lui. C'est en Lui que je place ma confiance, et Il est le Seigneur du Trône immense.",s:"Abû Dâwud"},
+ {id:"ms6",t:"Verset du Trône",q:[2,255,255]},
+ {id:"ms7",t:"Sourate Al-Ikhlâs",n:3,q:[112,1,4]},
+ {id:"ms8",t:"Sourate Al-Falaq",n:3,q:[113,1,5]},
+ {id:"ms9",t:"Sourate An-Nâs",n:3,q:[114,1,6]},
+ {id:"ms10",t:"Gloire et louange",n:100,a:"سُبْحَانَ اللَّهِ وَبِحَمْدِهِ",p:"Subhâna-llâhi wa bi-hamdih.",f:"Gloire et louange à Allah.",s:"Muslim"}
+]},
+{c:"Sommeil et réveil",d:[
+ {id:"sr1",t:"Avant de dormir",a:"بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا",p:"Bismika-llâhumma amûtu wa ahyâ.",f:"C'est en Ton nom, ô Allah, que je meurs et que je vis.",s:"Al-Bukhârî"},
+ {id:"sr2",t:"En se couchant",n:3,a:"اللَّهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ",p:"Allâhumma qinî 'adhâbaka yawma tab'athu 'ibâdak.",f:"Ô Allah, préserve-moi de Ton châtiment le jour où Tu ressusciteras Tes serviteurs.",s:"Abû Dâwud, At-Tirmidhî"},
+ {id:"sr3",t:"Au réveil",a:"الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",p:"Al-hamdu lillâhi-lladhî ahyânâ ba'da mâ amâtanâ wa ilayhi-n-nushûr.",f:"Louange à Allah qui nous a rendu la vie après nous avoir fait mourir, et c'est vers Lui qu'est la résurrection.",s:"Al-Bukhârî"}
+]},
+{c:"Ablutions et mosquée",d:[
+ {id:"am1",t:"Après les ablutions",a:"أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",p:"Ash-hadu an lâ ilâha illa-llâhu wahdahu lâ sharîka lah, wa ash-hadu anna Muhammadan 'abduhu wa rasûluh.",f:"J'atteste qu'il n'y a de divinité qu'Allah, Seul, sans associé, et j'atteste que Muhammad est Son serviteur et Son messager.",s:"Muslim"},
+ {id:"am2",t:"En entrant à la mosquée",a:"اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",p:"Allâhumma-ftah lî abwâba rahmatik.",f:"Ô Allah, ouvre-moi les portes de Ta miséricorde.",s:"Muslim"},
+ {id:"am3",t:"En sortant de la mosquée",a:"اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ",p:"Allâhumma innî as'aluka min fadlik.",f:"Ô Allah, je Te demande de Ta grâce.",s:"Muslim"},
+ {id:"am4",t:"En entrant aux toilettes",a:"اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ",p:"Allâhumma innî a'ûdhu bika mina-l-khubuthi wa-l-khabâ'ith.",f:"Ô Allah, je cherche refuge auprès de Toi contre les démons mâles et femelles.",s:"Al-Bukhârî, Muslim"},
+ {id:"am5",t:"En sortant des toilettes",a:"غُفْرَانَكَ",p:"Ghufrânak.",f:"Je Te demande pardon.",s:"Abû Dâwud, At-Tirmidhî"}
+]},
+{c:"Pendant la prière",d:[
+ {id:"pp1",t:"Invocation d'ouverture",a:"سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَىٰ جَدُّكَ، وَلَا إِلَٰهَ غَيْرُكَ",p:"Subhânaka-llâhumma wa bi-hamdik, wa tabâraka-smuk, wa ta'âlâ jadduk, wa lâ ilâha ghayruk.",f:"Gloire et louange à Toi, ô Allah. Béni soit Ton nom, élevée soit Ta majesté. Nulle divinité en dehors de Toi.",s:"Abû Dâwud, At-Tirmidhî"},
+ {id:"pp2",t:"En inclinaison",n:3,a:"سُبْحَانَ رَبِّيَ الْعَظِيمِ",p:"Subhâna rabbiya-l-'azîm.",f:"Gloire à mon Seigneur, le Très Grand.",s:"Muslim"},
+ {id:"pp3",t:"En prosternation",n:3,a:"سُبْحَانَ رَبِّيَ الْأَعْلَىٰ",p:"Subhâna rabbiya-l-a'lâ.",f:"Gloire à mon Seigneur, le Très Haut.",s:"Muslim"},
+ {id:"pp4",t:"Entre les deux prosternations",a:"رَبِّ اغْفِرْ لِي، رَبِّ اغْفِرْ لِي",p:"Rabbi-ghfir lî, rabbi-ghfir lî.",f:"Seigneur, pardonne-moi. Seigneur, pardonne-moi.",s:"Abû Dâwud"},
+ {id:"pp5",t:"Avant le salut final",a:"اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، وَمِنْ عَذَابِ جَهَنَّمَ، وَمِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ، وَمِنْ شَرِّ فِتْنَةِ الْمَسِيحِ الدَّجَّالِ",p:"Allâhumma innî a'ûdhu bika min 'adhâbi-l-qabr, wa min 'adhâbi jahannam, wa min fitnati-l-mahyâ wa-l-mamât, wa min sharri fitnati-l-masîhi-d-dajjâl.",f:"Ô Allah, je cherche refuge auprès de Toi contre le châtiment de la tombe, contre le châtiment de l'Enfer, contre l'épreuve de la vie et de la mort, et contre le mal de l'épreuve du faux messie.",s:"Muslim"},
+ {id:"pp6",t:"Après la prière : demande de pardon",n:3,a:"أَسْتَغْفِرُ اللَّهَ",p:"Astaghfiru-llâh.",f:"Je demande pardon à Allah.",s:"Muslim"},
+ {id:"pp7",t:"Après la prière : la paix",a:"اللَّهُمَّ أَنْتَ السَّلَامُ، وَمِنْكَ السَّلَامُ، تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ",p:"Allâhumma anta-s-salâm, wa minka-s-salâm, tabârakta yâ dha-l-jalâli wa-l-ikrâm.",f:"Ô Allah, Tu es la Paix et la paix vient de Toi. Béni sois-Tu, ô Détenteur de la majesté et de la générosité.",s:"Muslim"},
+ {id:"pp8",t:"Aide pour le rappel et l'adoration",a:"اللَّهُمَّ أَعِنِّي عَلَىٰ ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ",p:"Allâhumma a'innî 'alâ dhikrika wa shukrika wa husni 'ibâdatik.",f:"Ô Allah, aide-moi à T'évoquer, à Te remercier et à T'adorer de la meilleure manière.",s:"Abû Dâwud"}
+]},
+{c:"Repas et jeûne",d:[
+ {id:"rj1",t:"Avant de manger",a:"بِسْمِ اللَّهِ",p:"Bismillâh.",f:"Au nom d'Allah.",s:"Abû Dâwud, At-Tirmidhî"},
+ {id:"rj2",t:"Si l'on a oublié au début",a:"بِسْمِ اللَّهِ فِي أَوَّلِهِ وَآخِرِهِ",p:"Bismillâhi fî awwalihi wa âkhirih.",f:"Au nom d'Allah, au début et à la fin.",s:"Abû Dâwud, At-Tirmidhî"},
+ {id:"rj3",t:"Après le repas",a:"الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَٰذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ",p:"Al-hamdu lillâhi-lladhî at'amanî hâdhâ wa razaqanîhi min ghayri hawlin minnî wa lâ quwwah.",f:"Louange à Allah qui m'a nourri de ceci et me l'a accordé sans force ni puissance de ma part.",s:"Abû Dâwud, At-Tirmidhî"},
+ {id:"rj4",t:"À la rupture du jeûne",a:"ذَهَبَ الظَّمَأُ، وَابْتَلَّتِ الْعُرُوقُ، وَثَبَتَ الْأَجْرُ إِنْ شَاءَ اللَّهُ",p:"Dhahaba-z-zama', wa-btallati-l-'urûq, wa thabata-l-ajru in shâ'a-llâh.",f:"La soif est partie, les veines sont abreuvées et la récompense est acquise, si Allah le veut.",s:"Abû Dâwud"}
+]},
+{c:"Maison et voyage",d:[
+ {id:"mv1",t:"En sortant de chez soi",a:"بِسْمِ اللَّهِ، تَوَكَّلْتُ عَلَى اللَّهِ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",p:"Bismillâh, tawakkaltu 'ala-llâh, wa lâ hawla wa lâ quwwata illâ billâh.",f:"Au nom d'Allah. Je place ma confiance en Allah. Il n'y a de force ni de puissance que par Allah.",s:"Abû Dâwud, At-Tirmidhî"},
+ {id:"mv2",t:"En montant dans un véhicule",q:[43,13,14]}
+]},
+{c:"Épreuves et protection",d:[
+ {id:"ep1",t:"Contre le souci et la tristesse",a:"اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَالْعَجْزِ وَالْكَسَلِ، وَالْبُخْلِ وَالْجُبْنِ، وَضَلَعِ الدَّيْنِ، وَغَلَبَةِ الرِّجَالِ",p:"Allâhumma innî a'ûdhu bika mina-l-hammi wa-l-hazan, wa-l-'ajzi wa-l-kasal, wa-l-bukhli wa-l-jubn, wa dala'i-d-dayn, wa ghalabati-r-rijâl.",f:"Ô Allah, je cherche refuge auprès de Toi contre le souci et la tristesse, contre l'incapacité et la paresse, contre l'avarice et la lâcheté, contre le poids de la dette et la domination des hommes.",s:"Al-Bukhârî"},
+ {id:"ep2",t:"Invocation de Yûnus",a:"لَا إِلَٰهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ",p:"Lâ ilâha illâ anta, subhânaka, innî kuntu mina-z-zâlimîn.",f:"Nulle divinité sauf Toi. Gloire à Toi. J'étais vraiment du nombre des injustes.",s:"Coran 21:87"},
+ {id:"ep3",t:"Allah nous suffit",a:"حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ",p:"Hasbuna-llâhu wa ni'ma-l-wakîl.",f:"Allah nous suffit, et quel excellent Garant.",s:"Coran 3:173"},
+ {id:"ep4",t:"Lors d'un malheur",a:"إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ، اللَّهُمَّ أْجُرْنِي فِي مُصِيبَتِي وَأَخْلِفْ لِي خَيْرًا مِنْهَا",p:"Innâ lillâhi wa innâ ilayhi râji'ûn. Allâhumma'jurnî fî musîbatî wa akhlif lî khayran minhâ.",f:"Nous appartenons à Allah et c'est vers Lui que nous retournons. Ô Allah, récompense-moi dans mon malheur et accorde-moi en échange quelque chose de meilleur.",s:"Muslim"},
+ {id:"ep5",t:"Appel au secours",a:"يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ",p:"Yâ Hayyu yâ Qayyûm, bi-rahmatika astaghîth.",f:"Ô Vivant, ô Celui qui subsiste par Lui-même, c'est par Ta miséricorde que j'implore le secours.",s:"At-Tirmidhî"},
+ {id:"ep6",t:"En visitant un malade",a:"لَا بَأْسَ، طَهُورٌ إِنْ شَاءَ اللَّهُ",p:"Lâ ba's, tahûrun in shâ'a-llâh.",f:"Pas de mal, ce sera une purification, si Allah le veut.",s:"Al-Bukhârî"}
+]},
+{c:"Pardon et louange",d:[
+ {id:"pl1",t:"Demande de pardon de la Nuit du Destin",a:"اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",p:"Allâhumma innaka 'afuwwun tuhibbu-l-'afwa fa-'fu 'annî.",f:"Ô Allah, Tu es Celui qui pardonne et Tu aimes le pardon, alors pardonne-moi.",s:"At-Tirmidhî"},
+ {id:"pl2",t:"L'unicité",n:100,a:"لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",p:"Lâ ilâha illa-llâhu wahdahu lâ sharîka lah, lahu-l-mulku wa lahu-l-hamd, wa huwa 'alâ kulli shay'in qadîr.",f:"Nulle divinité sauf Allah, Seul, sans associé. À Lui la royauté, à Lui la louange, et Il est capable de toute chose.",s:"Al-Bukhârî, Muslim"},
+ {id:"pl3",t:"Deux paroles légères sur la langue",a:"سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحَانَ اللَّهِ الْعَظِيمِ",p:"Subhâna-llâhi wa bi-hamdih, subhâna-llâhi-l-'azîm.",f:"Gloire et louange à Allah. Gloire à Allah, le Très Grand.",s:"Al-Bukhârî, Muslim"},
+ {id:"pl4",t:"Un trésor du Paradis",a:"لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",p:"Lâ hawla wa lâ quwwata illâ billâh.",f:"Il n'y a de force ni de puissance que par Allah.",s:"Al-Bukhârî, Muslim"},
+ {id:"pl5",t:"Prière sur le Prophète",n:10,a:"اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَىٰ نَبِيِّنَا مُحَمَّدٍ",p:"Allâhumma salli wa sallim 'alâ nabiyyinâ Muhammad.",f:"Ô Allah, accorde Tes éloges et Ta paix à notre Prophète Muhammad.",s:"Sunna"}
+]},
+{c:"Invocations du Coran",d:[
+ {id:"ic1",t:"Le bien ici-bas et dans l'au-delà",q:[2,201,201]},
+ {id:"ic2",t:"Ne nous charge pas au-delà de nos forces",q:[2,286,286]},
+ {id:"ic3",t:"Ne fais pas dévier nos cœurs",q:[3,8,8]},
+ {id:"ic4",t:"Invocation d'Adam et Ève",q:[7,23,23]},
+ {id:"ic5",t:"Pour la prière et les parents",q:[14,40,41]},
+ {id:"ic6",t:"Ouvre-moi ma poitrine",q:[20,25,28]},
+ {id:"ic7",t:"Pardonne et fais miséricorde",q:[23,118,118]},
+ {id:"ic8",t:"Pour le conjoint et les enfants",q:[25,74,74]},
+ {id:"ic9",t:"Pour ceux qui nous ont précédés dans la foi",q:[59,10,10]}
+]}
+];
+
+const ALLD=DUAS.flatMap(c=>c.d.map(d=>Object.assign({cat:c.c},d)));
+const isFav=id=>S.duas.fav.includes(id);
+async function duaText(d){if(!d.q)return{a:d.a,p:d.p,f:d.f,s:d.s};
+  const v=(await loadSurah(d.q[0])).slice(d.q[1]-1,d.q[2]);
+  return{a:v.map(x=>x[0]).join(" ۝ "),p:v.map(x=>x[1]).filter(Boolean).join(" "),f:v.map(x=>x[2]).join(" "),
+    s:"Coran "+d.q[0]+":"+d.q[1]+(d.q[2]>d.q[1]?"-"+d.q[2]:"")+" ("+SURAHS[d.q[0]-1][0]+")"}}
+function duaCard(d){const c=el("div","card dua"),h=el("div","dh"),star=el("button","star",isFav(d.id)?"★":"☆");
+  star.setAttribute("aria-pressed",isFav(d.id)?"true":"false");star.setAttribute("aria-label","Favori");
+  star.onclick=()=>{const f=S.duas.fav,i=f.indexOf(d.id);if(i<0)f.push(d.id);else f.splice(i,1);save();
+    star.textContent=isFav(d.id)?"★":"☆";star.setAttribute("aria-pressed",isFav(d.id)?"true":"false")};
+  h.append(el("b",null,d.t),star);const body=el("div","verse"),foot=el("div","df"),src=el("span","note");
+  let txt=null;
+  const fill=()=>{body.textContent="";body.append(el("div","note","Chargement…"));
+    duaText(d).then(x=>{txt=x;body.textContent="";const a=el("div","a",x.a);a.lang="ar";body.append(a,el("div","p",x.p),el("div","f",x.f));src.textContent=x.s})
+      .catch(()=>{body.textContent="";body.append(el("div","note","Ce passage vient du Coran, dont le texte n'est pas encore sur l'appareil."));
+        const b=el("button","btn ghost","Installer le texte du Coran");b.onclick=()=>{location.hash="#coran"};body.append(b)})};
+  fill();
+  const right=el("span","rbar");
+  if(d.n>1){let k=0;const b=el("button","chip cnt num","0 / "+d.n);b.setAttribute("aria-label","Compter les répétitions");
+    b.onclick=()=>{k=k>=d.n?0:k+1;b.textContent=k+" / "+d.n;b.dataset.done=k>=d.n?"1":"0";if(k===d.n){try{navigator.vibrate&&navigator.vibrate(120)}catch(e){}}};right.append(b)}
+  const sh=el("button","chip","Partager");
+  sh.onclick=async()=>{if(!txt)return;const t=d.t+"\n\n"+txt.a+"\n\n"+txt.p+"\n\n"+txt.f+"\n("+txt.s+")";
+    try{if(navigator.share){await navigator.share({title:d.t,text:t});return}}catch(e){if(e&&e.name==="AbortError")return}
+    try{await navigator.clipboard.writeText(t);sh.textContent="Copié";setTimeout(()=>{sh.textContent="Partager"},1500)}catch(e){sh.textContent="Copie impossible"}};
+  right.append(sh);foot.append(src,right);c.append(h,body,foot);return c}
+let dCat=-1,dFav=false;
+function renderDuas(){applyShow();
+  const home=$("d-home"),cat=$("d-cat");$("d-back").hidden=dCat<0;home.hidden=dCat>=0;cat.hidden=dCat<0;
+  if(dCat>=0){const c=DUAS[dCat];$("d-title").textContent=c.c;const L=$("d-list");L.textContent="";c.d.forEach(d=>L.append(duaCard(d)));return}
+  const norm=x=>x.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f'’-]/g,""),q=norm($("d-search").value.trim());
+  const T=$("d-today"),C=$("d-cats"),Rz=$("d-results");T.textContent="";C.textContent="";Rz.textContent="";
+  $("d-favs").setAttribute("aria-pressed",dFav?"true":"false");
+  if(q||dFav){C.hidden=true;
+    const hits=ALLD.filter(d=>(!dFav||isFav(d.id))&&(!q||norm(d.t+" "+d.cat+" "+(d.f||"")+" "+(d.p||"")).includes(q)));
+    if(!hits.length)Rz.append(el("div","note",dFav&&!q?"Aucun favori pour l'instant. Touchez l'étoile d'une invocation pour l'ajouter.":"Aucune invocation ne correspond."));
+    hits.forEach(d=>Rz.append(duaCard(d)));return}
+  C.hidden=false;
+  const now=new Date(),doy=Math.floor((now-new Date(now.getFullYear(),0,0))/864e5);
+  T.append(el("div","label","Invocation du jour"),duaCard(ALLD[doy%ALLD.length]));
+  DUAS.forEach((c,i)=>{const b=el("button","sitem"),mid=el("span","mid");mid.append(el("b",null,c.c),el("span",null,c.d.length+" invocations"));
+    b.append(mid,el("span","no","→"));b.onclick=()=>{dCat=i;renderDuas();$("main").scrollTop=0};C.append(b)})}
+$("d-search").oninput=renderDuas;
+$("d-favs").onclick=()=>{dFav=!dFav;renderDuas()};
+$("d-back").onclick=()=>{dCat=-1;renderDuas()};
 
 /* ---------- Tasbih ---------- */
 function renderTasbih(){const t=S.tasbih,p=PHRASES[t.phrase]||PHRASES[0];
@@ -544,12 +737,12 @@ $("wipe").onclick=()=>{const b=$("wipe");if(!armed){armed=1;b.textContent="Confi
   armed=0;S=DEF();save();try{indexedDB.deleteDatabase("carnet-coran")}catch(e){}b.textContent="Effacer toutes mes données";renderData();renderHead();say("Données effacées.")};
 
 /* ---------- routing ---------- */
-const VIEWS=["prieres","qibla","coran","tasbih","donnees"];
+const VIEWS=["prieres","qibla","coran","duas","tasbih","donnees"];
 function route(){let h=location.hash.slice(1);if(!VIEWS.includes(h))h="prieres";
   VIEWS.forEach(v=>$("v-"+v).classList.toggle("on",v===h));
   document.querySelectorAll("#nav a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+h));
   if(h==="prieres"){sel=today();renderPrayers()}else{sel=today();renderHead()}
-  if(h==="qibla")renderQibla();if(h==="coran"&&$("q-read").hidden)renderList();if(h==="tasbih")renderTasbih();if(h==="donnees")renderData();
+  if(h==="qibla")renderQibla();if(h==="coran"&&$("q-read").hidden)renderList();if(h==="duas")renderDuas();if(h==="tasbih")renderTasbih();if(h==="donnees")renderData();
   $("main").scrollTop=0}
 window.addEventListener("hashchange",route);route();
 let lastDay=keyOf(today());
