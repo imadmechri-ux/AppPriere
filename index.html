@@ -148,6 +148,8 @@ nav a.on svg{background:var(--accent-soft)}
 .w.m{color:transparent;background:var(--line);cursor:default}
 .verse.cur{background:var(--accent-soft);box-shadow:-8px 0 0 var(--accent-soft),8px 0 0 var(--accent-soft);border-radius:4px}
 .p.veil{display:none}
+.w.ok{color:var(--accent)}
+.w.ko{color:var(--danger);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px}
 .bar{height:8px;border-radius:4px;background:var(--line);overflow:hidden}
 .bar i{display:block;height:100%;background:var(--gold)}
 #sess{align-items:flex-start}
@@ -611,6 +613,33 @@ const lvl=e=>["À revoir","Hésitant","Su"][e.r]+" · révision "+dueTxt(e);
 function rate(s,v,r){const k=s+":"+v,e=S.learn.v[k]||{i:0,first:keyOf(today())};
   e.i=r===2?(e.i?Math.min(60,e.i*2):1):r===1?1:0;e.r=r;e.d=keyOf(today());e.due=keyOf(addDays(today(),e.i));S.learn.v[k]=e;save()}
 const rangeTxt=a=>a.length>1&&a[a.length-1]-a[0]===a.length-1?a[0]+" à "+a[a.length-1]:a.join(", ");
+/* Reconnaissance vocale (essai) : compare les mots entendus au verset, sans juger la prononciation. */
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition;let rec=null;
+const nrm=w=>w.replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u0640]/g,"").replace(/[أإآٱا]/g,"").replace(/[ىئ]/g,"ي").replace(/ؤ/g,"و").replace(/ة/g,"ه").replace(/ء/g,"").replace(/[^\u0621-\u064A]/g,"");
+function lev(a,b){const m=a.length,n=b.length,d=[];for(let i=0;i<=m;i++){d[i]=[i];for(let j=1;j<=n;j++)d[i][j]=i?Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1)):j}return d[m][n]}
+const same=(a,b)=>!!a&&!!b&&lev(a,b)<=Math.floor(Math.max(a.length,b.length)*.34);
+function compare(tokens,heard){const E=tokens.map(nrm),H=heard.split(/\s+/).map(nrm).filter(Boolean),m=E.length,n=H.length,dp=[],bk=[];
+  for(let i=0;i<=m;i++){dp[i]=[];bk[i]=[];for(let j=0;j<=n;j++){if(!i&&!j){dp[i][j]=0;continue}let best=1e9,mv="";
+    const tryMv=(c,k)=>{if(c<best){best=c;mv=k}};
+    if(i&&j)tryMv(dp[i-1][j-1]+(same(E[i-1],H[j-1])?0:1.2),same(E[i-1],H[j-1])?"M":"S");
+    if(i)tryMv(dp[i-1][j]+1,"D");if(j)tryMv(dp[i][j-1]+.5,"I");
+    if(i&&j>1&&same(E[i-1],H[j-2]+H[j-1]))tryMv(dp[i-1][j-2],"H");
+    if(i>1&&j&&same(E[i-2]+E[i-1],H[j-1]))tryMv(dp[i-2][j-1],"E");
+    dp[i][j]=best;bk[i][j]=mv}}
+  const marks=new Array(m).fill(0);let i=m,j=n;while(i||j){const k=bk[i][j];
+    if(k==="M"){marks[i-1]=1;i--;j--}else if(k==="S"){i--;j--}else if(k==="D")i--;else if(k==="I")j--;else if(k==="H"){marks[i-1]=1;i--;j-=2}else{marks[i-1]=marks[i-2]=1;i-=2;j--}}
+  return{marks,n:m,ok:marks.reduce((a,b)=>a+b,0),bad:tokens.filter((t,q)=>!marks[q])}}
+function listen(text,btn,fb,reveal){if(rec){try{rec.stop()}catch(e){}return}
+  lrnStop();let heard="",failed=false;const r=rec=new SR(),idle=()=>{rec=null;btn.textContent="Réciter au micro";btn.setAttribute("aria-pressed","false")};
+  r.lang="ar-SA";r.interimResults=true;r.continuous=true;r.maxAlternatives=1;
+  btn.textContent="J'écoute… touchez pour terminer";btn.setAttribute("aria-pressed","true");fb.textContent="Récitez le verset, puis touchez le bouton.";
+  r.onresult=e=>{let t="";for(let q=0;q<e.results.length;q++)t+=e.results[q][0].transcript+" ";heard=t.trim();fb.textContent="Entendu : "+heard};
+  r.onerror=e=>{if(e.error==="aborted"||(e.error==="no-speech"&&heard))return;failed=true;idle();
+    fb.textContent=e.error==="not-allowed"||e.error==="service-not-allowed"?"Micro refusé. Autorisez le micro et la dictée pour cette appli dans les réglages du téléphone, puis réessayez.":e.error==="network"?"La reconnaissance vocale a besoin d'une connexion internet.":e.error==="no-speech"?"Rien entendu. Réessayez plus près du micro.":"Reconnaissance vocale indisponible ici ("+e.error+"). Utilisez Dévoiler pour vous corriger."};
+  r.onend=()=>{if(failed)return;idle();if(!heard){fb.textContent="Rien entendu. Réessayez, ou utilisez Dévoiler.";return}
+    const res=compare(toks(text),heard);reveal(res.marks);
+    fb.textContent=res.ok+" mots reconnus sur "+res.n+". "+(res.bad.length?"À revoir : "+res.bad.join(" ، ")+". ":"Tout y est. ")+"Entendu : "+heard};
+  try{r.start()}catch(e){idle();fb.textContent="Impossible de démarrer le micro."}}
 function sessCheck(){const B=$("sess");if(!rFilter||rMode!=="reciter"){B.hidden=true;return}
   const k=keyOf(today()),done=rFilter.every(v=>{const e=S.learn.v[cur+":"+v];return e&&e.d===k});B.hidden=!done;B.textContent="";
   if(done){B.append(el("b",null,"Session terminée"));const b=el("button","btn","Retour au parcours");b.onclick=()=>$("back").click();B.append(b)}}
@@ -627,7 +656,7 @@ function drawLrn(){const B=$("lrn");B.hidden=rMode==="lire";B.textContent="";if(
       chips("Répéter chaque verset",[["1",1],["3",3],["5",5],["10",10]],()=>S.learn.rep,v=>{S.learn.rep=v}),
       el("div","note","Le mot récité s'allume. Touchez un mot pour reprendre l'écoute à cet endroit."))}
   else B.append(chips("Masquage",[["Tout","all"],["1 mot sur 2","half"],["Sauf le 1er mot","first"]],()=>S.learn.mask,v=>{S.learn.mask=v},true),
-    el("div","note","Récitez le verset de mémoire, puis dévoilez-le et notez-vous. La note fixe la prochaine révision."));
+    el("div","note",SR?"Récitez de mémoire. « Réciter au micro » écoute et signale les mots manquants ou différents (essai, connexion requise, ne juge pas la prononciation). « Dévoiler » vous laisse vous corriger seul. La note fixe la prochaine révision.":"Récitez le verset de mémoire, puis dévoilez-le et notez-vous. La reconnaissance vocale n'est pas disponible sur ce navigateur. La note fixe la prochaine révision."));
   const st=el("span","note");st.id="l-st";const dlb=el("button","chip","Enregistrer l'audio de ces versets"),r2=el("div","line");
   dlb.onclick=async()=>{const a=shown();let ok=0;for(let i=0;i<a.length;i++){st.textContent="Téléchargement… "+(i+1)+" sur "+a.length;if(await savePart(eaPart(cur,a[i])))ok++}
     st.textContent=ok===a.length?"Audio enregistré sur l'appareil.":ok+" sur "+a.length+" enregistrés."};
@@ -646,10 +675,12 @@ function drawVerses(){const n=cur,d=mem[n],V=$("verses");if(!d)return;V.textCont
       else{const e=S.learn.v[n+":"+vn],stt=el("span","note",e?lvl(e):"Nouveau");h.append(stt);
         a.querySelectorAll(".w").forEach((sp,j)=>sp.classList.toggle("m",S.learn.mask==="all"||(S.learn.mask==="half"&&j%2===1)||(S.learn.mask==="first"&&j>0)));p.classList.add("veil");
         const bar=el("div","rbar"),hear=el("button","chip","Écouter"),rev=el("button","chip","Dévoiler");hear.onclick=()=>{L.rep=0;playVerse(vn,true)};
-        rev.onclick=()=>{a.querySelectorAll(".w").forEach(sp=>sp.classList.remove("m"));p.classList.remove("veil");bar.textContent="";bar.append(hear);
+        const fb=el("div","note"),reveal=marks=>{a.querySelectorAll(".w").forEach((sp,j)=>{sp.classList.remove("m","ok","ko");if(marks)sp.classList.add(marks[j]?"ok":"ko")});p.classList.remove("veil");bar.textContent="";bar.append(hear);
           [["Su",2],["Hésitant",1],["À revoir",0]].forEach(([t,r])=>{const b=el("button","chip",t);b.onclick=()=>{rate(n,vn,r);stt.textContent=lvl(S.learn.v[n+":"+vn]);
             bar.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",c===b?"true":"false"));sessCheck()};bar.append(b)})};
-        bar.append(hear,rev);w.append(h,a,p,f,bar)}}
+        rev.onclick=()=>reveal(null);bar.append(hear);
+        if(SR){const mic=el("button","chip","Réciter au micro");mic.onclick=()=>listen(x[0],mic,fb,reveal);bar.append(mic)}
+        bar.append(rev);w.append(h,a,p,f,fb,bar)}}
     V.append(w)})}
 document.querySelectorAll("[data-mode]").forEach(b=>b.onclick=()=>{rMode=b.dataset.mode;if(rMode==="lire")rFilter=null;drawVerses()});
 function dueBySurah(){const k=keyOf(today()),o={};for(const id in S.learn.v){const e=S.learn.v[id];if(e.due<=k){const p=id.split(":");(o[+p[0]]=o[+p[0]]||[]).push(+p[1])}}for(const s in o)o[s].sort((a,b)=>a-b);return o}
