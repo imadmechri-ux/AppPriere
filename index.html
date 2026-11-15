@@ -149,6 +149,17 @@ nav a.on{color:var(--accent);font-weight:600}
 .dua .verse{border:0;padding:4px 0 0}
 .dua .df{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px}
 .dua .cnt[data-done="1"]{background:var(--gold);border-color:var(--gold);color:var(--surface)}
+.dua .player,.dcount{margin-top:6px;padding-top:10px;border-top:1px solid var(--line)}
+.dcount{display:flex;align-items:center;gap:16px}
+.dring{position:relative;width:64px;height:64px;margin:6px;border-radius:50%;border:0;background:var(--accent);color:var(--accent-ink);flex:none;padding:0;touch-action:manipulation;user-select:none;-webkit-user-select:none}
+.dring:active{transform:scale(.95)}
+.dring svg{position:absolute;inset:-7px;width:78px;height:78px;transform:rotate(-90deg)}
+.dring .c{position:relative;font-family:var(--f-display);font-weight:700;font-size:24px}
+.dcount .di{flex:1;display:flex;flex-direction:column;gap:2px}
+.dcount[data-done="1"] .dring{background:var(--gold)}
+.feat{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;text-align:left;border:0;border-radius:18px;padding:16px;background:var(--accent);color:var(--accent-ink)}
+.feat b{display:block;font-family:var(--f-display);font-size:24px;line-height:1.15}
+.feat span{font-size:14px;opacity:.9}
 .hide-ar .a,.hide-ph .p,.hide-fr .f{display:none}
 
 /* Tasbih */
@@ -273,12 +284,14 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
     <div id="d-home" class="stack">
       <input class="search" id="d-search" type="search" placeholder="Chercher une invocation" aria-label="Chercher une invocation">
       <div class="rbar"><button class="chip" id="d-favs" aria-pressed="false">★ Mes favoris</button></div>
-      <div id="d-today" class="stack"></div>
+      <div id="d-feat"></div>
       <div class="card slist" id="d-cats"></div>
+      <div id="d-today" class="stack"></div>
       <div id="d-results" class="stack"></div>
     </div>
     <div id="d-cat" class="stack" hidden>
-      <h2 id="d-title" style="font-size:24px"></h2>
+      <div><h2 id="d-title" style="font-size:24px"></h2><div class="note" id="d-prog"></div></div>
+      <div id="d-audio" class="stack"></div>
       <div id="d-list" class="stack"></div>
     </div>
   </section>
@@ -316,6 +329,11 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
       <div class="note">Les heures s'affichent dans le fuseau horaire de cet appareil.</div>
     </div>
     <div class="card stack">
+      <h2 style="font-size:18px">Rappels</h2>
+      <div class="note">Une page web ne peut pas envoyer de notification quand elle est fermée. Les rappels passent donc par le calendrier du téléphone, qui sonne même hors ligne : chaque jour à l'heure du Fajr (calculée pour votre ville, sur un an) et chaque soir à 23 h.</div>
+      <button class="btn" id="ics">Ajouter les rappels à mon calendrier</button>
+    </div>
+    <div class="card stack">
       <h2 style="font-size:18px">Mes données</h2>
       <div class="note">Tout reste sur cet appareil, dans ce navigateur. Exportez régulièrement pour garder une copie.</div>
       <div class="btns">
@@ -330,7 +348,7 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
       <div id="msg" role="status"></div>
       <button class="btn warn" id="wipe">Effacer toutes mes données</button>
     </div>
-    <div class="note">Récitation : Mishary Rashid al-Afasy (mp3quran.net). Texte du Coran : jeu de données libre quran-json (arabe othmani, phonétique Tanzil, traduction française de M. Hamidullah), gardé sur l'appareil une fois chargé.</div>
+    <div class="note">Récitation : Mishary Rashid al-Afasy (mp3quran.net, quran.com, archive.org). Texte du Coran : jeu de données libre quran-json (arabe othmani, phonétique Tanzil, traduction française de M. Hamidullah), gardé sur l'appareil une fois chargé.</div>
   </section>
 </main>
 
@@ -357,12 +375,12 @@ const TARGETS=[33,99,100,0];
 
 /* ---------- state ---------- */
 const DEF=()=>({v:1,loc:{name:"Sartrouville",lat:48.9372,lng:2.1594},method:"MF",asr:1,hadj:0,log:{},
-  tasbih:{count:0,target:33,phrase:0,total:0},quran:{s:0,v:0,ar:1,ph:1,fr:1,size:1},duas:{fav:[]}});
+  tasbih:{count:0,target:33,phrase:0,total:0},quran:{s:0,v:0,ar:1,ph:1,fr:1,size:1},duas:{fav:[],day:"",cnt:{}}});
 let S=DEF();
 function merge(d){const b=DEF();if(!d||typeof d!=="object")return b;
   for(const k of Object.keys(b)){if(d[k]==null)continue;
     if(typeof b[k]==="object"&&k!=="log")b[k]=Object.assign(b[k],d[k]);else b[k]=d[k];}
-  if(!METHODS[b.method])b.method="MF";if(!Array.isArray(b.duas.fav))b.duas.fav=[];return b}
+  if(!METHODS[b.method])b.method="MF";if(!Array.isArray(b.duas.fav))b.duas.fav=[];if(!b.duas.cnt||typeof b.duas.cnt!=="object")b.duas.cnt={};return b}
 try{const r=localStorage.getItem(KEY);if(r)S=merge(JSON.parse(r))}catch(e){}
 let saveOK=true;
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));saveOK=true}catch(e){saveOK=false}}
@@ -644,41 +662,74 @@ async function duaText(d){if(!d.q)return{a:d.a,p:d.p,f:d.f,s:d.s};
   const v=(await loadSurah(d.q[0])).slice(d.q[1]-1,d.q[2]);
   return{a:v.map(x=>x[0]).join(" ۝ "),p:v.map(x=>x[1]).filter(Boolean).join(" "),f:v.map(x=>x[2]).join(" "),
     s:"Coran "+d.q[0]+":"+d.q[1]+(d.q[2]>d.q[1]?"-"+d.q[2]:"")+" ("+SURAHS[d.q[0]-1][0]+")"}}
-function duaCard(d){const c=el("div","card dua"),h=el("div","dh"),star=el("button","star",isFav(d.id)?"★":"☆");
+DUAS[0].au=[["Invocations du matin","03"],["Invocations du soir","04"]];DUAS[1].au=[["Au réveil","01"],["Avant de dormir","11"]];
+const TRK=n=>"https://archive.org/download/makkah-live.-net-athkar-01/MakkahLive.Net_athkar_"+n+".mp3";
+const ayParts=q=>{const o=[];for(let v=q[1];v<=q[2];v++){const k=String(q[0]).padStart(3,"0")+String(v).padStart(3,"0");
+  o.push({key:"ay"+k,urls:["https://verses.quran.com/Alafasy/mp3/"+k+".mp3","https://everyayah.com/data/Alafasy_128kbps/"+k+".mp3"]})}return o};
+/* Small player: plays its parts in order, each from the device if saved, else online. */
+function audioBox(label,parts){const box=el("div","player"),a=el("audio"),st=el("span","note"),bt=el("button","chip","Garder hors ligne"),l1=el("div","line"),l2=el("div","line");
+  a.controls=true;a.preload="none";l1.append(el("span","label",label));l2.append(st,bt);box.append(l1,a,l2);
+  let i=0,u=0,local=false,url=null,want=false,busy=false,saved=false;
+  const load=async(play)=>{if(url){URL.revokeObjectURL(url);url=null}u=0;const blob=await dbGet("a",parts[i].key);
+    if(blob){local=true;url=URL.createObjectURL(blob);a.src=url}else{local=false;a.src=parts[i].urls[0]}if(play)a.play().catch(()=>{})};
+  const state=async()=>{let n=0;for(const p of parts)if(await dbGet("a",p.key))n++;saved=n===parts.length;
+    st.textContent=saved?"Enregistré sur l'appareil":"Lecture en ligne";bt.textContent=saved?"Supprimer de l'appareil":"Garder hors ligne"};
+  a.addEventListener("play",()=>{want=true;document.querySelectorAll("audio").forEach(x=>{if(x!==a)x.pause()})});
+  a.addEventListener("pause",()=>{if(!a.ended)want=false});
+  a.addEventListener("error",()=>{if(local)return;if(u<parts[i].urls.length-1){u++;a.src=parts[i].urls[u];if(want)a.play().catch(()=>{})}
+    else st.textContent="Audio indisponible. Vérifiez la connexion."});
+  a.addEventListener("ended",()=>{if(i<parts.length-1){i++;load(true)}else if(parts.length>1){i=0;load(false)}});
+  bt.onclick=async()=>{if(busy)return;if(saved){for(const p of parts)await dbDel("a",p.key);await state();load(false);return}
+    busy=true;let ok=true,k=0;for(const p of parts){k++;if(await dbGet("a",p.key))continue;let got=false;st.textContent="Téléchargement… "+k+" sur "+parts.length;
+      for(const src of p.urls){try{const r=await fetch(src);if(!r.ok)throw 0;const b=await r.blob();if(b.size<2000)throw 0;await dbPut("a",p.key,b);got=true;break}catch(e){}}
+      if(!got){ok=false;break}}
+    busy=false;await state();if(!ok)st.textContent="Enregistrement impossible (connexion coupée ou serveur qui le refuse). L'écoute en ligne reste possible.";else if(a.paused)load(false)};
+  load(false);state();return box}
+function dCnt(){const k=keyOf(today());if(S.duas.day!==k){S.duas.day=k;S.duas.cnt={}}return S.duas.cnt}
+const dDone=d=>(dCnt()[d.id]||0)>=(d.n||1);
+function counter(d,changed){const n=d.n||1,w=el("div","dcount"),b=el("button","dring"),num=el("span","c num"),di=el("div","di"),lab=el("b"),sub=el("span","note","Recommandé : "+n+" fois"),rs=el("button","chip","Zéro");
+  b.innerHTML='<svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="none" stroke="var(--line)" stroke-width="6"/><circle class="rg" cx="50" cy="50" r="44" fill="none" stroke="var(--gold)" stroke-width="6" stroke-linecap="round" stroke-dasharray="276.5" stroke-dashoffset="276.5"/></svg>';
+  b.append(num);b.setAttribute("aria-label","Compter une récitation");rs.setAttribute("aria-label","Remettre le compteur à zéro");di.append(lab,sub);w.append(b,di,rs);
+  const paint=()=>{const k=dCnt()[d.id]||0,done=k>=n;num.textContent=done?"✓":k;lab.textContent=done?"Fait aujourd'hui":k+" sur "+n;
+    b.querySelector(".rg").setAttribute("stroke-dashoffset",(276.5*(1-Math.min(1,k/n))).toFixed(1));w.dataset.done=done?"1":"0"};
+  b.onclick=()=>{const c=dCnt();let k=c[d.id]||0;k=k>=n?1:k+1;c[d.id]=k;if(k===n){try{navigator.vibrate&&navigator.vibrate(200)}catch(e){}}save();paint();changed&&changed()};
+  rs.onclick=()=>{delete dCnt()[d.id];save();paint();changed&&changed()};paint();return w}
+function duaCard(d,changed){const c=el("div","card dua"),h=el("div","dh"),star=el("button","star",isFav(d.id)?"★":"☆");
   star.setAttribute("aria-pressed",isFav(d.id)?"true":"false");star.setAttribute("aria-label","Favori");
   star.onclick=()=>{const f=S.duas.fav,i=f.indexOf(d.id);if(i<0)f.push(d.id);else f.splice(i,1);save();
     star.textContent=isFav(d.id)?"★":"☆";star.setAttribute("aria-pressed",isFav(d.id)?"true":"false")};
   h.append(el("b",null,d.t),star);const body=el("div","verse"),foot=el("div","df"),src=el("span","note");
-  let txt=null;
-  const fill=()=>{body.textContent="";body.append(el("div","note","Chargement…"));
-    duaText(d).then(x=>{txt=x;body.textContent="";const a=el("div","a",x.a);a.lang="ar";body.append(a,el("div","p",x.p),el("div","f",x.f));src.textContent=x.s})
-      .catch(()=>{body.textContent="";body.append(el("div","note","Ce passage vient du Coran, dont le texte n'est pas encore sur l'appareil."));
-        const b=el("button","btn ghost","Installer le texte du Coran");b.onclick=()=>{location.hash="#coran"};body.append(b)})};
-  fill();
-  const right=el("span","rbar");
-  if(d.n>1){let k=0;const b=el("button","chip cnt num","0 / "+d.n);b.setAttribute("aria-label","Compter les répétitions");
-    b.onclick=()=>{k=k>=d.n?0:k+1;b.textContent=k+" / "+d.n;b.dataset.done=k>=d.n?"1":"0";if(k===d.n){try{navigator.vibrate&&navigator.vibrate(120)}catch(e){}}};right.append(b)}
+  let txt=null;body.append(el("div","note","Chargement…"));
+  duaText(d).then(x=>{txt=x;body.textContent="";const a=el("div","a",x.a);a.lang="ar";body.append(a,el("div","p",x.p),el("div","f",x.f));src.textContent=x.s})
+    .catch(()=>{body.textContent="";body.append(el("div","note","Ce passage vient du Coran, dont le texte n'est pas encore sur l'appareil."));
+      const b=el("button","btn ghost","Installer le texte du Coran");b.onclick=()=>{location.hash="#coran"};body.append(b)});
   const sh=el("button","chip","Partager");
   sh.onclick=async()=>{if(!txt)return;const t=d.t+"\n\n"+txt.a+"\n\n"+txt.p+"\n\n"+txt.f+"\n("+txt.s+")";
     try{if(navigator.share){await navigator.share({title:d.t,text:t});return}}catch(e){if(e&&e.name==="AbortError")return}
     try{await navigator.clipboard.writeText(t);sh.textContent="Copié";setTimeout(()=>{sh.textContent="Partager"},1500)}catch(e){sh.textContent="Copie impossible"}};
-  right.append(sh);foot.append(src,right);c.append(h,body,foot);return c}
+  foot.append(src,sh);c.append(h,body,foot);
+  if(d.q)c.append(audioBox("Récitation · Mishary Rashid al-Afasy",ayParts(d.q)));
+  c.append(counter(d,changed));return c}
 let dCat=-1,dFav=false;
-function renderDuas(){applyShow();
+const progTxt=c=>c.d.filter(dDone).length+" sur "+c.d.length+" faites aujourd'hui";
+function renderDuas(){applyShow();document.querySelectorAll("#v-duas audio").forEach(x=>x.pause());
   const home=$("d-home"),cat=$("d-cat");$("d-back").hidden=dCat<0;home.hidden=dCat>=0;cat.hidden=dCat<0;
-  if(dCat>=0){const c=DUAS[dCat];$("d-title").textContent=c.c;const L=$("d-list");L.textContent="";c.d.forEach(d=>L.append(duaCard(d)));return}
-  const norm=x=>x.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f'’-]/g,""),q=norm($("d-search").value.trim());
-  const T=$("d-today"),C=$("d-cats"),Rz=$("d-results");T.textContent="";C.textContent="";Rz.textContent="";
+  if(dCat>=0){const c=DUAS[dCat],prog=()=>{$("d-prog").textContent=progTxt(c)};$("d-title").textContent=c.c;prog();
+    const A=$("d-audio");A.textContent="";(c.au||[]).forEach(x=>{const k=el("div","card");k.append(audioBox(x[0]+" · Mishary Rashid al-Afasy",[{key:"trk"+x[1],urls:[TRK(x[1])]}]));A.append(k)});
+    const L=$("d-list");L.textContent="";c.d.forEach(d=>L.append(duaCard(d,prog)));return}
+  const norm=x=>x.toLowerCase().normalize("NFD").replace(/[̀-ͯ'’-]/g,""),q=norm($("d-search").value.trim());
+  const F=$("d-feat"),T_=$("d-today"),C=$("d-cats"),Rz=$("d-results");F.textContent="";T_.textContent="";C.textContent="";Rz.textContent="";
   $("d-favs").setAttribute("aria-pressed",dFav?"true":"false");
   if(q||dFav){C.hidden=true;
     const hits=ALLD.filter(d=>(!dFav||isFav(d.id))&&(!q||norm(d.t+" "+d.cat+" "+(d.f||"")+" "+(d.p||"")).includes(q)));
     if(!hits.length)Rz.append(el("div","note",dFav&&!q?"Aucun favori pour l'instant. Touchez l'étoile d'une invocation pour l'ajouter.":"Aucune invocation ne correspond."));
     hits.forEach(d=>Rz.append(duaCard(d)));return}
-  C.hidden=false;
+  C.hidden=false;const open=i=>{dCat=i;renderDuas();$("main").scrollTop=0};
+  const fb=el("button","feat"),fl=el("span");fl.append(el("b",null,DUAS[0].c),el("span",null,progTxt(DUAS[0])+" · avec audio"));fb.append(fl,el("span",null,"→"));fb.onclick=()=>open(0);F.append(fb);
+  DUAS.forEach((c,i)=>{if(!i)return;const b=el("button","sitem"),mid=el("span","mid");mid.append(el("b",null,c.c),el("span",null,progTxt(c)));
+    b.append(mid,el("span","no","→"));b.onclick=()=>open(i);C.append(b)});
   const now=new Date(),doy=Math.floor((now-new Date(now.getFullYear(),0,0))/864e5);
-  T.append(el("div","label","Invocation du jour"),duaCard(ALLD[doy%ALLD.length]));
-  DUAS.forEach((c,i)=>{const b=el("button","sitem"),mid=el("span","mid");mid.append(el("b",null,c.c),el("span",null,c.d.length+" invocations"));
-    b.append(mid,el("span","no","→"));b.onclick=()=>{dCat=i;renderDuas();$("main").scrollTop=0};C.append(b)})}
+  T_.append(el("div","label","Invocation du jour"),duaCard(ALLD[doy%ALLD.length]))}
 $("d-search").oninput=renderDuas;
 $("d-favs").onclick=()=>{dFav=!dFav;renderDuas()};
 $("d-back").onclick=()=>{dCat=-1;renderDuas()};
@@ -719,10 +770,19 @@ $("hadj").onchange=e=>{S.hadj=+e.target.value;save();renderHead()};
 
 let dl=null;
 try{if(window.claude&&claude.use)claude.use("downloads").then(d=>{dl=d}).catch(()=>{})}catch(e){}
-async function deliver(filename,data){
+async function deliver(filename,data,mime){
   if(dl){try{await dl.save({filename,data});say("Fichier "+filename+" proposé au téléchargement.");return}catch(e){}}
+  if(!window.claude){try{const u=URL.createObjectURL(new Blob([data],{type:mime||"text/plain"})),a=el("a");a.href=u;a.download=filename;document.body.append(a);a.click();a.remove();
+    setTimeout(()=>URL.revokeObjectURL(u),6e4);say("Fichier "+filename+" téléchargé.");return}catch(e){}}
   $("outwrap").hidden=false;$("out").value=data;say("Téléchargement indisponible ici : copiez le texte ci-dessous.")}
 const stamp=()=>keyOf(today());
+$("ics").onclick=()=>{const z=d=>d.getUTCFullYear()+pad(d.getUTCMonth()+1)+pad(d.getUTCDate())+"T"+pad(d.getUTCHours())+pad(d.getUTCMinutes())+"00Z";
+  const app=location.href.split("#")[0]+"#duas",now=z(new Date()),t0=today(),L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Carnet de priere//FR","CALSCALE:GREGORIAN"];
+  const ev=(uid,start,sum,extra)=>L.push("BEGIN:VEVENT","UID:"+uid+"@carnet-priere","DTSTAMP:"+now,start,"DURATION:PT10M","SUMMARY:"+sum,"URL:"+app,...(extra||[]),
+    "BEGIN:VALARM","ACTION:DISPLAY","DESCRIPTION:"+sum,"TRIGGER:PT0S","END:VALARM","END:VEVENT");
+  for(let i=0;i<365;i++){const d=addDays(t0,i);ev("fajr-"+keyOf(d),"DTSTART:"+z(T(d).fajr),"Fajr · invocations du matin")}
+  ev("soir-23h","DTSTART:"+keyOf(t0).replace(/-/g,"")+"T230000","Invocations du soir",["RRULE:FREQ=DAILY"]);
+  L.push("END:VCALENDAR");deliver("rappels-carnet-priere.ics",L.join("\r\n"),"text/calendar")};
 $("exp-json").onclick=()=>deliver("carnet-priere-"+stamp()+".json",JSON.stringify(Object.assign({exported:new Date().toISOString()},S),null,1));
 $("exp-csv").onclick=()=>{const rows=["date;fajr;dhuhr;asr;maghrib;isha;jeune;tasbih"];
   Object.keys(S.log).sort().forEach(k=>{const e=S.log[k];rows.push([k,...e.p,e.f?1:0,e.t||0].join(";"))});
