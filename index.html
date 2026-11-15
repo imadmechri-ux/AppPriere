@@ -334,6 +334,15 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
       <div class="note">Les heures s'affichent dans le fuseau horaire de cet appareil.</div>
     </div>
     <div class="card stack">
+      <h2 style="font-size:18px">Apparence</h2>
+      <div class="rbar" id="themes">
+        <button class="chip" data-theme-set="auto">Automatique</button>
+        <button class="chip" data-theme-set="light">Clair</button>
+        <button class="chip" data-theme-set="dark">Sombre</button>
+      </div>
+      <div class="note">Automatique suit le réglage clair ou sombre du téléphone.</div>
+    </div>
+    <div class="card stack">
       <h2 style="font-size:18px">Rappels</h2>
       <div class="note">Une page web ne peut pas envoyer de notification quand elle est fermée. Les rappels passent donc par le calendrier du téléphone, qui sonne même hors ligne : chaque jour à l'heure du Fajr (calculée pour votre ville, sur un an) et chaque soir à 23 h.</div>
       <button class="btn" id="ics">Ajouter les rappels à mon calendrier</button>
@@ -379,7 +388,7 @@ const PHRASES=[["سُبْحَانَ ٱللَّٰه","Subhânallâh"],["ٱلْح�
 const TARGETS=[33,99,100,0];
 
 /* ---------- state ---------- */
-const DEF=()=>({v:1,loc:{name:"Sartrouville",lat:48.9372,lng:2.1594},method:"MF",asr:1,hadj:0,log:{},
+const DEF=()=>({v:1,theme:"auto",loc:{name:"Sartrouville",lat:48.9372,lng:2.1594},method:"MF",asr:1,hadj:0,log:{},
   tasbih:{count:0,target:33,phrase:0,total:0},quran:{s:0,v:0,ar:1,ph:1,fr:1,size:1},duas:{fav:[],day:"",cnt:{}}});
 let S=DEF();
 function merge(d){const b=DEF();if(!d||typeof d!=="object")return b;
@@ -388,6 +397,12 @@ function merge(d){const b=DEF();if(!d||typeof d!=="object")return b;
   if(!METHODS[b.method])b.method="MF";if(!Array.isArray(b.duas.fav))b.duas.fav=[];if(!b.duas.cnt||typeof b.duas.cnt!=="object")b.duas.cnt={};return b}
 try{const r=localStorage.getItem(KEY);if(r)S=merge(JSON.parse(r))}catch(e){}
 let saveOK=true;
+function applyTheme(){const t=S.theme==="light"||S.theme==="dark"?S.theme:"auto",r=document.documentElement;
+  if(t==="auto")r.removeAttribute("data-theme");else r.setAttribute("data-theme",t);
+  const dark=t==="dark"||(t==="auto"&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches),m=document.querySelector('meta[name="theme-color"]');
+  if(m)m.content=dark?"#0E1917":"#F2F5F1";
+  document.querySelectorAll("[data-theme-set]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.themeSet===t?"true":"false"))}
+applyTheme();
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));saveOK=true}catch(e){saveOK=false}}
 
 /* ---------- dates ---------- */
@@ -787,6 +802,7 @@ $("method").onchange=e=>{S.method=e.target.value;save()};
 $("asr").onchange=e=>{S.asr=+e.target.value;save()};
 $("hadj").onchange=e=>{S.hadj=+e.target.value;save();renderHead()};
 
+document.querySelectorAll("[data-theme-set]").forEach(b=>b.onclick=()=>{S.theme=b.dataset.themeSet;save();applyTheme()});
 let dl=null;
 try{if(window.claude&&claude.use)claude.use("downloads").then(d=>{dl=d}).catch(()=>{})}catch(e){}
 async function deliver(filename,data,mime){
@@ -807,13 +823,13 @@ $("exp-csv").onclick=()=>{const rows=["date;fajr;dhuhr;asr;maghrib;isha;jeune;ta
   Object.keys(S.log).sort().forEach(k=>{const e=S.log[k];rows.push([k,...e.p,e.f?1:0,e.t||0].join(";"))});
   deliver("rahim-journal-"+stamp()+".csv",rows.join("\n"))};
 $("copy").onclick=async()=>{try{await navigator.clipboard.writeText($("out").value);say("Copié.")}catch(e){$("out").select();say("Sélectionné : utilisez Copier dans le menu.")}};
-function doImport(txt){try{const d=JSON.parse(txt);if(!d||typeof d!=="object"||!d.log)throw 0;delete d.exported;S=merge(d);save();sel=today();renderData();renderHead();
+function doImport(txt){try{const d=JSON.parse(txt);if(!d||typeof d!=="object"||!d.log)throw 0;delete d.exported;S=merge(d);save();applyTheme();sel=today();renderData();renderHead();
   say("Sauvegarde importée : "+Object.keys(S.log).length+" jours de journal.")}catch(e){say("Ce contenu n'est pas une sauvegarde valide de Rahim.")}}
 $("imp-file").onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>doImport(String(r.result));r.readAsText(f)};
 $("imp-go").onclick=()=>doImport($("imp-txt").value);
 let armed=0;
 $("wipe").onclick=()=>{const b=$("wipe");if(!armed){armed=1;b.textContent="Confirmer : tout effacer définitivement";setTimeout(()=>{armed=0;b.textContent="Effacer toutes mes données"},5000);return}
-  armed=0;S=DEF();save();try{indexedDB.deleteDatabase("carnet-coran")}catch(e){}b.textContent="Effacer toutes mes données";renderData();renderHead();say("Données effacées.")};
+  armed=0;S=DEF();save();applyTheme();try{indexedDB.deleteDatabase("carnet-coran")}catch(e){}b.textContent="Effacer toutes mes données";renderData();renderHead();say("Données effacées.")};
 
 /* ---------- routing ---------- */
 const VIEWS=["prieres","qibla","coran","duas","tasbih","donnees"];
@@ -821,7 +837,7 @@ function route(){let h=location.hash.slice(1);if(!VIEWS.includes(h))h="prieres";
   VIEWS.forEach(v=>$("v-"+v).classList.toggle("on",v===h));
   document.querySelectorAll("#nav a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+h));
   if(h==="prieres"){sel=today();renderPrayers()}else{sel=today();renderHead()}
-  if(h==="qibla")renderQibla();if(h==="coran"&&$("q-read").hidden)renderList();if(h==="duas")renderDuas();if(h==="tasbih")renderTasbih();if(h==="donnees")renderData();
+  if(h==="qibla")renderQibla();if(h==="coran"&&$("q-read").hidden)renderList();if(h==="duas")renderDuas();if(h==="tasbih")renderTasbih();if(h==="donnees"){renderData();applyTheme()}
   $("main").scrollTop=0}
 window.addEventListener("hashchange",route);route();
 let lastDay=keyOf(today());
