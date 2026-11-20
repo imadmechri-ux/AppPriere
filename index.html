@@ -57,12 +57,25 @@ main{flex:1;overflow-y:auto;padding:4px 16px 20px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px}
 .label{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
 
-nav{display:flex;border-top:1px solid var(--line);background:var(--surface);padding:4px 4px calc(18px + env(safe-area-inset-bottom))}
-nav a{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 2px 10px;font-size:11px;
+nav{display:flex;border-top:1px solid var(--line);background:var(--surface);padding:4px 6px calc(14px + env(safe-area-inset-bottom))}
+nav a{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 2px 10px;font-size:13px;min-height:58px;
   font-weight:500;color:var(--muted);text-decoration:none}
-nav a svg{width:44px;height:30px;padding:4px 11px;box-sizing:border-box;border-radius:999px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+nav a svg{width:60px;height:32px;padding:4px 18px;box-sizing:border-box;border-radius:999px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 nav a.on{color:var(--accent);font-weight:700}
 nav a.on svg{background:var(--accent-soft)}
+#bbar{border-top:1px solid var(--line);background:var(--surface);padding:8px 12px 0}
+#bbar[hidden]{display:none}
+#bbar button{width:100%;max-width:560px;margin:0 auto;display:flex;align-items:center;gap:10px;min-height:50px;padding:0 18px;
+  border:0;border-radius:14px;background:var(--accent-soft);color:var(--accent);font-weight:700;font-size:16px;text-align:left}
+#bbar button svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+#back,#d-back,#k-back{display:none!important}
+#v-plus.on{min-height:100%;justify-content:flex-end}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{display:flex;flex-direction:column;justify-content:space-between;gap:14px;min-height:128px;padding:16px;border-radius:18px;
+  background:var(--surface);border:1px solid var(--line);color:var(--ink);text-decoration:none}
+.tile svg{width:34px;height:34px;stroke:var(--accent);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.tile b{display:block;font-family:var(--f-display);font-size:19px}
+.tile span{color:var(--muted);font-size:13px}
 .hscroll{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
 .hscroll::-webkit-scrollbar{display:none}
 .hscroll .chip{flex:none;white-space:nowrap}
@@ -403,16 +416,23 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
     </div>
     <div class="note">Récitation : Mishary Rashid al-Afasy (mp3quran.net, quran.com, archive.org). Invocations du matin et du soir : texte et audio du recueil Hisn al-Muslim (projet Adhkar-json, lecture de Hamad al-Duraihim). Hadiths : projet libre hadith-api (fawazahmed0). Tafsir : Al-Mukhtasar en français (projet tafsir_api). Minutage mot à mot : projet quran-align (CC BY 4.0), audio everyayah.com. Texte du Coran : jeu de données libre quran-json (arabe othmani, phonétique Tanzil, traduction française de M. Hamidullah), gardé sur l'appareil une fois chargé.</div>
   </section>
+  <section class="view" id="v-plus">
+    <h2 style="font-size:24px">Plus</h2>
+    <div class="tiles">
+      <a class="tile" href="#qibla"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><div><b>Qibla</b><span>Direction de la Kaaba</span></div></a>
+      <a class="tile" href="#tasbih"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="18" cy="9" r="2"/><circle cx="17" cy="16" r="2"/><circle cx="7" cy="16" r="2"/><circle cx="6" cy="9" r="2"/><path d="M12 19v3"/></svg><div><b>Tasbih</b><span>Compteur de dhikr</span></div></a>
+      <a class="tile" href="#savoir"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></svg><div><b>Savoir</b><span>Hadiths et thèmes</span></div></a>
+      <a class="tile" href="#donnees"><svg viewBox="0 0 24 24"><path d="M4 7c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3zM4 7v10c0 1.7 3.6 3 8 3s8-1.3 8-3V7M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg><div><b>Réglages</b><span>Ville, thème, rappels</span></div></a>
+    </div>
+  </section>
 </main>
 
+<div id="bbar" hidden><button type="button" id="bbtn"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg><span id="bbtn-t">Retour</span></button></div>
 <nav id="nav">
   <a href="#prieres"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Prières</a>
-  <a href="#qibla"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>Qibla</a>
   <a href="#coran"><svg viewBox="0 0 24 24"><path d="M12 6c-2-1.5-5-2-8-1.5v13c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5v-13c-3-.5-6 0-8 1.5zM12 6v13"/></svg>Coran</a>
   <a href="#duas"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg>Duas</a>
-  <a href="#savoir"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></svg>Savoir</a>
-  <a href="#tasbih"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="18" cy="9" r="2"/><circle cx="17" cy="16" r="2"/><circle cx="7" cy="16" r="2"/><circle cx="6" cy="9" r="2"/><path d="M12 19v3"/></svg>Tasbih</a>
-  <a href="#donnees"><svg viewBox="0 0 24 24"><path d="M4 7c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3zM4 7v10c0 1.7 3.6 3 8 3s8-1.3 8-3V7M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>Données</a>
+  <a href="#plus"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="18" cy="12" r="1.6"/></svg>Plus</a>
 </nav>
 
 <script>
@@ -1113,13 +1133,33 @@ $("wipe").onclick=()=>{const b=$("wipe");if(!armed){armed=1;b.textContent="Confi
   armed=0;S=DEF();save();applyTheme();try{indexedDB.deleteDatabase("carnet-coran")}catch(e){}b.textContent="Effacer toutes mes données";renderData();renderHead();say("Données effacées.")};
 
 /* ---------- routing ---------- */
-const VIEWS=["prieres","qibla","coran","duas","savoir","tasbih","donnees"];
+const VIEWS=["prieres","qibla","coran","duas","savoir","tasbih","donnees","plus"],UNDER_PLUS=["qibla","tasbih","savoir","donnees"];
 function route(){try{lrnStop();if(act)act.stop();ma.pause()}catch(e){}let h=location.hash.slice(1);if(!VIEWS.includes(h))h="prieres";
   VIEWS.forEach(v=>$("v-"+v).classList.toggle("on",v===h));
-  document.querySelectorAll("#nav a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+h));
+  const tab=UNDER_PLUS.includes(h)?"plus":h;document.querySelectorAll("#nav a").forEach(a=>{const on=a.getAttribute("href")==="#"+tab;a.classList.toggle("on",on);if(on)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
   if(h==="prieres"){sel=today();renderPrayers()}else{sel=today();renderHead()}
   if(h==="qibla")renderQibla();if(h==="coran"&&$("q-read").hidden)renderList();if(h==="coran")fillTafsir();if(h==="duas")renderDuas();if(h==="savoir")renderSavoir();if(h==="tasbih")renderTasbih();if(h==="donnees"){renderData();applyTheme()}
-  $("main").scrollTop=0}
+  $("main").scrollTop=0;updBack()}
+
+/* ---------- retour à portée du pouce + geste retour du téléphone ---------- */
+function curView(){const h=location.hash.slice(1);return VIEWS.includes(h)?h:"prieres"}
+function backInfo(){const v=curView();
+  if(v==="coran"&&!$("q-read").hidden)return{t:"Sourates",f:()=>$("back").click()};
+  if(v==="duas"&&dCat>=0)return{t:"Catégories",f:()=>$("d-back").click()};
+  if(v==="savoir"&&K.view!=="home")return{t:"Retour",f:()=>$("k-back").click()};
+  if(UNDER_PLUS.includes(v))return{t:"Plus",f:()=>location.replace("#plus"),top:1};
+  return null}
+function updBack(){const b=backInfo();$("bbar").hidden=!b;if(!b)return;$("bbtn-t").textContent=b.t;
+  // un niveau ouvert = une entrée d'historique, pour que le geste retour le referme
+  if(!b.top&&!(history.state&&history.state.sub))try{history.pushState({sub:1},"")}catch(e){}}
+function doBack(){const b=backInfo();if(!b)return;b.f();$("main").scrollTop=0;setTimeout(updBack,0)}
+$("bbtn").onclick=()=>{const b=backInfo();if(b&&!b.top&&history.state&&history.state.sub)history.back();else doBack()};
+window.addEventListener("popstate",()=>{const b=backInfo();if(b&&!b.top)doBack()});
+{const oS=openSurah;openSurah=function(){const r=oS.apply(this,arguments);updBack();Promise.resolve(r).then(updBack,updBack);return r};
+ const oD=renderDuas;renderDuas=function(){const r=oD.apply(this,arguments);updBack();return r};
+ const oK=renderSavoir;renderSavoir=function(){const r=oK.apply(this,arguments);updBack();return r}}
+// onglets du bas : on remplace l'adresse au lieu d'empiler l'historique
+document.querySelectorAll("#nav a").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();const h=a.getAttribute("href");if(location.hash!==h)location.replace(h);else{$("main").scrollTop=0;const b=backInfo();if(b&&!b.top)doBack()}}));
 window.addEventListener("hashchange",route);route();
 let lastDay=keyOf(today());
 setInterval(()=>{if($("v-prieres").classList.contains("on")){const k=keyOf(today());if(k!==lastDay){lastDay=k;sel=today();renderPrayers()}else tick()}},1000);
