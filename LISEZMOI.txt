@@ -16,3 +16,9 @@ de index.html et placez-y quran_fr.json et quran_transliteration.json
 
 Vos données (journal, tasbih, marque-page) restent dans le navigateur du téléphone.
 Exportez-les de temps en temps depuis l'onglet Données.
+
+Correction de prononciation (onglet Coran, mode Réciter) :
+- Modèle « HisnLabs Tajweed v2 » (licence Apache-2.0, https://huggingface.co/HisnLabs/tajweed-v2),
+  téléchargé une seule fois (23 Mo) puis gardé sur l'appareil ; l'analyse se fait sur le téléphone.
+- Dossier tajwid/ : prononciation attendue de chaque verset (riwaya Hafs), générée avec quran-transcript (MIT).
+- Dossier ort/ : moteur d'exécution ONNX Runtime Web (MIT).

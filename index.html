@@ -172,6 +172,7 @@ nav a.on svg{background:var(--accent-soft)}
 .verse.cur{background:var(--accent-soft);box-shadow:-8px 0 0 var(--accent-soft),8px 0 0 var(--accent-soft);border-radius:4px}
 .p.veil{display:none}
 .w.ok{color:var(--accent)}
+.tjn{margin-top:6px}.tjw{font-family:var(--f-ar);font-size:20px;color:var(--danger)}.tjx{margin-top:8px;font-size:12px}
 .w.ko{color:var(--danger);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px}
 .bar{height:8px;border-radius:4px;background:var(--line);overflow:hidden}
 .bar i{display:block;height:100%;background:var(--gold)}
@@ -688,33 +689,45 @@ const ma=new Audio();let act=null;
 const TIPS={"ض":"ض : son emphatique, le côté de la langue appuie contre les molaires.","ظ":"ظ : pointe de la langue entre les dents, son emphatique.","ص":"ص : « s » emphatique, la langue se creuse.","ط":"ط : « t » emphatique, bouche pleine.","ق":"ق : du fond de la gorge, plus profond que ك.","ح":"ح : souffle du milieu de la gorge, sans voix.","ع":"ع : milieu de la gorge, son serré et voisé.","خ":"خ : frottement du haut de la gorge.","غ":"غ : « r » grasseyé du haut de la gorge.","ذ":"ذ : pointe de la langue entre les dents, voisé.","ث":"ث : pointe de la langue entre les dents, soufflé.","ه":"ه : souffle léger du fond de la gorge."};
 function hints(tokens,res){const out=[];tokens.forEach((t,i)=>{if(!res.heardFor[i]||out.length>=3)return;const e=nrm(t),h=nrm(res.heardFor[i]);if(e.length!==h.length)return;
   for(let k=0;k<e.length;k++)if(e[k]!==h[k]&&TIPS[e[k]]){out.push("Piste de prononciation dans « "+t+" » : lettre "+TIPS[e[k]]+" Entendu plutôt « "+h[k]+" ».");break}});return out}
-/* One tap: records the voice (to replay and compare) and, where available, recognises the words. */
+/* One tap: records the voice (to replay and compare), then the on-device model corrects the pronunciation.
+   No speech recognition any more: on iPhone it fought the recorder for the microphone and left empty recordings. */
 function listen(s,vn,text,btn,fb,reveal,refresh){
   if(act){act.stop();return}
   lrnStop();try{ma.pause()}catch(e){}
-  const A=act={heard:"",srErr:"",blob:null,srOn:false,mrOn:false,mrPending:false,closed:false,stopping:false};
+  if(!canRec){fb.textContent="Le micro n'est pas disponible sur ce navigateur.";return}
+  const A=act={blob:null,pending:true,mrOn:false,closed:false,stopping:false,err:false};
   const label=on=>{btn.textContent=on?"J'écoute… touchez pour terminer":"Réciter au micro";btn.setAttribute("aria-pressed",on?"true":"false")};
-  const finish=async()=>{if(A.srOn||A.mrOn||A.mrPending||A.closed)return;A.closed=true;act=null;label(false);
-    if(A.stream)A.stream.getTracks().forEach(t=>t.stop());const has=A.blob&&A.blob.size>1000;
-    if(has){try{await dbPut("a","me"+k6(s,vn),A.blob)}catch(e){}refresh()}
-    fb.textContent="";
-    if(A.heard){const tk=toks(text),res=compare(tk,A.heard);reveal(res.marks);
-      fb.append(el("div",null,res.ok+" mots reconnus sur "+res.n+". "+(res.bad.length?"À revoir : "+res.bad.join(" ، ")+".":"Tout y est.")),el("div",null,"Entendu : "+A.heard));
-      hints(tk,res).forEach(h=>fb.append(el("div",null,h)))}
-    else{const why=A.srErr==="not-allowed"||A.srErr==="service-not-allowed"?"La reconnaissance des mots est refusée sur cet appareil (réglages du micro et de la dictée).":A.srErr==="network"?"La reconnaissance des mots a besoin d'une connexion.":!SR?"La reconnaissance des mots n'existe pas sur ce navigateur.":"Aucun mot n'a été reconnu.";
-      fb.append(el("div",null,why+(has?" Votre enregistrement est prêt : réécoutez-vous, comparez avec al-Afasy, puis dévoilez le verset.":" Utilisez Dévoiler pour vous corriger.")))}};
-  A.stop=()=>{A.stopping=true;try{A.r&&A.r.stop()}catch(e){A.srOn=false}try{A.mr&&A.mr.state!=="inactive"&&A.mr.stop()}catch(e){A.mrOn=false}finish()};
-  label(true);fb.textContent="Récitez le verset, puis touchez le bouton.";
-  if(SR){try{const r=A.r=new SR();r.lang="ar-SA";r.interimResults=true;r.continuous=true;
-      r.onresult=e=>{let t="";for(let q=0;q<e.results.length;q++)t+=e.results[q][0].transcript+" ";A.heard=t.trim();fb.textContent="Entendu : "+A.heard};
-      r.onerror=e=>{if(e.error!=="aborted")A.srErr=e.error};
-      r.onend=()=>{A.srOn=false;finish()};r.start();A.srOn=true}catch(e){A.srOn=false}}
-  if(canRec){A.mrPending=true;navigator.mediaDevices.getUserMedia({audio:true}).then(st=>{A.mrPending=false;
+  const finish=async()=>{if(A.pending||A.mrOn||A.closed)return;A.closed=true;act=null;clearTimeout(A.cap);label(false);
+    if(A.stream)A.stream.getTracks().forEach(t=>t.stop());
+    if(!(A.blob&&A.blob.size>500)){fb.textContent=A.err?"Le micro n'a pas pu démarrer. Autorisez-le pour Rahim (Réglages de l'iPhone > Safari > Micro), puis réessayez.":"L'enregistrement est vide. Réessayez en récitant un peu plus près du téléphone.";return}
+    try{await dbPut("a","me"+k6(s,vn),A.blob)}catch(e){}refresh();
+    correct(s,vn,text,A.blob,fb,reveal)};
+  A.stop=()=>{A.stopping=true;try{A.mr&&A.mr.state!=="inactive"?A.mr.stop():(A.mrOn=false)}catch(e){A.mrOn=false}finish()};
+  label(true);fb.textContent="Récitez le verset, puis touchez le bouton ("+TJ.MAXS+" secondes au plus).";
+  navigator.mediaDevices.getUserMedia({audio:true}).then(st=>{A.pending=false;
       if(A.closed||A.stopping||act!==A){st.getTracks().forEach(t=>t.stop());finish();return}
-      A.stream=st;const ch=[],mr=A.mr=new MediaRecorder(st);mr.ondataavailable=e=>{if(e.data&&e.data.size)ch.push(e.data)};
-      mr.onstop=()=>{A.blob=new Blob(ch,{type:mr.mimeType||"audio/mp4"});A.mrOn=false;finish()};mr.start();A.mrOn=true})
-    .catch(()=>{A.mrPending=false;finish()})}
-  finish()}
+      A.stream=st;const ch=[];let mr;try{mr=A.mr=new MediaRecorder(st)}catch(e){A.err=true;finish();return}
+      mr.ondataavailable=e=>{if(e.data&&e.data.size)ch.push(e.data)};
+      mr.onstop=()=>{A.blob=new Blob(ch,{type:mr.mimeType||(ch[0]&&ch[0].type)||"audio/mp4"});A.mrOn=false;finish()};
+      mr.start(250);A.mrOn=true;A.cap=setTimeout(()=>{if(act===A)A.stop()},TJ.MAXS*1000)})
+    .catch(()=>{A.pending=false;A.err=true;finish()})}
+async function correct(s,vn,text,blob,fb,reveal){fb.textContent="";
+  if(!S.learn.tj){reveal(null);
+    const b=el("button","btn","Activer la correction de prononciation");b.onclick=()=>{S.learn.tj=1;save();correct(s,vn,text,blob,fb,reveal)};
+    fb.append(el("div",null,"Votre enregistrement est prêt : réécoutez-vous et comparez avec al-Afasy."),
+      el("div",null,"La correction de prononciation écoute votre récitation et signale, mot par mot, lettres, voyelles, madd, ghunna, idghâm, chadda et qalqala. Elle fonctionne sur le téléphone, sans connexion, après un téléchargement unique d'environ 35 Mo."),b);return}
+  const st=el("div",null,TJ.isReady()?"Analyse de la prononciation…":"Préparation de la correction…");fb.append(st);
+  try{await TJ.ready(p=>{st.textContent="Téléchargement de la correction (une seule fois)… "+p+" %"});st.textContent="Analyse de la prononciation…";
+    const e=await TJ.entry(s,vn);if(!e)throw new Error("data");const r=await TJ.analyze(blob,e);fb.textContent="";
+    const tk=toks(text),W=r.words,bad=W.filter(w=>!w.ok);
+    reveal(tk.length===W.length?W.map(w=>w.ok?1:0):null);
+    if(!r.heard){fb.append(el("div",null,"Je n'ai rien entendu de clair. Réessayez dans un endroit calme, le téléphone près de la bouche."));return}
+    fb.append(el("b",null,bad.length?(W.length-bad.length)+" mots sur "+W.length+" sans remarque.":"Aucune remarque, macha'Allah."));
+    bad.forEach(w=>{const d=el("div","tjn"),a=el("span","tjw",w.word);a.lang="ar";d.append(a,el("span",null," : "+[...new Set(w.notes.map(n=>n.msg))].join(" ; ")));fb.append(d)});
+    if(r.cut)fb.append(el("div",null,"Seules les "+TJ.MAXS+" premières secondes ont été écoutées : pour un long verset, récitez-le en plusieurs fois."));
+    fb.append(el("div","tjx","Correction automatique, à titre d'aide : elle se trompe parfois (environ 1 mot juste sur 15 signalé à tort) et ne remplace pas un professeur."))}
+  catch(e){fb.textContent="";reveal(null);
+    fb.append(el("div",null,navigator.onLine===false&&!TJ.isReady()?"Le premier téléchargement de la correction demande une connexion. Votre enregistrement est gardé : réessayez avec du réseau.":"La correction n'a pas pu se faire sur cet enregistrement. Réécoutez-vous et comparez avec al-Afasy, ou réessayez."))}}
 async function cmpRow(s,vn,box){box.textContent="";const blob=await dbGet("a","me"+k6(s,vn));if(!blob)return;
   const url=URL.createObjectURL(blob),mine=el("button","chip","Ma récitation"),his=el("button","chip","Al-Afasy"),both=el("button","chip","L'un puis l'autre");
   mine.onclick=()=>{lrnStop();ma.muted=false;ma.src=url;ma.play().catch(()=>{})};
@@ -740,7 +753,7 @@ function drawLrn(){const B=$("lrn");B.hidden=rMode==="lire";B.textContent="";if(
       chips("Répéter chaque verset",[["1",1],["3",3],["5",5],["10",10]],()=>S.learn.rep,v=>{S.learn.rep=v}),
       el("div","note","Le mot récité s'allume. Touchez un mot pour reprendre l'écoute à cet endroit."))}
   else B.append(chips("Masquage",[["Tout","all"],["1 mot sur 2","half"],["Sauf le 1er mot","first"]],()=>S.learn.mask,v=>{S.learn.mask=v},true),
-    el("div","note",SR||canRec?"Récitez de mémoire. « Réciter au micro » vous enregistre pour vous réécouter et vous comparer à al-Afasy, et signale si possible les mots manquants ou différents (connexion requise pour cette partie). « Dévoiler » vous laisse vous corriger seul. La note fixe la prochaine révision.":"Récitez le verset de mémoire, puis dévoilez-le et notez-vous. Le micro n'est pas disponible sur ce navigateur."));
+    el("div","note",canRec?"Récitez de mémoire. « Réciter au micro » vous enregistre pour vous réécouter, vous comparer à al-Afasy et corriger votre prononciation mot par mot. « Dévoiler » vous laisse vous corriger seul. La note fixe la prochaine révision.":"Récitez le verset de mémoire, puis dévoilez-le et notez-vous. Le micro n'est pas disponible sur ce navigateur."));
   const st=el("span","note");st.id="l-st";const dlb=el("button","chip","Enregistrer l'audio de ces versets"),r2=el("div","line");
   dlb.onclick=async()=>{const a=shown();let ok=0;for(let i=0;i<a.length;i++){st.textContent="Téléchargement… "+(i+1)+" sur "+a.length;if(await savePart(eaPart(cur,a[i])))ok++}
     st.textContent=ok===a.length?"Audio enregistré sur l'appareil.":ok+" sur "+a.length+" enregistrés."};
@@ -764,7 +777,7 @@ function drawVerses(){const n=cur,d=mem[n],V=$("verses");if(!d)return;if(act)act
             bar.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",c===b?"true":"false"));sessCheck()};bar.append(b)})};
         rev.onclick=()=>reveal(null);bar.append(hear);
         const cmp=el("div","rbar");cmpRow(n,vn,cmp);
-        if(SR||canRec){const mic=el("button","chip","Réciter au micro");mic.onclick=()=>listen(n,vn,x[0],mic,fb,reveal,()=>cmpRow(n,vn,cmp));bar.append(mic)}
+        if(canRec){const mic=el("button","chip","Réciter au micro");mic.onclick=()=>listen(n,vn,x[0],mic,fb,reveal,()=>cmpRow(n,vn,cmp));bar.append(mic)}
         bar.append(rev);w.append(h,a,p,f,fb,bar,cmp)}}
     V.append(w)});fillTafsir()}
 document.querySelectorAll("[data-mode]").forEach(b=>b.onclick=()=>{rMode=b.dataset.mode;if(rMode==="lire")rFilter=null;drawVerses()});
@@ -1131,6 +1144,176 @@ $("imp-go").onclick=()=>doImport($("imp-txt").value);
 let armed=0;
 $("wipe").onclick=()=>{const b=$("wipe");if(!armed){armed=1;b.textContent="Confirmer : tout effacer définitivement";setTimeout(()=>{armed=0;b.textContent="Effacer toutes mes données"},5000);return}
   armed=0;S=DEF();save();applyTheme();try{indexedDB.deleteDatabase("carnet-coran")}catch(e){}b.textContent="Effacer toutes mes données";renderData();renderHead();say("Données effacées.")};
+
+/* ---------- Correction de prononciation (modèle HisnLabs Tajweed v2, Apache-2.0) ---------- */
+// Port of python-Levenshtein (rapidfuzz) editops/opcodes: same backtrace, so the same alignment.
+const LEV=(()=>{function editops(a,b){
+  let pre=0;while(pre<a.length&&pre<b.length&&a[pre]===b[pre])pre++;
+  let suf=0;while(suf<a.length-pre&&suf<b.length-pre&&a[a.length-1-suf]===b[b.length-1-suf])suf++;
+  const s1=a.slice(pre,a.length-suf),s2=b.slice(pre,b.length-suf),m=s1.length,n=s2.length;
+  const D=[];for(let i=0;i<=m;i++){D[i]=new Int32Array(n+1);D[i][0]=i}for(let j=0;j<=n;j++)D[0][j]=j;
+  for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)D[i][j]=Math.min(D[i-1][j]+1,D[i][j-1]+1,D[i-1][j-1]+(s1[i-1]===s2[j-1]?0:1));
+  const ops=[];let i=m,j=n;
+  while(i&&j){
+    if(D[i][j]-D[i-1][j]===1){i--;ops.push(["delete",i+pre,j+pre])}
+    else{j--;
+      if(j&&D[i][j]-D[i-1][j]===-1)ops.push(["insert",i+pre,j+pre]);
+      else{i--;if(s1[i]!==s2[j])ops.push(["replace",i+pre,j+pre])}}}
+  while(i){i--;ops.push(["delete",i+pre,j+pre])}
+  while(j){j--;ops.push(["insert",i+pre,j+pre])}
+  return ops.reverse()}
+function opcodes(a,b){const eo=editops(a,b),out=[];let si=0,di=0,k=0;
+  while(k<eo.length){const [t,sp,dp]=eo[k];
+    if(si<sp||di<dp){out.push(["equal",si,sp,di,dp]);si=sp;di=dp}
+    const s0=si,d0=di;
+    while(k<eo.length&&eo[k][0]===t&&eo[k][1]===si&&eo[k][2]===di){if(t!=="insert")si++;if(t!=="delete")di++;k++}
+    out.push([t,s0,si,d0,di])}
+  if(si<a.length||di<b.length)out.push(["equal",si,a.length,di,b.length]);return out}
+return{opcodes}})();
+
+// Whisper log-mel (faster-whisper FeatureExtractor, padding=0), 80 bins, n_fft 400, hop 160.
+const MEL=(()=>{const NF=400,HOP=160,NM=80,SR=16000,NB=NF/2+1;
+  // mel filters (Slaney)
+  const mels=[],freqs=[];for(let i=0;i<NM+2;i++){const m=45.245640471924965*i/(NM+1);mels.push(m)}
+  const fsp=200/3,minLogMel=1000/fsp,logstep=Math.log(6.4)/27;
+  for(const m of mels)freqs.push(m>=minLogMel?1000*Math.exp(logstep*(m-minLogMel)):fsp*m);
+  const fft=[];for(let k=0;k<NB;k++)fft.push(k*SR/NF);
+  const W=[];for(let i=0;i<NM;i++){const row=new Float32Array(NB),d0=freqs[i+1]-freqs[i],d1=freqs[i+2]-freqs[i+1],en=2/(freqs[i+2]-freqs[i]);
+    for(let k=0;k<NB;k++){const lo=(fft[k]-freqs[i])/d0,up=(freqs[i+2]-fft[k])/d1;row[k]=Math.max(0,Math.min(lo,up))*en}W.push(row)}
+  const win=new Float64Array(NF);for(let n=0;n<NF;n++)win[n]=0.5-0.5*Math.cos(2*Math.PI*n/NF);
+  // mixed-radix FFT for n=400 (recursive, factors 2/5)
+  function dft(re,im,n,stride,off,oRe,oIm){
+    if(n===1){oRe[0]=re[off];oIm[0]=im[off];return}
+    const p=n%2===0?2:n%5===0?5:n,m=n/p;
+    if(p===n){for(let k=0;k<n;k++){let sr=0,si=0;for(let t=0;t<n;t++){const a=-2*Math.PI*k*t/n,x=re[off+t*stride],y=im[off+t*stride];sr+=x*Math.cos(a)-y*Math.sin(a);si+=x*Math.sin(a)+y*Math.cos(a)}oRe[k]=sr;oIm[k]=si}return}
+    const subR=[],subI=[];for(let q=0;q<p;q++){const r=new Float64Array(m),i=new Float64Array(m);dft(re,im,m,stride*p,off+q*stride,r,i);subR.push(r);subI.push(i)}
+    for(let k=0;k<n;k++){let sr=0,si=0;const km=k%m;for(let q=0;q<p;q++){const a=-2*Math.PI*q*k/n,c=Math.cos(a),s=Math.sin(a),x=subR[q][km],y=subI[q][km];sr+=x*c-y*s;si+=x*s+y*c}oRe[k]=sr;oIm[k]=si}}
+  return function(x){// x: Float32Array 16 kHz mono → {data: Float32Array [80*T], T}
+    const P=NF/2,L=x.length+2*P,y=new Float64Array(L);
+    for(let i=0;i<L;i++){let j=i-P;if(j<0)j=-j;if(j>=x.length)j=2*(x.length-1)-j;y[i]=x[j]||0}
+    const nFr=1+Math.floor((L-NF)/HOP),T=nFr-1,spec=new Float64Array(NM*T);
+    const re=new Float64Array(NF),im=new Float64Array(NF),oR=new Float64Array(NF),oI=new Float64Array(NF),pw=new Float64Array(NB);
+    for(let t=0;t<T;t++){for(let n=0;n<NF;n++){re[n]=y[t*HOP+n]*win[n];im[n]=0}
+      dft(re,im,NF,1,0,oR,oI);for(let k=0;k<NB;k++)pw[k]=oR[k]*oR[k]+oI[k]*oI[k];
+      for(let m=0;m<NM;m++){const w=W[m];let s=0;for(let k=0;k<NB;k++)s+=w[k]*pw[k];spec[m*T+t]=Math.log10(Math.max(s,1e-10))}}
+    let mx=-Infinity;for(const v of spec)if(v>mx)mx=v;
+    const out=new Float32Array(NM*T);for(let i=0;i<spec.length;i++)out[i]=(Math.max(spec[i],mx-8)+4)/4;
+    return{data:out,T}}})();
+
+// Port (Hafs, French) of HisnLabs imam.listen — Apache-2.0, https://github.com/HisnLabs/tajweed
+const IMAM=(()=>{const {opcodes}=LEV;
+const LONG=new Set(["ا","ۥ","ۦ"]),HARAKAT=new Set(["َ","ُ","ِ"]),ONSET=3,TIME_SIX=8.3,TIME_FIVE=7.0;
+const MADD={NormalMaddRule:"madd naturel",MonfaselMaddRule:"madd munfasil",MottaselMaddRule:"madd muttasil",MottaselMaddPauseRule:"madd muttasil à l’arrêt",
+  LazemMaddRule:"madd lazim",AaredMaddRule:"madd ʿarid (à l’arrêt)",LeenMaddRule:"madd lin",BadalMadd:"madd badal",LeenHamzaMadd:"madd lin devant une hamza"};
+const VOWEL={"َ":"a (fatha)","ُ":"ou (damma)","ِ":"i (kasra)"};
+const fmt=(t,k)=>t.replace(/\{(\w+)\}/g,(_,a)=>k[a]);
+const T={madd_short:"{name} trop court : {heard} au lieu de {want}",madd_long:"{name} trop long : {heard} au lieu de {want}",
+  madd_missing:"{name} oublié : la voyelle doit être allongée",madd_added:"une voyelle allongée là où il n’y a pas de madd",
+  madd_uneven:"{name} : garde la même longueur à chaque fois ({lens})",ghunnah_short:"ghunna trop courte : tiens le son nasal 2 temps",
+  ikhfa_izhar:"ikhfaʾ : le noun a été prononcé clairement ; il faut le cacher avec la ghunna",ikhfa_short:"ikhfaʾ : la ghunna est trop courte",
+  iqlab_missed:"iqlab : le noun devient un mim caché avec ghunna devant ب",idgham_missed:"idgham : le noun a été prononcé ; il faut le fondre dans {letter}",
+  idgham_ghunnah_short:"idgham avec ghunna : la ghunna manque",shadda_missing:"la chadda sur {letter} n’a pas été prononcée",
+  qalqalah_missing:"qalqala absente sur {letter} : fais-la rebondir",letter:"{heard} prononcé au lieu de {want}",
+  vowel:"mauvaise voyelle : {heard} au lieu de {want}",dropped:"un son a été omis : {want}",added:"un son en trop : {heard}",word_missing:"ce mot n’a pas été entendu"};
+const counts=n=>n+" temps";
+const setOf=s=>new Set(s);
+function boundaries(ref,heard){const b=new Array(ref.length+1).fill(0);
+  for(const [tag,i1,i2,j1,j2] of opcodes(ref,heard))for(let k=i1;k<=i2;k++)b[k]=j1+(i2>i1?pyround((k-i1)*(j2-j1)/(i2-i1)):0);
+  b[ref.length]=heard.length;return b}
+function pyround(x){const f=Math.floor(x),d=x-f;if(Math.abs(d-0.5)<1e-12)return f%2===0?f:f+1;return Math.round(x)}
+function run(heard,a,b,c){let k=null;for(let x=a;x<b;x++)if(heard[x]===c){k=x;break}if(k===null)return[0,a,a];
+  let s=k,e=k;while(s>0&&heard[s-1]===c)s--;while(e<heard.length&&heard[e]===c)e++;return[e-s,s,e]}
+function dur(heard,times,s,e){const a=s&&HARAKAT.has(heard[s-1])?times[s-1]:times[s];return Math.max(0,times[Math.min(e,times.length-1)]-a)}
+function tempoOf(ref,heard,b,times,tempo){if(!times||times.length!==heard.length+1)return null;const ends=new Set(ref.ends||[ref.words.length-1]),nat=[];
+  for(const u of ref.units)if(u.kind==="madd"&&u.rule==="NormalMaddRule"&&!ends.has(u.word)){const [n,s,e]=run(heard,Math.max(0,b[u.s]-1),Math.min(heard.length,b[u.e]+1),u.char);if(n>=1&&n<=3)nat.push(dur(heard,times,s,e))}
+  const nat2=nat.filter(d=>d>0.08&&d<2.0);
+  if(tempo){tempo.push(...nat2);tempo.splice(0,Math.max(0,tempo.length-40))}
+  const src=nat2.length>=2?nat2:(tempo&&tempo.length>=3?tempo:[]);if(!src.length)return null;
+  const srt=[...src].sort((x,y)=>x-y);return srt[Math.floor(srt.length/2)]/2}
+function stripLen(s){const out=[];for(const c of s){if(out.length&&out[out.length-1]===c)continue;out.push(c)}return out.filter(c=>!LONG.has(c)&&!"ںڇ۾".includes(c)).join("")}
+function listen(ref,heard,opt={}){const probs=opt.probs,times=opt.times,tempo=opt.tempo,minProb=opt.minProb??0.3,jaliThr=opt.minProbJali??minProb;
+  heard=heard.replace(/ /g,"");const P=ref.phonemes,b=boundaries(P,heard),notes=ref.words.map(()=>[]),covered=new Array(P.length).fill(false);
+  let pos=null,span=[0,0];
+  const unsure=(hs,he,thr)=>{if(!probs||!probs.length)return false;const seg=probs.slice(Math.max(0,hs-1),Math.min(probs.length,he+1));return seg.length>0&&Math.min(...seg)<(thr??minProb)};
+  const add=(w,rule,sev,exp,got,kind,k={})=>{if(unsure(span[0],span[1]))return;notes[w].push({rule,severity:sev,expected:exp,heard:got,pos,msg:fmt(T[kind],k)})};
+  const cnt=(s,c)=>s.split(c).length-1;
+  const moreNun=(u,hs,he)=>cnt(heard.slice(Math.max(0,hs-2),he),"ن")>cnt(P.slice(Math.max(0,u.s-2),u.e),"ن");
+  const maddSeen={},maddHeard=ref.words.map(()=>[]),unit=tempoOf(ref,heard,b,times,tempo);
+  for(const u of ref.units){for(let x=u.s;x<u.e;x++)covered[x]=true;const hs=b[u.s],he=b[u.e];pos=u.s;span=[hs,he];
+    if(u.kind==="madd"){let [n,rs,re]=run(heard,Math.max(0,hs-1),Math.min(heard.length,he+1),u.char);
+      if(u.rule.startsWith("Leen")&&n>0)n+=1;
+      let sym=n,allowed=u.allowed,shown=n?(n<=3?2:n<=5?4:6):0;
+      if(unit&&(n===4||n===5)){const tc=dur(heard,times,rs,re)/unit;n=tc>=TIME_SIX?6:tc>=TIME_FIVE?5:4;shown=tc>=TIME_SIX?6:4}
+      const name=MADD[u.rule];let near=allowed[0];for(const a of allowed)if(Math.abs(a-n)<Math.abs(near-n))near=a;
+      (maddSeen[u.rule]=maddSeen[u.rule]||[]).push([u.word,sym]);
+      if(shown&&u.rule!=="NormalMaddRule")maddHeard[u.word].push({rule:u.rule,heard:shown,name});
+      if(n===0&&!u.rule.startsWith("Leen"))add(u.word,u.rule,"jali",u.golden,0,"madd_missing",{name});
+      else if(Math.abs(n-near)>1&&!unsure(hs,he)){const want=counts(allowed.includes(u.golden)?u.golden:near);
+        notes[u.word].push({rule:u.rule,severity:"khafi",expected:[...allowed].sort((x,y)=>x-y),heard:n,pos:u.s,msg:fmt(T[n>near?"madd_long":"madd_short"],{name,heard:counts(n),want})})}}
+    else if(u.kind==="qalqalah"){if(!heard.slice(Math.max(0,hs-1),he+1).includes("ڇ"))add(u.word,"qalqalah","khafi","ڇ","","qalqalah_missing",{letter:u.s?P[u.s-1]:""})}
+    else if(u.kind==="ikhfa"){const [n]=run(heard,hs,Math.max(he,hs+1),"ں");
+      if(n===0&&heard.slice(hs,he+1).includes("ن"))add(u.word,"ikhfa","khafi",u.golden,0,"ikhfa_izhar");else if(n&&n<u.golden-1)add(u.word,"ikhfa","khafi",u.golden,n,"ikhfa_short")}
+    else if(u.kind==="iqlab"){if(!heard.slice(Math.max(0,hs-1),he+1).includes("۾"))add(u.word,"iqlab","khafi",u.golden,0,"iqlab_missed")}
+    else if(u.kind==="ghunnah"||u.kind==="idgham_ghunnah"){const [n]=run(heard,Math.max(0,hs-1),Math.min(heard.length,he+1),u.char);
+      if(u.kind==="idgham_ghunnah"&&u.char!=="ن"&&moreNun(u,hs,he))add(u.word,"idgham","khafi",u.golden,n,"idgham_missed",{letter:u.char});
+      else if(n<u.golden)add(u.word,u.kind,"khafi",u.golden,n,u.kind==="ghunnah"?"ghunnah_short":"idgham_ghunnah_short")}
+    else if(u.kind==="shadda"||u.kind==="idgham"){const [n]=run(heard,Math.max(0,hs-1),Math.min(heard.length,he+1),u.char);
+      if(u.kind==="idgham"&&moreNun(u,hs,he))add(u.word,"idgham","khafi",2,n,"idgham_missed",{letter:u.char});else if(n===1)add(u.word,"shadda","jali",2,1,"shadda_missing",{letter:u.char})}}
+  const okSet=new Set([...LONG,"ڇ","ں","۾","ن","م"]);
+  for(const [tag,i1,i2,j1,j2] of opcodes(P,heard)){if(tag==="equal")continue;const exp=P.slice(i1,i2),got=heard.slice(j1,j2);
+    if(i2>i1&&covered.slice(i1,i2).every(Boolean)&&(!got||[...got].every(c=>exp.includes(c)||okSet.has(c))))continue;
+    if(tag==="insert"&&ref.units.some(u=>u.kind==="madd"&&u.s<=i1&&i1<=u.e&&[...got].every(c=>c===u.char)))continue;
+    let w=ref.spans.findIndex(([a,z])=>a<=i1&&i1<z);if(w<0)w=ref.words.length-1;
+    pos=i1;span=[j1,j2];if(i1<ONSET)continue;
+    const ec=stripLen(exp),gc=stripLen(got);if(ec===gc)continue;if(unsure(j1,j2,jaliThr))continue;
+    if(tag==="replace"&&ec.length===1&&gc.length===1&&HARAKAT.has(ec)&&HARAKAT.has(gc))
+      notes[w].push({rule:"vowel",severity:"jali",expected:exp,heard:got,pos:i1,msg:fmt(T.vowel,{want:VOWEL[ec],heard:VOWEL[gc]})});
+    else if(tag==="replace")add(w,"letter","jali",exp,got,"letter",{want:exp,heard:got});
+    else if(tag==="delete"){if([...exp].every(c=>LONG.has(c)||HARAKAT.has(c))&&exp.length===1)continue;add(w,"dropped","jali",exp,"","dropped",{want:exp})}
+    else if(tag==="insert"){if(i1===0||i1===P.length)continue;
+      if([...got].every(c=>LONG.has(c))){if(got.length>=2)add(w,"madd_added","khafi","",got,"madd_added");continue}
+      if(got.length===1&&HARAKAT.has(got))continue;add(w,"added","jali","",got,"added",{heard:got})}}
+  ref.spans.forEach(([a,z],k)=>{if(z>a&&b[z]-b[a]<=Math.max(0,Math.floor((z-a)/4)))notes[k]=[{rule:"word",severity:"jali",expected:P.slice(a,z),heard:heard.slice(b[a],b[z]),pos:a,msg:T.word_missing}]});
+  for(const rule of Object.keys(maddSeen)){const seen=maddSeen[rule];
+    if(["MonfaselMaddRule","MottaselMaddRule","AaredMaddRule","BadalMadd"].includes(rule)&&seen.length>=2){const lens=seen.map(x=>x[1]).filter(Boolean);
+      if(lens.length&&Math.max(...lens)-Math.min(...lens)>=2){const avg=pyround(lens.reduce((a,c)=>a+c,0)/lens.length);
+        let best=seen[0];for(const x of seen)if(Math.abs(x[1]-avg)>Math.abs(best[1]-avg))best=x;
+        notes[best[0]].push({rule:rule+":uneven",severity:"khafi",expected:"same",heard:lens,pos:null,msg:fmt(T.madd_uneven,{name:MADD[rule],lens:lens.join(" / ")})})}}}
+  return ref.words.map((w,k)=>({word:w,index:k,ok:!notes[k].length,notes:notes[k],madd:maddHeard[k]}))}
+// ref from the precomputed JSON entry {w,p,sp,u}
+function makeRef(e){return{words:e.w,phonemes:e.p,spans:e.sp,ends:[e.w.length-1],
+  units:e.u.map(([s,e2,kind,word,golden,allowed,rule,char])=>({s,e:e2,kind,word,golden,allowed,rule,char}))}}
+return{listen,makeRef,stripLen}})();
+
+
+const TJ=(()=>{const MODEL="https://huggingface.co/HisnLabs/tajweed-v2/resolve/main/onnx/model-int8.onnx",MKEY="tj-model-v2",
+  PH=["ء", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي", "ا", "ۦ", "ۥ", "َ", "ُ", "ِ", "۪", "ـ", "ٲ", "ڇ", "ں", "۾", "ۜ", "ؙ"],LEAD=6400,MAXS=29,tempo=[],cache={};let sess=null,loading=null;
+  function script(src){return new Promise((ok,no)=>{const s=document.createElement("script");s.src=src;s.onload=ok;s.onerror=()=>no(new Error("script"));document.head.append(s)})}
+  async function model(prog){let buf=null;try{buf=await dbGet("a",MKEY)}catch(e){}
+    if(buf)return buf instanceof Blob?await buf.arrayBuffer():buf;
+    const r=await fetch(MODEL);if(!r.ok)throw new Error("download");const tot=+r.headers.get("content-length")||24300000,rd=r.body&&r.body.getReader?r.body.getReader():null;
+    if(!rd){buf=await r.arrayBuffer()}else{const parts=[];let n=0;for(;;){const {done,value}=await rd.read();if(done)break;parts.push(value);n+=value.length;prog&&prog(Math.min(99,Math.round(n*100/tot)))}
+      const u=new Uint8Array(n);let o=0;for(const p of parts){u.set(p,o);o+=p.length}buf=u.buffer}
+    try{await dbPut("a",MKEY,new Blob([buf]))}catch(e){}return buf}
+  function ready(prog){if(sess)return Promise.resolve();if(loading)return loading;
+    loading=(async()=>{if(!window.ort)await script("ort/ort.wasm.min.js");ort.env.wasm.numThreads=1;ort.env.wasm.wasmPaths=new URL("ort/",location.href).href;
+      const buf=await model(prog);sess=await ort.InferenceSession.create(new Uint8Array(buf),{executionProviders:["wasm"]})})();
+    loading.catch(()=>{loading=null});return loading}
+  async function entry(s,v){if(!cache[s]){const r=await fetch("tajwid/"+s+".json");if(!r.ok)throw new Error("data");cache[s]=await r.json()}return cache[s][v-1]}
+  async function decode(blob){const AC=window.AudioContext||window.webkitAudioContext,ac=new AC(),ab=await blob.arrayBuffer();
+    const buf=await new Promise((ok,no)=>{const p=ac.decodeAudioData(ab,ok,no);if(p&&p.then)p.then(ok,no)});try{ac.close()}catch(e){}
+    const n=Math.max(1,Math.ceil(buf.duration*16000)),OAC=window.OfflineAudioContext||window.webkitOfflineAudioContext,oc=new OAC(1,n,16000),src=oc.createBufferSource();
+    src.buffer=buf;src.connect(oc.destination);src.start(0);const r=await oc.startRendering();return r.getChannelData(0).slice(0,MAXS*16000)}
+  async function hear(x){const a=new Float32Array(x.length+2*LEAD);a.set(x,LEAD);const m=MEL(a),T2=Math.min(3000,Math.floor(m.T/2)*2),mel=new Float32Array(80*T2);
+    for(let r=0;r<80;r++)mel.set(m.data.subarray(r*m.T,r*m.T+T2),r*T2);
+    const out=await sess.run({mel:new ort.Tensor("float32",mel,[1,80,T2]),riwaya:new ort.Tensor("int64",BigInt64Array.from([0n]),[1])});
+    const lp=out[Object.keys(out)[0]],[,F,C]=lp.dims,d=lp.data,step=a.length/16000/F,heard=[],probs=[],times=[];let prev=0,last=-1;
+    for(let t=0;t<F;t++){let bi=0,bv=-Infinity;for(let c=0;c<C;c++){const v=d[t*C+c];if(v>bv){bv=v;bi=c}}
+      if(bi!==0){last=t;if(bi!==prev){heard.push(PH[bi-1]);probs.push(Math.exp(bv));times.push((t+.5)*step-LEAD/16000)}}prev=bi}
+    times.push(last>=0?(last+1)*step-LEAD/16000:0);return{heard:heard.join(""),probs,times,secs:x.length/16000}}
+  async function analyze(blob,e){const x=await decode(blob),h=await hear(x);
+    return{words:IMAM.listen(IMAM.makeRef(e),h.heard,{probs:h.probs,times:h.times,tempo,minProb:.3,minProbJali:.7}),heard:h.heard,cut:x.length>=MAXS*16000}}
+  return{ready,entry,analyze,isReady:()=>!!sess,MAXS}})();
 
 /* ---------- routing ---------- */
 const VIEWS=["prieres","qibla","coran","duas","savoir","tasbih","donnees","plus"],UNDER_PLUS=["qibla","tasbih","savoir","donnees"];
