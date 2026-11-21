@@ -76,6 +76,7 @@ nav a.on svg{background:var(--accent-soft)}
 .tile svg{width:34px;height:34px;stroke:var(--accent);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .tile b{display:block;font-family:var(--f-display);font-size:19px}
 .tile span{color:var(--muted);font-size:13px}
+.chip.pal{display:inline-flex;align-items:center;gap:8px}.chip.pal .sw{display:inline-flex}.chip.pal .sw i{width:14px;height:14px;border-radius:50%;border:1.5px solid var(--surface);margin-left:-4px}.chip.pal .sw i:first-child{margin-left:0}
 .hscroll{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
 .hscroll::-webkit-scrollbar{display:none}
 .hscroll .chip{flex:none;white-space:nowrap}
@@ -394,6 +395,8 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
         <button class="chip" data-theme-set="dark">Sombre</button>
       </div>
       <div class="note">Automatique suit le réglage clair ou sombre du téléphone.</div>
+      <div class="label" style="margin-top:6px">Couleurs</div>
+      <div class="rbar" id="palettes"></div>
     </div>
     <div class="card stack">
       <h2 style="font-size:18px">Rappels</h2>
@@ -458,12 +461,25 @@ function merge(d){const b=DEF();if(!d||typeof d!=="object")return b;
   if(!METHODS[b.method])b.method="MF";if(!Array.isArray(b.duas.fav))b.duas.fav=[];if(!b.duas.cnt||typeof b.duas.cnt!=="object")b.duas.cnt={};return b}
 try{const r=localStorage.getItem(KEY);if(r)S=merge(JSON.parse(r))}catch(e){}
 let saveOK=true;
+/* Palettes: [light, dark] values of the colour variables; "sapin" = the stylesheet's own colours. */
+const PALS={sapin:{n:"Vert sapin",sw:["#0C6B5B","#A8771C"]},
+  nuit:{n:"Bleu nuit et or",sw:["#1F3A68","#A8822F"],
+    l:{bg:"#F3F5F9",surface:"#FFFFFF",ink:"#16213A",muted:"#5D6B85",line:"#DCE2EC",accent:"#1F3A68","accent-ink":"#FFFFFF","accent-soft":"#E1E8F4",gold:"#A8822F",danger:"#B3402E"},
+    k:{bg:"#0D1424",surface:"#152036",ink:"#E6ECF7",muted:"#8E9BB5",line:"#24324E",accent:"#8FB2E8","accent-ink":"#0B1628","accent-soft":"#1E2E4D",gold:"#E0BE6E",danger:"#F08A76"}}};
+const PAL_VARS=["bg","surface","ink","muted","line","accent","accent-ink","accent-soft","gold","danger"];
 function applyTheme(){const t=S.theme==="light"||S.theme==="dark"?S.theme:"auto",r=document.documentElement;
   if(t==="auto")r.removeAttribute("data-theme");else r.setAttribute("data-theme",t);
   const dark=t==="dark"||(t==="auto"&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches),m=document.querySelector('meta[name="theme-color"]');
-  if(m)m.content=dark?"#0E1917":"#F2F5F1";
+  const P=PALS[S.pal]&&PALS[S.pal].l?PALS[S.pal]:null,c=P?P[dark?"k":"l"]:null;
+  PAL_VARS.forEach(v=>{if(c)r.style.setProperty("--"+v,c[v]);else r.style.removeProperty("--"+v)});
+  if(m)m.content=c?c.bg:dark?"#0E1917":"#F2F5F1";
+  const PB=$("palettes");if(PB&&!PB.childElementCount)Object.entries(PALS).forEach(([k,x])=>{const b=el("button","chip pal");b.dataset.pal=k;
+    const sw=el("span","sw");x.sw.forEach(col=>{const d=el("i");d.style.background=col;sw.append(d)});b.append(sw,x.n);
+    b.onclick=()=>{S.pal=k;save();applyTheme()};PB.append(b)});
+  document.querySelectorAll("[data-pal]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.pal===(PALS[S.pal]?S.pal:"sapin")?"true":"false"));
   document.querySelectorAll("[data-theme-set]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.themeSet===t?"true":"false"))}
 applyTheme();
+try{matchMedia("(prefers-color-scheme: dark)").addEventListener("change",applyTheme)}catch(e){}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));saveOK=true}catch(e){saveOK=false}}
 
 /* ---------- dates ---------- */
