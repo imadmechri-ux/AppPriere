@@ -76,7 +76,7 @@ nav a.on svg{background:var(--accent-soft)}
 .tile svg{width:34px;height:34px;stroke:var(--accent);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .tile b{display:block;font-family:var(--f-display);font-size:19px}
 .tile span{color:var(--muted);font-size:13px}
-.chip.pal{display:inline-flex;align-items:center;gap:8px}.chip.pal .sw{display:inline-flex}.chip.pal .sw i{width:14px;height:14px;border-radius:50%;border:1.5px solid var(--surface);margin-left:-4px}.chip.pal .sw i:first-child{margin-left:0}
+.chip.pal{display:inline-flex;align-items:center;gap:8px}.chip.pal .sw{display:inline-flex}.chip.pal .sw i{width:14px;height:14px;border-radius:50%;border:1.5px solid var(--surface);margin-left:-4px}.chip.pal .sw i:first-child{margin-left:0}.chip.pal[aria-pressed="true"] .sw i{border-color:var(--accent-ink)}
 .hscroll{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
 .hscroll::-webkit-scrollbar{display:none}
 .hscroll .chip{flex:none;white-space:nowrap}
@@ -465,7 +465,10 @@ let saveOK=true;
 const PALS={sapin:{n:"Vert sapin",sw:["#0C6B5B","#A8771C"]},
   nuit:{n:"Bleu nuit et or",sw:["#1F3A68","#A8822F"],
     l:{bg:"#F3F5F9",surface:"#FFFFFF",ink:"#16213A",muted:"#5D6B85",line:"#DCE2EC",accent:"#1F3A68","accent-ink":"#FFFFFF","accent-soft":"#E1E8F4",gold:"#A8822F",danger:"#B3402E"},
-    k:{bg:"#0D1424",surface:"#152036",ink:"#E6ECF7",muted:"#8E9BB5",line:"#24324E",accent:"#8FB2E8","accent-ink":"#0B1628","accent-soft":"#1E2E4D",gold:"#E0BE6E",danger:"#F08A76"}}};
+    k:{bg:"#0D1424",surface:"#152036",ink:"#E6ECF7",muted:"#8E9BB5",line:"#24324E",accent:"#8FB2E8","accent-ink":"#0B1628","accent-soft":"#1E2E4D",gold:"#E0BE6E",danger:"#F08A76"}},
+  medine:{n:"Turquoise de Médine",sw:["#0E7C86","#B07D2A"],
+    l:{bg:"#F1F7F8",surface:"#FFFFFF",ink:"#123238",muted:"#557178",line:"#D6E6E8",accent:"#0E7C86","accent-ink":"#FFFFFF","accent-soft":"#D8EEF0",gold:"#B07D2A",danger:"#B3402E"},
+    k:{bg:"#0B1A1D",surface:"#12262A",ink:"#E2F1F3",muted:"#89A9AE",line:"#21393D",accent:"#5CCAD3","accent-ink":"#062226","accent-soft":"#17383D",gold:"#E3BC68",danger:"#F08A76"}}};
 const PAL_VARS=["bg","surface","ink","muted","line","accent","accent-ink","accent-soft","gold","danger"];
 function applyTheme(){const t=S.theme==="light"||S.theme==="dark"?S.theme:"auto",r=document.documentElement;
   if(t==="auto")r.removeAttribute("data-theme");else r.setAttribute("data-theme",t);
