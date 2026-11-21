@@ -468,7 +468,10 @@ const PALS={sapin:{n:"Vert sapin",sw:["#0C6B5B","#A8771C"]},
     k:{bg:"#0D1424",surface:"#152036",ink:"#E6ECF7",muted:"#8E9BB5",line:"#24324E",accent:"#8FB2E8","accent-ink":"#0B1628","accent-soft":"#1E2E4D",gold:"#E0BE6E",danger:"#F08A76"}},
   medine:{n:"Turquoise de Médine",sw:["#0E7C86","#B07D2A"],
     l:{bg:"#F1F7F8",surface:"#FFFFFF",ink:"#123238",muted:"#557178",line:"#D6E6E8",accent:"#0E7C86","accent-ink":"#FFFFFF","accent-soft":"#D8EEF0",gold:"#B07D2A",danger:"#B3402E"},
-    k:{bg:"#0B1A1D",surface:"#12262A",ink:"#E2F1F3",muted:"#89A9AE",line:"#21393D",accent:"#5CCAD3","accent-ink":"#062226","accent-soft":"#17383D",gold:"#E3BC68",danger:"#F08A76"}}};
+    k:{bg:"#0B1A1D",surface:"#12262A",ink:"#E2F1F3",muted:"#89A9AE",line:"#21393D",accent:"#5CCAD3","accent-ink":"#062226","accent-soft":"#17383D",gold:"#E3BC68",danger:"#F08A76"}},
+  bordeaux:{n:"Bordeaux et crème",sw:["#7A2335","#A57A2C"],
+    l:{bg:"#F8F4F0",surface:"#FFFDFB",ink:"#2F1C1E",muted:"#7C6466",line:"#EADFDA",accent:"#7A2335","accent-ink":"#FFFFFF","accent-soft":"#F1DDE0",gold:"#A57A2C",danger:"#B3402E"},
+    k:{bg:"#1A1112",surface:"#25191A",ink:"#F3E7E6",muted:"#AE9797",line:"#382729",accent:"#E0899A","accent-ink":"#2C0D14","accent-soft":"#3B2226",gold:"#DDB66A",danger:"#F08A76"}}};
 const PAL_VARS=["bg","surface","ink","muted","line","accent","accent-ink","accent-soft","gold","danger"];
 function applyTheme(){const t=S.theme==="light"||S.theme==="dark"?S.theme:"auto",r=document.documentElement;
   if(t==="auto")r.removeAttribute("data-theme");else r.setAttribute("data-theme",t);
