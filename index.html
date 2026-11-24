@@ -154,6 +154,11 @@ nav a.on svg{background:var(--accent-soft)}
   background:var(--accent-soft);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
 .resume b{display:block}
 .rbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.rprog{position:sticky;top:-4px;z-index:5;background:var(--bg);margin:0 -16px;padding:8px 16px 8px}
+.rprog .rl{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--muted);margin-bottom:6px}
+.rprog .rl b{color:inherit;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rprog .tr{height:6px;border-radius:99px;background:var(--line);overflow:hidden}
+.rprog .tr i{display:block;height:100%;width:0;background:var(--gold);border-radius:99px;transition:width .12s linear}
 .chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 13px;font-size:14px;font-weight:500}
 .chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .rhead{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
@@ -352,6 +357,7 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
       <div class="hscroll" id="d-nav" aria-label="Catégories"></div>
       <div><h2 id="d-title" style="font-size:24px"></h2><div class="note" id="d-prog"></div></div>
       <div id="d-audio" class="stack"></div>
+      <div class="rprog" id="d-rp" aria-hidden="true"><div class="rl"><b id="d-rt"></b><span class="num" id="d-rn"></span></div><div class="tr"><i id="d-rb"></i></div></div>
       <div id="d-list" class="stack"></div>
     </div>
   </section>
@@ -1042,7 +1048,7 @@ function renderDuas(){applyShow();document.querySelectorAll("#v-duas audio").for
     if(all.length){const sb=el("button","btn ghost","Enregistrer tout l'audio de cette catégorie");let busy=false;
       sb.onclick=async()=>{if(busy)return;busy=true;let ok=0;for(let i=0;i<all.length;i++){sb.textContent="Téléchargement… "+(i+1)+" sur "+all.length;if(await savePart(all[i]))ok++}
         busy=false;if(ok===all.length){renderDuas()}else sb.textContent=ok+" sur "+all.length+" enregistrés. Réessayer"};A.append(sb)}
-    const L=$("d-list");L.textContent="";c.d.forEach(d=>L.append(duaCard(d,prog)));return}
+    const L=$("d-list");L.textContent="";c.d.forEach(d=>L.append(duaCard(d,prog)));setTimeout(readProg,0);return}
   const norm=x=>x.toLowerCase().normalize("NFD").replace(/[̀-ͯ'’-]/g,""),q=norm($("d-search").value.trim());
   const F=$("d-feat"),T_=$("d-today"),C=$("d-cats"),Rz=$("d-results");F.textContent="";T_.textContent="";C.textContent="";Rz.textContent="";
   $("d-favs").setAttribute("aria-pressed",dFav?"true":"false");
@@ -1056,6 +1062,19 @@ function renderDuas(){applyShow();document.querySelectorAll("#v-duas audio").for
     b.append(mid,el("span","no","→"));b.onclick=()=>open(i);C.append(b)});
   const now=new Date(),doy=Math.floor((now-new Date(now.getFullYear(),0,0))/864e5);
   T_.append(el("div","label","Invocation du jour"),duaCard(ALLD[doy%ALLD.length]))}
+/* barre de progression de lecture : avance avec le défilement, invocation par invocation */
+function readProg(){const P=$("d-rp");if(!P||$("d-cat").hidden)return;const cards=[...$("d-list").children];if(!cards.length)return;
+  const m=$("main"),top=m.getBoundingClientRect().top+P.offsetHeight,vh=m.clientHeight-P.offsetHeight,n=cards.length;
+  let idx=0,frac=0;
+  for(let i=0;i<n;i++){const r=cards[i].getBoundingClientRect(),t=r.top-top,h=Math.max(1,r.height-vh*0.5);
+    if(t<=vh*0.25){idx=i;frac=Math.min(1,Math.max(0,(vh*0.25-t)/h))}}
+  if(m.scrollTop+m.clientHeight>=m.scrollHeight-4){idx=n-1;frac=1}
+  const pct=Math.min(100,(idx+frac)/n*100);
+  $("d-rb").style.width=pct.toFixed(1)+"%";
+  $("d-rn").textContent=(idx+1)+" sur "+n;
+  const b=cards[idx].querySelector(".dh b");$("d-rt").textContent=b?b.textContent:""}
+$("main").addEventListener("scroll",()=>{if(curView()==="duas")requestAnimationFrame(readProg)},{passive:true});
+window.addEventListener("resize",()=>{if(curView()==="duas")readProg()});
 $("d-search").oninput=renderDuas;
 $("d-favs").onclick=()=>{dFav=!dFav;renderDuas()};
 $("d-back").onclick=()=>{dCat=-1;renderDuas()};
