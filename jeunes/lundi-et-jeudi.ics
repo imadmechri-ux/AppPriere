@@ -1,0 +1,4285 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Rahim//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Rahim · Lundi et jeudi
+X-WR-TIMEZONE:Europe/Paris
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:jeune-20261126@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20261125T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 26 novembre · 16 Joumâdâ ath-Thâniya 1448. Pensez 
+ à l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20261130@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20261129T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 30 novembre · 20 Joumâdâ ath-Thâniya 1448. Pensez 
+ à l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20261203@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20261202T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 3 décembre · 23 Joumâdâ ath-Thâniya 1448. Pensez 
+ à l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20261207@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20261206T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 7 décembre · 27 Joumâdâ ath-Thâniya 1448. Pensez 
+ à l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20261210@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20261209T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 10 décembre · 1 Rajab 1448. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20261214@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20261213T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 14 décembre · 5 Rajab 1448. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20261217@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20261216T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 17 décembre · 8 Rajab 1448. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20261221@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20261220T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 21 décembre · 12 Rajab 1448. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20261224@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20261223T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 24 décembre · 15 Rajab 1448. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20261228@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20261227T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 28 décembre · 19 Rajab 1448. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20261231@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20261230T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 31 décembre · 22 Rajab 1448. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270104@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270103T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 4 janvier · 26 Rajab 1448. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270107@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270106T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 7 janvier · 29 Rajab 1448. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270111@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270110T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 11 janvier · 3 Cha'bân 1448. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270114@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270113T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 14 janvier · 6 Cha'bân 1448. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270118@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270117T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 18 janvier · 10 Cha'bân 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270121@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270120T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 21 janvier · 13 Cha'bân 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270125@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270124T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 25 janvier · 17 Cha'bân 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270128@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270127T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 28 janvier · 20 Cha'bân 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270201@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270131T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 1 février · 24 Cha'bân 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270204@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270203T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 4 février · 27 Cha'bân 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270311@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270310T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 11 mars · 3 Chawwâl 1448. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270315@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270314T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 15 mars · 7 Chawwâl 1448. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270318@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270317T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 18 mars · 10 Chawwâl 1448. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270322@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270321T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 22 mars · 14 Chawwâl 1448. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270325@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270324T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 25 mars · 17 Chawwâl 1448. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270329@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270328T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 29 mars · 21 Chawwâl 1448. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270401@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270331T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 1 avril · 24 Chawwâl 1448. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270405@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270404T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 5 avril · 28 Chawwâl 1448. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270408@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270407T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 8 avril · 1 Dhou al-Qa'da 1448. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270412@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270411T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 12 avril · 5 Dhou al-Qa'da 1448. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270415@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270414T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 15 avril · 8 Dhou al-Qa'da 1448. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270419@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270418T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 19 avril · 12 Dhou al-Qa'da 1448. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270422@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270421T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 22 avril · 15 Dhou al-Qa'da 1448. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270426@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270425T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 26 avril · 19 Dhou al-Qa'da 1448. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270429@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270428T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 29 avril · 22 Dhou al-Qa'da 1448. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270503@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270502T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 3 mai · 26 Dhou al-Qa'da 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270506@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270505T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 6 mai · 29 Dhou al-Qa'da 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270510@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270509T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 10 mai · 4 Dhou al-Hijja 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270513@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270512T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 13 mai · 7 Dhou al-Hijja 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270520@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270519T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 20 mai · 14 Dhou al-Hijja 1448. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270524@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270523T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 24 mai · 18 Dhou al-Hijja 1448. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270527@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270526T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 27 mai · 21 Dhou al-Hijja 1448. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270531@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270530T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 31 mai · 25 Dhou al-Hijja 1448. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270603@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270602T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 3 juin · 28 Dhou al-Hijja 1448. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270607@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270606T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 7 juin · 2 Mouharram 1449. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270610@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270609T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 10 juin · 5 Mouharram 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270614@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270613T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 14 juin · 9 Mouharram 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270617@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270616T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 17 juin · 12 Mouharram 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270621@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270620T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 21 juin · 16 Mouharram 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270624@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270623T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 24 juin · 19 Mouharram 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270628@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270627T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 28 juin · 23 Mouharram 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270701@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270630T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 1 juillet · 26 Mouharram 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270705@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270704T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 5 juillet · 1 Safar 1449. Pensez à l'intention et au 
+ suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270708@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270707T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 8 juillet · 4 Safar 1449. Pensez à l'intention et au 
+ suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270712@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270711T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 12 juillet · 8 Safar 1449. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270715@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270714T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 15 juillet · 11 Safar 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270719@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270718T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 19 juillet · 15 Safar 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270722@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270721T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 22 juillet · 18 Safar 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270726@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270725T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 26 juillet · 22 Safar 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270729@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270728T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 29 juillet · 25 Safar 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270802@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270801T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 2 août · 29 Safar 1449. Pensez à l'intention et au s
+ uhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270805@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270804T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 5 août · 3 Rabî' al-Awwal 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270809@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270808T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 9 août · 7 Rabî' al-Awwal 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270812@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270811T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 12 août · 10 Rabî' al-Awwal 1449. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270816@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270815T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 16 août · 14 Rabî' al-Awwal 1449. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270819@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270818T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 19 août · 17 Rabî' al-Awwal 1449. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270823@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270822T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 23 août · 21 Rabî' al-Awwal 1449. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270826@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270825T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 26 août · 24 Rabî' al-Awwal 1449. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270830@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270829T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 30 août · 28 Rabî' al-Awwal 1449. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270902@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270901T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 2 septembre · 1 Rabî' ath-Thânî 1449. Pensez à l'i
+ ntention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270906@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270905T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 6 septembre · 5 Rabî' ath-Thânî 1449. Pensez à l'i
+ ntention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270909@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270908T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 9 septembre · 8 Rabî' ath-Thânî 1449. Pensez à l'i
+ ntention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270913@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270912T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 13 septembre · 12 Rabî' ath-Thânî 1449. Pensez à l
+ 'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270916@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270915T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 16 septembre · 15 Rabî' ath-Thânî 1449. Pensez à l
+ 'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270920@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270919T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 20 septembre · 19 Rabî' ath-Thânî 1449. Pensez à l
+ 'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270923@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270922T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 23 septembre · 22 Rabî' ath-Thânî 1449. Pensez à l
+ 'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270927@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270926T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 27 septembre · 26 Rabî' ath-Thânî 1449. Pensez à l
+ 'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270930@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270929T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 30 septembre · 29 Rabî' ath-Thânî 1449. Pensez à l
+ 'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271004@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271003T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 4 octobre · 4 Joumâdâ al-Oûlâ 1449. Pensez à l'in
+ tention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271007@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271006T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 7 octobre · 7 Joumâdâ al-Oûlâ 1449. Pensez à l'in
+ tention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271011@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271010T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 11 octobre · 11 Joumâdâ al-Oûlâ 1449. Pensez à l'
+ intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271014@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271013T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 14 octobre · 14 Joumâdâ al-Oûlâ 1449. Pensez à l'
+ intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271018@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271017T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 18 octobre · 18 Joumâdâ al-Oûlâ 1449. Pensez à l'
+ intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271021@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271020T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 21 octobre · 21 Joumâdâ al-Oûlâ 1449. Pensez à l'
+ intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271025@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271024T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 25 octobre · 25 Joumâdâ al-Oûlâ 1449. Pensez à l'
+ intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271028@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271027T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 28 octobre · 28 Joumâdâ al-Oûlâ 1449. Pensez à l'
+ intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271101@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271031T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 1 novembre · 2 Joumâdâ ath-Thâniya 1449. Pensez à 
+ l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271104@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271103T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 4 novembre · 5 Joumâdâ ath-Thâniya 1449. Pensez à 
+ l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271108@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271107T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 8 novembre · 9 Joumâdâ ath-Thâniya 1449. Pensez à 
+ l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271111@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271110T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 11 novembre · 12 Joumâdâ ath-Thâniya 1449. Pensez 
+ à l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271115@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271114T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 15 novembre · 16 Joumâdâ ath-Thâniya 1449. Pensez 
+ à l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271118@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271117T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 18 novembre · 19 Joumâdâ ath-Thâniya 1449. Pensez 
+ à l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271122@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271121T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 22 novembre · 23 Joumâdâ ath-Thâniya 1449. Pensez 
+ à l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271125@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271124T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 25 novembre · 26 Joumâdâ ath-Thâniya 1449. Pensez 
+ à l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271129@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271128T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 29 novembre · 1 Rajab 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271202@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271201T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 2 décembre · 4 Rajab 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271206@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271205T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 6 décembre · 8 Rajab 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271209@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271208T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 9 décembre · 11 Rajab 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271213@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271212T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 13 décembre · 15 Rajab 1449. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271216@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271215T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 16 décembre · 18 Rajab 1449. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271220@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271219T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 20 décembre · 22 Rajab 1449. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271223@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271222T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 23 décembre · 25 Rajab 1449. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271227@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271226T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 27 décembre · 29 Rajab 1449. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271230@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271229T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 30 décembre · 2 Cha'bân 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280103@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280102T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 3 janvier · 6 Cha'bân 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280106@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280105T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 6 janvier · 9 Cha'bân 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280110@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280109T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 10 janvier · 13 Cha'bân 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280113@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280112T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 13 janvier · 16 Cha'bân 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280117@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280116T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 17 janvier · 20 Cha'bân 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280120@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280119T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 20 janvier · 23 Cha'bân 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280124@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280123T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 24 janvier · 27 Cha'bân 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280127@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280126T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 27 janvier · 30 Cha'bân 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280228@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280227T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 28 février · 3 Chawwâl 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280302@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280301T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 2 mars · 6 Chawwâl 1449. Pensez à l'intention et au 
+ suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280306@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280305T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 6 mars · 10 Chawwâl 1449. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280309@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280308T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 9 mars · 13 Chawwâl 1449. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280313@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280312T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 13 mars · 17 Chawwâl 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280316@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280315T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 16 mars · 20 Chawwâl 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280320@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280319T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 20 mars · 24 Chawwâl 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280323@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280322T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 23 mars · 27 Chawwâl 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280327@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280326T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 27 mars · 1 Dhou al-Qa'da 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280330@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280329T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 30 mars · 4 Dhou al-Qa'da 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280403@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280402T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 3 avril · 8 Dhou al-Qa'da 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280406@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280405T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 6 avril · 11 Dhou al-Qa'da 1449. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280410@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280409T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 10 avril · 15 Dhou al-Qa'da 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280413@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280412T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 13 avril · 18 Dhou al-Qa'da 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280417@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280416T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 17 avril · 22 Dhou al-Qa'da 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280420@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280419T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 20 avril · 25 Dhou al-Qa'da 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280424@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280423T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 24 avril · 29 Dhou al-Qa'da 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280427@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280426T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 27 avril · 2 Dhou al-Hijja 1449. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280501@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280430T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 1 mai · 6 Dhou al-Hijja 1449. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280504@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280503T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 4 mai · 9 Dhou al-Hijja 1449. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280511@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280510T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 11 mai · 16 Dhou al-Hijja 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280515@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280514T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 15 mai · 20 Dhou al-Hijja 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280518@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280517T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 18 mai · 23 Dhou al-Hijja 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280522@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280521T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 22 mai · 27 Dhou al-Hijja 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280525@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280524T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 25 mai · 1 Mouharram 1450. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280529@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280528T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 29 mai · 5 Mouharram 1450. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280601@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280531T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 1 juin · 8 Mouharram 1450. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280605@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280604T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 5 juin · 12 Mouharram 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280608@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280607T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 8 juin · 15 Mouharram 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280612@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280611T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 12 juin · 19 Mouharram 1450. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280615@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280614T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 15 juin · 22 Mouharram 1450. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280619@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280618T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 19 juin · 26 Mouharram 1450. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280622@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280621T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 22 juin · 29 Mouharram 1450. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280626@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280625T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 26 juin · 3 Safar 1450. Pensez à l'intention et au su
+ hoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280629@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280628T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 29 juin · 6 Safar 1450. Pensez à l'intention et au su
+ hoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280703@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280702T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 3 juillet · 10 Safar 1450. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280706@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280705T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 6 juillet · 13 Safar 1450. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280710@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280709T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 10 juillet · 17 Safar 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280713@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280712T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 13 juillet · 20 Safar 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280717@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280716T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 17 juillet · 24 Safar 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280720@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280719T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 20 juillet · 27 Safar 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280724@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280723T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 24 juillet · 2 Rabî' al-Awwal 1450. Pensez à l'inten
+ tion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280727@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280726T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 27 juillet · 5 Rabî' al-Awwal 1450. Pensez à l'inten
+ tion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280731@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280730T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 31 juillet · 9 Rabî' al-Awwal 1450. Pensez à l'inten
+ tion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280803@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280802T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 3 août · 12 Rabî' al-Awwal 1450. Pensez à l'intenti
+ on et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280807@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280806T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 7 août · 16 Rabî' al-Awwal 1450. Pensez à l'intenti
+ on et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280810@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280809T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 10 août · 19 Rabî' al-Awwal 1450. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280814@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280813T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 14 août · 23 Rabî' al-Awwal 1450. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280817@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280816T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 17 août · 26 Rabî' al-Awwal 1450. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280821@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280820T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 21 août · 30 Rabî' al-Awwal 1450. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280824@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280823T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 24 août · 3 Rabî' ath-Thânî 1450. Pensez à l'inte
+ ntion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280828@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280827T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 28 août · 7 Rabî' ath-Thânî 1450. Pensez à l'inte
+ ntion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280831@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280830T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 31 août · 10 Rabî' ath-Thânî 1450. Pensez à l'int
+ ention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280904@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280903T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 4 septembre · 14 Rabî' ath-Thânî 1450. Pensez à l'
+ intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280907@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280906T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 7 septembre · 17 Rabî' ath-Thânî 1450. Pensez à l'
+ intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280911@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280910T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 11 septembre · 21 Rabî' ath-Thânî 1450. Pensez à l
+ 'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280914@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280913T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 14 septembre · 24 Rabî' ath-Thânî 1450. Pensez à l
+ 'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280918@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280917T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 18 septembre · 28 Rabî' ath-Thânî 1450. Pensez à l
+ 'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280921@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280920T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 21 septembre · 2 Joumâdâ al-Oûlâ 1450. Pensez à l
+ 'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280925@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280924T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 25 septembre · 6 Joumâdâ al-Oûlâ 1450. Pensez à l
+ 'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280928@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280927T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 28 septembre · 9 Joumâdâ al-Oûlâ 1450. Pensez à l
+ 'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281002@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281001T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 2 octobre · 13 Joumâdâ al-Oûlâ 1450. Pensez à l'i
+ ntention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281005@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281004T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 5 octobre · 16 Joumâdâ al-Oûlâ 1450. Pensez à l'i
+ ntention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281009@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281008T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 9 octobre · 20 Joumâdâ al-Oûlâ 1450. Pensez à l'i
+ ntention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281012@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281011T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 12 octobre · 23 Joumâdâ al-Oûlâ 1450. Pensez à l'
+ intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281016@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281015T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 16 octobre · 27 Joumâdâ al-Oûlâ 1450. Pensez à l'
+ intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281019@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281018T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 19 octobre · 1 Joumâdâ ath-Thâniya 1450. Pensez à 
+ l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281023@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281022T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 23 octobre · 5 Joumâdâ ath-Thâniya 1450. Pensez à 
+ l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281026@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281025T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 26 octobre · 8 Joumâdâ ath-Thâniya 1450. Pensez à 
+ l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281030@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281029T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 30 octobre · 12 Joumâdâ ath-Thâniya 1450. Pensez à
+  l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281102@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281101T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 2 novembre · 15 Joumâdâ ath-Thâniya 1450. Pensez à
+  l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281106@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281105T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 6 novembre · 19 Joumâdâ ath-Thâniya 1450. Pensez à
+  l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281109@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281108T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 9 novembre · 22 Joumâdâ ath-Thâniya 1450. Pensez à
+  l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281113@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281112T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 13 novembre · 26 Joumâdâ ath-Thâniya 1450. Pensez 
+ à l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281116@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281115T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 16 novembre · 29 Joumâdâ ath-Thâniya 1450. Pensez 
+ à l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281120@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281119T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 20 novembre · 3 Rajab 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281123@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281122T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 23 novembre · 6 Rajab 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281127@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281126T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 27 novembre · 10 Rajab 1450. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281130@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281129T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 30 novembre · 13 Rajab 1450. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281204@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281203T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 4 décembre · 17 Rajab 1450. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281207@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281206T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 7 décembre · 20 Rajab 1450. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281211@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281210T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 11 décembre · 24 Rajab 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281214@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281213T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 14 décembre · 27 Rajab 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281218@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281217T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 18 décembre · 2 Cha'bân 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281221@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281220T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 21 décembre · 5 Cha'bân 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281225@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281224T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 25 décembre · 9 Cha'bân 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281228@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281227T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 28 décembre · 12 Cha'bân 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290101@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281231T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 1 janvier · 16 Cha'bân 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290104@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290103T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 4 janvier · 19 Cha'bân 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290108@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290107T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 8 janvier · 23 Cha'bân 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290111@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290110T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 11 janvier · 26 Cha'bân 1450. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290115@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290114T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 15 janvier · 30 Cha'bân 1450. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290215@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290214T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 15 février · 2 Chawwâl 1450. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290219@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290218T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 19 février · 6 Chawwâl 1450. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290222@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290221T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 22 février · 9 Chawwâl 1450. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290226@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290225T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 26 février · 13 Chawwâl 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290301@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290228T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 1 mars · 16 Chawwâl 1450. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290305@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290304T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 5 mars · 20 Chawwâl 1450. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290308@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290307T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 8 mars · 23 Chawwâl 1450. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290312@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290311T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 12 mars · 27 Chawwâl 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290315@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290314T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 15 mars · 30 Chawwâl 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290319@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290318T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 19 mars · 4 Dhou al-Qa'da 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290322@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290321T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 22 mars · 7 Dhou al-Qa'da 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290326@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290325T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 26 mars · 11 Dhou al-Qa'da 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290329@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290328T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 29 mars · 14 Dhou al-Qa'da 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290402@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290401T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 2 avril · 18 Dhou al-Qa'da 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290405@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290404T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 5 avril · 21 Dhou al-Qa'da 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290409@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290408T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 9 avril · 25 Dhou al-Qa'da 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290412@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290411T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 12 avril · 28 Dhou al-Qa'da 1450. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290416@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290415T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 16 avril · 2 Dhou al-Hijja 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290419@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290418T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 19 avril · 5 Dhou al-Hijja 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290423@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290422T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 23 avril · 9 Dhou al-Hijja 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290430@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290429T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 30 avril · 16 Dhou al-Hijja 1450. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290503@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290502T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 3 mai · 19 Dhou al-Hijja 1450. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290507@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290506T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 7 mai · 23 Dhou al-Hijja 1450. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290510@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290509T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 10 mai · 26 Dhou al-Hijja 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290514@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290513T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 14 mai · 1 Mouharram 1451. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290517@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290516T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 17 mai · 4 Mouharram 1451. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290521@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290520T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 21 mai · 8 Mouharram 1451. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290524@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290523T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 24 mai · 11 Mouharram 1451. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290528@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290527T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 28 mai · 15 Mouharram 1451. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290531@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290530T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 31 mai · 18 Mouharram 1451. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290604@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290603T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 4 juin · 22 Mouharram 1451. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290607@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290606T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 7 juin · 25 Mouharram 1451. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290611@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290610T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 11 juin · 29 Mouharram 1451. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290614@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290613T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 14 juin · 2 Safar 1451. Pensez à l'intention et au su
+ hoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290618@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290617T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 18 juin · 6 Safar 1451. Pensez à l'intention et au su
+ hoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290621@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290620T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 21 juin · 9 Safar 1451. Pensez à l'intention et au su
+ hoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290625@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290624T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 25 juin · 13 Safar 1451. Pensez à l'intention et au s
+ uhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290628@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290627T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 28 juin · 16 Safar 1451. Pensez à l'intention et au s
+ uhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290702@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290701T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 2 juillet · 20 Safar 1451. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290705@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290704T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 5 juillet · 23 Safar 1451. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290709@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290708T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 9 juillet · 27 Safar 1451. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290712@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290711T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 12 juillet · 30 Safar 1451. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290716@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290715T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 16 juillet · 4 Rabî' al-Awwal 1451. Pensez à l'inten
+ tion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290719@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290718T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 19 juillet · 7 Rabî' al-Awwal 1451. Pensez à l'inten
+ tion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290723@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290722T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 23 juillet · 11 Rabî' al-Awwal 1451. Pensez à l'inte
+ ntion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290726@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290725T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 26 juillet · 14 Rabî' al-Awwal 1451. Pensez à l'inte
+ ntion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290730@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290729T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 30 juillet · 18 Rabî' al-Awwal 1451. Pensez à l'inte
+ ntion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290802@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290801T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 2 août · 21 Rabî' al-Awwal 1451. Pensez à l'intenti
+ on et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290806@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290805T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 6 août · 25 Rabî' al-Awwal 1451. Pensez à l'intenti
+ on et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290809@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290808T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 9 août · 28 Rabî' al-Awwal 1451. Pensez à l'intenti
+ on et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290813@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290812T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 13 août · 2 Rabî' ath-Thânî 1451. Pensez à l'inte
+ ntion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290816@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290815T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 16 août · 5 Rabî' ath-Thânî 1451. Pensez à l'inte
+ ntion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290820@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290819T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 20 août · 9 Rabî' ath-Thânî 1451. Pensez à l'inte
+ ntion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290823@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290822T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 23 août · 12 Rabî' ath-Thânî 1451. Pensez à l'int
+ ention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290827@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290826T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 27 août · 16 Rabî' ath-Thânî 1451. Pensez à l'int
+ ention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290830@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290829T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 30 août · 19 Rabî' ath-Thânî 1451. Pensez à l'int
+ ention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290903@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290902T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 3 septembre · 23 Rabî' ath-Thânî 1451. Pensez à l'
+ intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290906@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290905T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 6 septembre · 26 Rabî' ath-Thânî 1451. Pensez à l'
+ intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290910@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290909T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 10 septembre · 1 Joumâdâ al-Oûlâ 1451. Pensez à l
+ 'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290913@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290912T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 13 septembre · 4 Joumâdâ al-Oûlâ 1451. Pensez à l
+ 'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290917@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290916T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 17 septembre · 8 Joumâdâ al-Oûlâ 1451. Pensez à l
+ 'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290920@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290919T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 20 septembre · 11 Joumâdâ al-Oûlâ 1451. Pensez à 
+ l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290924@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290923T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 24 septembre · 15 Joumâdâ al-Oûlâ 1451. Pensez à 
+ l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290927@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290926T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 27 septembre · 18 Joumâdâ al-Oûlâ 1451. Pensez à 
+ l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291001@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290930T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 1 octobre · 22 Joumâdâ al-Oûlâ 1451. Pensez à l'i
+ ntention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291004@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291003T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 4 octobre · 25 Joumâdâ al-Oûlâ 1451. Pensez à l'i
+ ntention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291008@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291007T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 8 octobre · 29 Joumâdâ al-Oûlâ 1451. Pensez à l'i
+ ntention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291011@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291010T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 11 octobre · 3 Joumâdâ ath-Thâniya 1451. Pensez à 
+ l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291015@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291014T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 15 octobre · 7 Joumâdâ ath-Thâniya 1451. Pensez à 
+ l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291018@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291017T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 18 octobre · 10 Joumâdâ ath-Thâniya 1451. Pensez à
+  l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291022@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291021T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 22 octobre · 14 Joumâdâ ath-Thâniya 1451. Pensez à
+  l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291025@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291024T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 25 octobre · 17 Joumâdâ ath-Thâniya 1451. Pensez à
+  l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291029@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291028T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 29 octobre · 21 Joumâdâ ath-Thâniya 1451. Pensez à
+  l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291101@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291031T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 1 novembre · 24 Joumâdâ ath-Thâniya 1451. Pensez à
+  l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291105@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291104T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 5 novembre · 28 Joumâdâ ath-Thâniya 1451. Pensez à
+  l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291108@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291107T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 8 novembre · 1 Rajab 1451. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291112@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291111T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 12 novembre · 5 Rajab 1451. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291115@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291114T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 15 novembre · 8 Rajab 1451. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291119@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291118T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:lundi 19 novembre · 12 Rajab 1451. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291122@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291121T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Lundi et jeudi)
+DESCRIPTION:jeudi 22 novembre · 15 Rajab 1451. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Lundi et jeudi)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR

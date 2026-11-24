@@ -1,0 +1,1345 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Rahim//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Rahim · Mois de Mouharram
+X-WR-TIMEZONE:Europe/Paris
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:jeune-20270606@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270605T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:dimanche 6 juin · 1 Mouharram 1449. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270607@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270606T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:lundi 7 juin · 2 Mouharram 1449. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270608@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270607T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mardi 8 juin · 3 Mouharram 1449. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270609@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270608T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mercredi 9 juin · 4 Mouharram 1449. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270610@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270609T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:jeudi 10 juin · 5 Mouharram 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270611@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270610T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:vendredi 11 juin · 6 Mouharram 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270612@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270611T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:samedi 12 juin · 7 Mouharram 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270613@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270612T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:dimanche 13 juin · 8 Mouharram 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270614@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270613T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:lundi 14 juin · 9 Mouharram 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270615@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270614T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mardi 15 juin · 10 Mouharram 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270616@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270615T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mercredi 16 juin · 11 Mouharram 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270617@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270616T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:jeudi 17 juin · 12 Mouharram 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270618@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270617T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:vendredi 18 juin · 13 Mouharram 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270619@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270618T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:samedi 19 juin · 14 Mouharram 1449. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270620@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270619T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:dimanche 20 juin · 15 Mouharram 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270621@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270620T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:lundi 21 juin · 16 Mouharram 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270622@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270621T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mardi 22 juin · 17 Mouharram 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270623@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270622T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mercredi 23 juin · 18 Mouharram 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270624@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270623T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:jeudi 24 juin · 19 Mouharram 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270625@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270624T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:vendredi 25 juin · 20 Mouharram 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270626@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270625T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:samedi 26 juin · 21 Mouharram 1449. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270627@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270626T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:dimanche 27 juin · 22 Mouharram 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270628@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270627T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:lundi 28 juin · 23 Mouharram 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270629@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270628T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mardi 29 juin · 24 Mouharram 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270630@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270629T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mercredi 30 juin · 25 Mouharram 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270701@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270630T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:jeudi 1 juillet · 26 Mouharram 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270702@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270701T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:vendredi 2 juillet · 27 Mouharram 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270703@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270702T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:samedi 3 juillet · 28 Mouharram 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270704@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270703T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:dimanche 4 juillet · 29 Mouharram 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280525@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280524T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:jeudi 25 mai · 1 Mouharram 1450. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280526@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280525T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:vendredi 26 mai · 2 Mouharram 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280527@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280526T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:samedi 27 mai · 3 Mouharram 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280528@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280527T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:dimanche 28 mai · 4 Mouharram 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280529@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280528T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:lundi 29 mai · 5 Mouharram 1450. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280530@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280529T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mardi 30 mai · 6 Mouharram 1450. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280531@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280530T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mercredi 31 mai · 7 Mouharram 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280601@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280531T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:jeudi 1 juin · 8 Mouharram 1450. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280602@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280601T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:vendredi 2 juin · 9 Mouharram 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280603@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280602T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:samedi 3 juin · 10 Mouharram 1450. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280604@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280603T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:dimanche 4 juin · 11 Mouharram 1450. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280605@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280604T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:lundi 5 juin · 12 Mouharram 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280606@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280605T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mardi 6 juin · 13 Mouharram 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280607@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280606T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mercredi 7 juin · 14 Mouharram 1450. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280608@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280607T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:jeudi 8 juin · 15 Mouharram 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280609@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280608T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:vendredi 9 juin · 16 Mouharram 1450. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280610@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280609T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:samedi 10 juin · 17 Mouharram 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280611@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280610T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:dimanche 11 juin · 18 Mouharram 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280612@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280611T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:lundi 12 juin · 19 Mouharram 1450. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280613@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280612T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mardi 13 juin · 20 Mouharram 1450. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280614@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280613T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mercredi 14 juin · 21 Mouharram 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280615@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280614T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:jeudi 15 juin · 22 Mouharram 1450. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280616@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280615T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:vendredi 16 juin · 23 Mouharram 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280617@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280616T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:samedi 17 juin · 24 Mouharram 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280618@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280617T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:dimanche 18 juin · 25 Mouharram 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280619@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280618T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:lundi 19 juin · 26 Mouharram 1450. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280620@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280619T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mardi 20 juin · 27 Mouharram 1450. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280621@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280620T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mercredi 21 juin · 28 Mouharram 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280622@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280621T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:jeudi 22 juin · 29 Mouharram 1450. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280623@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280622T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:vendredi 23 juin · 30 Mouharram 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290514@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290513T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:lundi 14 mai · 1 Mouharram 1451. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290515@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290514T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mardi 15 mai · 2 Mouharram 1451. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290516@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290515T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mercredi 16 mai · 3 Mouharram 1451. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290517@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290516T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:jeudi 17 mai · 4 Mouharram 1451. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290518@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290517T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:vendredi 18 mai · 5 Mouharram 1451. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290519@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290518T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:samedi 19 mai · 6 Mouharram 1451. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290520@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290519T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:dimanche 20 mai · 7 Mouharram 1451. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290521@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290520T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:lundi 21 mai · 8 Mouharram 1451. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290522@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290521T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mardi 22 mai · 9 Mouharram 1451. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290523@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290522T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mercredi 23 mai · 10 Mouharram 1451. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290524@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290523T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:jeudi 24 mai · 11 Mouharram 1451. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290525@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290524T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:vendredi 25 mai · 12 Mouharram 1451. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290526@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290525T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:samedi 26 mai · 13 Mouharram 1451. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290527@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290526T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:dimanche 27 mai · 14 Mouharram 1451. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290528@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290527T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:lundi 28 mai · 15 Mouharram 1451. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290529@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290528T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mardi 29 mai · 16 Mouharram 1451. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290530@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290529T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mercredi 30 mai · 17 Mouharram 1451. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290531@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290530T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:jeudi 31 mai · 18 Mouharram 1451. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290601@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290531T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:vendredi 1 juin · 19 Mouharram 1451. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290602@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290601T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:samedi 2 juin · 20 Mouharram 1451. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290603@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290602T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:dimanche 3 juin · 21 Mouharram 1451. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290604@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290603T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:lundi 4 juin · 22 Mouharram 1451. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290605@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290604T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mardi 5 juin · 23 Mouharram 1451. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290606@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290605T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mercredi 6 juin · 24 Mouharram 1451. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290607@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290606T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:jeudi 7 juin · 25 Mouharram 1451. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290608@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290607T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:vendredi 8 juin · 26 Mouharram 1451. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290609@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290608T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:samedi 9 juin · 27 Mouharram 1451. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290610@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290609T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:dimanche 10 juin · 28 Mouharram 1451. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290611@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290610T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:lundi 11 juin · 29 Mouharram 1451. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290612@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290611T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Mouharram)
+DESCRIPTION:mardi 12 juin · 30 Mouharram 1451. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR

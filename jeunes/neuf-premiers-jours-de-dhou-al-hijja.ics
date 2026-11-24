@@ -1,0 +1,442 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Rahim//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Rahim · Neuf premiers jours de Dhou al-Hijja
+X-WR-TIMEZONE:Europe/Paris
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:jeune-20270507@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270506T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:vendredi 7 mai · 1 Dhou al-Hijja 1448. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270508@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270507T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:samedi 8 mai · 2 Dhou al-Hijja 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270509@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270508T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:dimanche 9 mai · 3 Dhou al-Hijja 1448. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270510@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270509T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:lundi 10 mai · 4 Dhou al-Hijja 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270511@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270510T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:mardi 11 mai · 5 Dhou al-Hijja 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270512@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270511T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:mercredi 12 mai · 6 Dhou al-Hijja 1448. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270513@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270512T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:jeudi 13 mai · 7 Dhou al-Hijja 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270514@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270513T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:vendredi 14 mai · 8 Dhou al-Hijja 1448. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270515@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270514T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:samedi 15 mai · 9 Dhou al-Hijja 1448. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280426@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280425T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:mercredi 26 avril · 1 Dhou al-Hijja 1449. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280427@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280426T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:jeudi 27 avril · 2 Dhou al-Hijja 1449. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280428@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280427T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:vendredi 28 avril · 3 Dhou al-Hijja 1449. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280429@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280428T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:samedi 29 avril · 4 Dhou al-Hijja 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280430@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280429T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:dimanche 30 avril · 5 Dhou al-Hijja 1449. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280501@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280430T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:lundi 1 mai · 6 Dhou al-Hijja 1449. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280502@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280501T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:mardi 2 mai · 7 Dhou al-Hijja 1449. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280503@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280502T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:mercredi 3 mai · 8 Dhou al-Hijja 1449. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280504@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280503T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:jeudi 4 mai · 9 Dhou al-Hijja 1449. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290415@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290414T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:dimanche 15 avril · 1 Dhou al-Hijja 1450. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290416@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290415T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:lundi 16 avril · 2 Dhou al-Hijja 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290417@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290416T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:mardi 17 avril · 3 Dhou al-Hijja 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290418@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290417T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:mercredi 18 avril · 4 Dhou al-Hijja 1450. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290419@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290418T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:jeudi 19 avril · 5 Dhou al-Hijja 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290420@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290419T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:vendredi 20 avril · 6 Dhou al-Hijja 1450. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290421@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290420T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:samedi 21 avril · 7 Dhou al-Hijja 1450. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290422@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290421T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:dimanche 22 avril · 8 Dhou al-Hijja 1450. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290423@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290422T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-Hijja)
+DESCRIPTION:lundi 23 avril · 9 Dhou al-Hijja 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Neuf premiers jours de Dhou al-H
+ ijja)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR

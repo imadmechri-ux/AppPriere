@@ -1,0 +1,1510 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Rahim//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Rahim · Jours blancs : 13\, 14 et 15
+X-WR-TIMEZONE:Europe/Paris
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:jeune-20261125@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20261124T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mercredi 25 novembre · 15 Joumâdâ ath-Thâniya 1448. Pense
+ z à l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20261222@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20261221T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mardi 22 décembre · 13 Rajab 1448. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20261223@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20261222T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mercredi 23 décembre · 14 Rajab 1448. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20261224@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20261223T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:jeudi 24 décembre · 15 Rajab 1448. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270121@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270120T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:jeudi 21 janvier · 13 Cha'bân 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270122@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270121T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:vendredi 22 janvier · 14 Cha'bân 1448. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270123@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270122T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:samedi 23 janvier · 15 Cha'bân 1448. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270321@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270320T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:dimanche 21 mars · 13 Chawwâl 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270322@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270321T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:lundi 22 mars · 14 Chawwâl 1448. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270323@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270322T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mardi 23 mars · 15 Chawwâl 1448. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270420@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270419T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mardi 20 avril · 13 Dhou al-Qa'da 1448. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270421@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270420T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mercredi 21 avril · 14 Dhou al-Qa'da 1448. Pensez à l'inten
+ tion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270422@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270421T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:jeudi 22 avril · 15 Dhou al-Qa'da 1448. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270520@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270519T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:jeudi 20 mai · 14 Dhou al-Hijja 1448. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270521@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270520T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:vendredi 21 mai · 15 Dhou al-Hijja 1448. Pensez à l'intenti
+ on et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270618@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270617T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:vendredi 18 juin · 13 Mouharram 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270619@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270618T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:samedi 19 juin · 14 Mouharram 1449. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270620@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270619T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:dimanche 20 juin · 15 Mouharram 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270717@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270716T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:samedi 17 juillet · 13 Safar 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270718@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270717T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:dimanche 18 juillet · 14 Safar 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270719@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270718T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:lundi 19 juillet · 15 Safar 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270815@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270814T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:dimanche 15 août · 13 Rabî' al-Awwal 1449. Pensez à l'int
+ ention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270816@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270815T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:lundi 16 août · 14 Rabî' al-Awwal 1449. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270817@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270816T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mardi 17 août · 15 Rabî' al-Awwal 1449. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270914@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270913T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mardi 14 septembre · 13 Rabî' ath-Thânî 1449. Pensez à l
+ 'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270915@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270914T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mercredi 15 septembre · 14 Rabî' ath-Thânî 1449. Pensez 
+ à l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270916@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270915T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:jeudi 16 septembre · 15 Rabî' ath-Thânî 1449. Pensez à l
+ 'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271013@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271012T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mercredi 13 octobre · 13 Joumâdâ al-Oûlâ 1449. Pensez à
+  l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271014@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271013T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:jeudi 14 octobre · 14 Joumâdâ al-Oûlâ 1449. Pensez à l'
+ intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271015@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271014T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:vendredi 15 octobre · 15 Joumâdâ al-Oûlâ 1449. Pensez à
+  l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271112@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271111T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:vendredi 12 novembre · 13 Joumâdâ ath-Thâniya 1449. Pense
+ z à l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271113@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271112T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:samedi 13 novembre · 14 Joumâdâ ath-Thâniya 1449. Pensez 
+ à l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271114@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271113T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:dimanche 14 novembre · 15 Joumâdâ ath-Thâniya 1449. Pense
+ z à l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271211@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271210T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:samedi 11 décembre · 13 Rajab 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271212@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271211T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:dimanche 12 décembre · 14 Rajab 1449. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271213@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271212T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:lundi 13 décembre · 15 Rajab 1449. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280110@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280109T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:lundi 10 janvier · 13 Cha'bân 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280111@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280110T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mardi 11 janvier · 14 Cha'bân 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280112@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280111T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mercredi 12 janvier · 15 Cha'bân 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280309@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280308T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:jeudi 9 mars · 13 Chawwâl 1449. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280310@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280309T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:vendredi 10 mars · 14 Chawwâl 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280311@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280310T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:samedi 11 mars · 15 Chawwâl 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280408@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280407T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:samedi 8 avril · 13 Dhou al-Qa'da 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280409@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280408T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:dimanche 9 avril · 14 Dhou al-Qa'da 1449. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280410@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280409T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:lundi 10 avril · 15 Dhou al-Qa'da 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280509@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280508T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mardi 9 mai · 14 Dhou al-Hijja 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280510@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280509T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mercredi 10 mai · 15 Dhou al-Hijja 1449. Pensez à l'intenti
+ on et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280606@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280605T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mardi 6 juin · 13 Mouharram 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280607@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280606T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mercredi 7 juin · 14 Mouharram 1450. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280608@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280607T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:jeudi 8 juin · 15 Mouharram 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280706@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280705T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:jeudi 6 juillet · 13 Safar 1450. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280707@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280706T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:vendredi 7 juillet · 14 Safar 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280708@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280707T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:samedi 8 juillet · 15 Safar 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280804@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280803T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:vendredi 4 août · 13 Rabî' al-Awwal 1450. Pensez à l'inte
+ ntion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280805@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280804T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:samedi 5 août · 14 Rabî' al-Awwal 1450. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280806@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280805T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:dimanche 6 août · 15 Rabî' al-Awwal 1450. Pensez à l'inte
+ ntion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280903@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280902T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:dimanche 3 septembre · 13 Rabî' ath-Thânî 1450. Pensez à
+  l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280904@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280903T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:lundi 4 septembre · 14 Rabî' ath-Thânî 1450. Pensez à l'
+ intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280905@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280904T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mardi 5 septembre · 15 Rabî' ath-Thânî 1450. Pensez à l'
+ intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281002@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281001T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:lundi 2 octobre · 13 Joumâdâ al-Oûlâ 1450. Pensez à l'i
+ ntention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281003@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281002T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mardi 3 octobre · 14 Joumâdâ al-Oûlâ 1450. Pensez à l'i
+ ntention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281004@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281003T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mercredi 4 octobre · 15 Joumâdâ al-Oûlâ 1450. Pensez à 
+ l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281031@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281030T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mardi 31 octobre · 13 Joumâdâ ath-Thâniya 1450. Pensez à
+  l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281101@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281031T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mercredi 1 novembre · 14 Joumâdâ ath-Thâniya 1450. Pensez
+  à l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281102@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281101T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:jeudi 2 novembre · 15 Joumâdâ ath-Thâniya 1450. Pensez à
+  l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281130@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281129T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:jeudi 30 novembre · 13 Rajab 1450. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281201@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281130T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:vendredi 1 décembre · 14 Rajab 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281202@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281201T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:samedi 2 décembre · 15 Rajab 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281229@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281228T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:vendredi 29 décembre · 13 Cha'bân 1450. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281230@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281229T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:samedi 30 décembre · 14 Cha'bân 1450. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281231@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281230T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:dimanche 31 décembre · 15 Cha'bân 1450. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290226@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290225T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:lundi 26 février · 13 Chawwâl 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290227@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290226T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mardi 27 février · 14 Chawwâl 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290228@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290227T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mercredi 28 février · 15 Chawwâl 1450. Pensez à l'intenti
+ on et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290328@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290327T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mercredi 28 mars · 13 Dhou al-Qa'da 1450. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290329@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290328T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:jeudi 29 mars · 14 Dhou al-Qa'da 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290330@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290329T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:vendredi 30 mars · 15 Dhou al-Qa'da 1450. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290428@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290427T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:samedi 28 avril · 14 Dhou al-Hijja 1450. Pensez à l'intenti
+ on et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290429@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290428T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:dimanche 29 avril · 15 Dhou al-Hijja 1450. Pensez à l'inten
+ tion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290526@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290525T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:samedi 26 mai · 13 Mouharram 1451. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290527@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290526T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:dimanche 27 mai · 14 Mouharram 1451. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290528@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290527T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:lundi 28 mai · 15 Mouharram 1451. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290625@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290624T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:lundi 25 juin · 13 Safar 1451. Pensez à l'intention et au s
+ uhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290626@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290625T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mardi 26 juin · 14 Safar 1451. Pensez à l'intention et au s
+ uhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290627@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290626T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mercredi 27 juin · 15 Safar 1451. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290725@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290724T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mercredi 25 juillet · 13 Rabî' al-Awwal 1451. Pensez à l'i
+ ntention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290726@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290725T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:jeudi 26 juillet · 14 Rabî' al-Awwal 1451. Pensez à l'inte
+ ntion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290727@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290726T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:vendredi 27 juillet · 15 Rabî' al-Awwal 1451. Pensez à l'i
+ ntention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290824@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290823T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:vendredi 24 août · 13 Rabî' ath-Thânî 1451. Pensez à l'
+ intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290825@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290824T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:samedi 25 août · 14 Rabî' ath-Thânî 1451. Pensez à l'in
+ tention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290826@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290825T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:dimanche 26 août · 15 Rabî' ath-Thânî 1451. Pensez à l'
+ intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290922@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290921T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:samedi 22 septembre · 13 Joumâdâ al-Oûlâ 1451. Pensez à
+  l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290923@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290922T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:dimanche 23 septembre · 14 Joumâdâ al-Oûlâ 1451. Pensez 
+ à l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290924@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290923T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:lundi 24 septembre · 15 Joumâdâ al-Oûlâ 1451. Pensez à 
+ l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291021@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291020T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:dimanche 21 octobre · 13 Joumâdâ ath-Thâniya 1451. Pensez
+  à l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291022@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291021T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:lundi 22 octobre · 14 Joumâdâ ath-Thâniya 1451. Pensez à
+  l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291023@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291022T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mardi 23 octobre · 15 Joumâdâ ath-Thâniya 1451. Pensez à
+  l'intention et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291120@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291119T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mardi 20 novembre · 13 Rajab 1451. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291121@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291120T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:mercredi 21 novembre · 14 Rajab 1451. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20291122@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20291121T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+DESCRIPTION:jeudi 22 novembre · 15 Rajab 1451. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jours blancs : 13\, 14 et 15)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR

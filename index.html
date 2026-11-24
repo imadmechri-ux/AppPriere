@@ -382,9 +382,11 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
     </div>
     <div class="card" id="c-today" hidden style="border-color:var(--gold)"></div>
     <div class="card"><div class="label">Jeûnes recommandés par la Sunna</div>
-      <p class="note" style="margin:6px 0 4px">Classés par prochaine date. Touchez « Rappel » pour recevoir une alerte dans votre calendrier la veille, à 20 h.</p>
+      <p class="note" style="margin:6px 0 4px">Classés par prochaine date. Touchez « Rappel » pour ajouter à votre calendrier une alerte la veille, à 20 h, sur 3 ans.</p>
       <div id="c-fast"></div>
       <button class="btn allbtn" id="c-ics-all">Rappels la veille pour tous ces jeûnes (12 mois)</button>
+      <button class="btn ghost allbtn" id="c-sub">S'abonner : calendrier mis à jour automatiquement</button>
+      <p class="note" style="margin:6px 0 0;line-height:1.45">Sur iPhone : touchez un bouton, puis « Tout ajouter » et choisissez votre calendrier. Avec l'abonnement, désactivez « Supprimer les alertes » pour garder le rappel de 20 h.</p>
       <p class="note" style="margin:6px 0 0">Les mois de Mouharram et de Cha'bân ont leur propre bouton, pour éviter un rappel chaque soir du mois.</p>
       <div class="label" style="margin-top:14px">Jours où l'on ne jeûne pas</div>
       <p class="note" style="margin:6px 0 0;line-height:1.45">Les jours des deux Aïds (Al-Bukhârî, Muslim) et les jours de Tachrîq, 11, 12 et 13 Dhou al-Hijja (Muslim). Le Prophète a aussi déconseillé de jeûner le vendredi seul, sans le jour d'avant ou d'après (Al-Bukhârî, Muslim).</p></div>
@@ -1456,7 +1458,7 @@ function fastIcs(rules,name){const t0=today(),days=fastDays(t0,rules);if(!days.l
     L.push("BEGIN:VEVENT","UID:jeune-"+loc(x.d)+"@rahim","DTSTAMP:"+z(now),"DTSTART:"+loc(eve)+"T200000","DURATION:PT15M","SUMMARY:"+esc(sum),"DESCRIPTION:"+esc(desc),"URL:"+app,
       "BEGIN:VALARM","ACTION:DISPLAY","DESCRIPTION:"+esc(sum),"TRIGGER:PT0S","END:VALARM","END:VEVENT")}
   L.push("END:VCALENDAR");deliver("rahim-jeunes-"+name+".ics",L.join("\r\n"),"text/calendar")}
-const slug=x=>x.toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+const slug=x=>x.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 function renderFasts(t){const F=$("c-fast");F.textContent="";const todayHits=[];
   const items=FASTS.map(f=>({f,x:f[2]?nextFast(f[2],t):null})).sort((a,b)=>(a.x?a.x.i:1e4)-(b.x?b.x.i:1e4));
   for(const{f,x}of items){const[n,txt,rule,often]=f,r=el("div","ev"),tx=el("div","tx"),top=el("div");
@@ -1466,14 +1468,18 @@ function renderFasts(t){const F=$("c-fast");F.textContent="";const todayHits=[];
       when=x.i===0?"Aujourd'hui":x.i===1?"Demain":new Intl.DateTimeFormat("fr-FR",{weekday:"short",day:"numeric",month:"short"}).format(x.d)+(often?"":" · dans "+x.i+" j")}
     top.append(el("b",null,n),el("span","in",when));tx.append(top,el("p",null,txt));
     if(rule){const rb=el("button","chip","🔔 Rappel la veille");rb.style.marginTop="8px";rb.setAttribute("aria-label","Ajouter à mon calendrier un rappel la veille de chaque jour : "+n);
-      rb.onclick=()=>{fastIcs([f],slug(n));rb.textContent="✓ Fichier calendrier ouvert"};tx.append(rb)}
+      rb.onclick=()=>{addCal(slug(n));rb.textContent="✓ Ouvert dans le calendrier"};tx.append(rb)}
     const ic=el("div","dt");ic.innerHTML='<b style="font-size:18px">☾</b>';ic.querySelector("b").setAttribute("aria-hidden","true");
     r.append(ic,tx);if(when==="Aujourd'hui")r.classList.add("big");F.append(r)}
   const T0=$("c-today");T0.hidden=!todayHits.length;T0.textContent="";
   if(todayHits.length){T0.append(el("div","label","Aujourd'hui"),el("b",null,"Jour de jeûne recommandé"),el("p","note",todayHits.join(" · ")));
     const b=el("button","btn ghost allbtn");const st=()=>{const x=entry(keyOf(t));b.textContent=x.f?"Jeûne noté ✓":"Noter mon jeûne du jour"};st();
     b.onclick=()=>{const x=entry(keyOf(t),true);x.f=x.f?0:1;save();st()};T0.append(b)}}
-$("c-ics-all").onclick=e=>{fastIcs(FASTS.filter(f=>f[2]&&!/^Mois de/.test(f[0])),"tous");e.target.textContent="✓ Fichier calendrier ouvert"};
+/* calendrier : fichiers hébergés avec l'appli (dossier jeunes/), ouverts par Safari qui propose « Tout ajouter » */
+const calURL=n=>new URL("jeunes/"+n+".ics",location.href.split("#")[0]).href;
+function addCal(n){const u=calURL(n),w=window.open(u,"_blank");if(!w)location.href=u}
+$("c-ics-all").onclick=e=>{addCal("tous");e.target.textContent="✓ Ouvert dans le calendrier"};
+$("c-sub").onclick=()=>{location.href=calURL("tous").replace(/^https?:/,"webcal:")};
 function renderCal(){const t=today(),h=hparts(t);renderFasts(t);
   $("c-hij").textContent=h?h.d+" "+HM[h.m-1]+" "+h.y:hijri(t);
   $("c-greg").textContent=new Intl.DateTimeFormat("fr-FR",{weekday:"long",day:"numeric",month:"long"}).format(t);

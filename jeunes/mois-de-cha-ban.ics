@@ -1,0 +1,1360 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Rahim//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Rahim · Mois de Cha'bân
+X-WR-TIMEZONE:Europe/Paris
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:jeune-20270109@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270108T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:samedi 9 janvier · 1 Cha'bân 1448. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270110@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270109T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:dimanche 10 janvier · 2 Cha'bân 1448. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270111@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270110T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:lundi 11 janvier · 3 Cha'bân 1448. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270112@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270111T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mardi 12 janvier · 4 Cha'bân 1448. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270113@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270112T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mercredi 13 janvier · 5 Cha'bân 1448. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270114@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270113T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:jeudi 14 janvier · 6 Cha'bân 1448. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270115@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270114T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:vendredi 15 janvier · 7 Cha'bân 1448. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270116@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270115T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:samedi 16 janvier · 8 Cha'bân 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270117@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270116T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:dimanche 17 janvier · 9 Cha'bân 1448. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270118@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270117T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:lundi 18 janvier · 10 Cha'bân 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270119@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270118T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mardi 19 janvier · 11 Cha'bân 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270120@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270119T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mercredi 20 janvier · 12 Cha'bân 1448. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270121@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270120T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:jeudi 21 janvier · 13 Cha'bân 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270122@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270121T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:vendredi 22 janvier · 14 Cha'bân 1448. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270123@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270122T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:samedi 23 janvier · 15 Cha'bân 1448. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270124@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270123T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:dimanche 24 janvier · 16 Cha'bân 1448. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270125@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270124T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:lundi 25 janvier · 17 Cha'bân 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270126@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270125T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mardi 26 janvier · 18 Cha'bân 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270127@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270126T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mercredi 27 janvier · 19 Cha'bân 1448. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270128@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270127T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:jeudi 28 janvier · 20 Cha'bân 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270129@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270128T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:vendredi 29 janvier · 21 Cha'bân 1448. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270130@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270129T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:samedi 30 janvier · 22 Cha'bân 1448. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270131@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270130T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:dimanche 31 janvier · 23 Cha'bân 1448. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270201@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270131T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:lundi 1 février · 24 Cha'bân 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270202@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270201T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mardi 2 février · 25 Cha'bân 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270203@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270202T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mercredi 3 février · 26 Cha'bân 1448. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270204@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270203T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:jeudi 4 février · 27 Cha'bân 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270205@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270204T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:vendredi 5 février · 28 Cha'bân 1448. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270206@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270205T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:samedi 6 février · 29 Cha'bân 1448. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270207@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270206T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:dimanche 7 février · 30 Cha'bân 1448. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271229@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271228T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mercredi 29 décembre · 1 Cha'bân 1449. Pensez à l'intenti
+ on et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271230@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271229T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:jeudi 30 décembre · 2 Cha'bân 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20271231@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271230T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:vendredi 31 décembre · 3 Cha'bân 1449. Pensez à l'intenti
+ on et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280101@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20271231T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:samedi 1 janvier · 4 Cha'bân 1449. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280102@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280101T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:dimanche 2 janvier · 5 Cha'bân 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280103@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280102T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:lundi 3 janvier · 6 Cha'bân 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280104@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280103T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mardi 4 janvier · 7 Cha'bân 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280105@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280104T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mercredi 5 janvier · 8 Cha'bân 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280106@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280105T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:jeudi 6 janvier · 9 Cha'bân 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280107@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280106T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:vendredi 7 janvier · 10 Cha'bân 1449. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280108@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280107T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:samedi 8 janvier · 11 Cha'bân 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280109@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280108T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:dimanche 9 janvier · 12 Cha'bân 1449. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280110@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280109T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:lundi 10 janvier · 13 Cha'bân 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280111@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280110T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mardi 11 janvier · 14 Cha'bân 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280112@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280111T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mercredi 12 janvier · 15 Cha'bân 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280113@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280112T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:jeudi 13 janvier · 16 Cha'bân 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280114@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280113T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:vendredi 14 janvier · 17 Cha'bân 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280115@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280114T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:samedi 15 janvier · 18 Cha'bân 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280116@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280115T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:dimanche 16 janvier · 19 Cha'bân 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280117@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280116T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:lundi 17 janvier · 20 Cha'bân 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280118@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280117T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mardi 18 janvier · 21 Cha'bân 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280119@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280118T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mercredi 19 janvier · 22 Cha'bân 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280120@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280119T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:jeudi 20 janvier · 23 Cha'bân 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280121@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280120T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:vendredi 21 janvier · 24 Cha'bân 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280122@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280121T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:samedi 22 janvier · 25 Cha'bân 1449. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280123@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280122T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:dimanche 23 janvier · 26 Cha'bân 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280124@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280123T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:lundi 24 janvier · 27 Cha'bân 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280125@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280124T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mardi 25 janvier · 28 Cha'bân 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280126@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280125T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mercredi 26 janvier · 29 Cha'bân 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280127@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280126T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:jeudi 27 janvier · 30 Cha'bân 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281217@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281216T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:dimanche 17 décembre · 1 Cha'bân 1450. Pensez à l'intenti
+ on et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281218@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281217T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:lundi 18 décembre · 2 Cha'bân 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281219@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281218T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mardi 19 décembre · 3 Cha'bân 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281220@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281219T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mercredi 20 décembre · 4 Cha'bân 1450. Pensez à l'intenti
+ on et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281221@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281220T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:jeudi 21 décembre · 5 Cha'bân 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281222@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281221T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:vendredi 22 décembre · 6 Cha'bân 1450. Pensez à l'intenti
+ on et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281223@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281222T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:samedi 23 décembre · 7 Cha'bân 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281224@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281223T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:dimanche 24 décembre · 8 Cha'bân 1450. Pensez à l'intenti
+ on et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281225@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281224T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:lundi 25 décembre · 9 Cha'bân 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281226@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281225T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mardi 26 décembre · 10 Cha'bân 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281227@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281226T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mercredi 27 décembre · 11 Cha'bân 1450. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281228@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281227T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:jeudi 28 décembre · 12 Cha'bân 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281229@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281228T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:vendredi 29 décembre · 13 Cha'bân 1450. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281230@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281229T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:samedi 30 décembre · 14 Cha'bân 1450. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20281231@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281230T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:dimanche 31 décembre · 15 Cha'bân 1450. Pensez à l'intent
+ ion et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290101@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20281231T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:lundi 1 janvier · 16 Cha'bân 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290102@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290101T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mardi 2 janvier · 17 Cha'bân 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290103@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290102T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mercredi 3 janvier · 18 Cha'bân 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290104@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290103T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:jeudi 4 janvier · 19 Cha'bân 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290105@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290104T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:vendredi 5 janvier · 20 Cha'bân 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290106@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290105T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:samedi 6 janvier · 21 Cha'bân 1450. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290107@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290106T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:dimanche 7 janvier · 22 Cha'bân 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290108@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290107T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:lundi 8 janvier · 23 Cha'bân 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290109@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290108T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mardi 9 janvier · 24 Cha'bân 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290110@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290109T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:mercredi 10 janvier · 25 Cha'bân 1450. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290111@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290110T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:jeudi 11 janvier · 26 Cha'bân 1450. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290112@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290111T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:vendredi 12 janvier · 27 Cha'bân 1450. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290113@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290112T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:samedi 13 janvier · 28 Cha'bân 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290114@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290113T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:dimanche 14 janvier · 29 Cha'bân 1450. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290115@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290114T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Mois de Cha'bân)
+DESCRIPTION:lundi 15 janvier · 30 Cha'bân 1450. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Mois de Cha'bân)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR

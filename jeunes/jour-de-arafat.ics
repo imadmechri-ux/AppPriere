@@ -1,0 +1,55 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Rahim//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Rahim · Jour de 'Arafat
+X-WR-TIMEZONE:Europe/Paris
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:jeune-20270515@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270514T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jour de 'Arafat)
+DESCRIPTION:samedi 15 mai · 9 Dhou al-Hijja 1448. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jour de 'Arafat)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280504@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280503T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jour de 'Arafat)
+DESCRIPTION:jeudi 4 mai · 9 Dhou al-Hijja 1449. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jour de 'Arafat)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290423@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290422T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Jour de 'Arafat)
+DESCRIPTION:lundi 23 avril · 9 Dhou al-Hijja 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Jour de 'Arafat)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR

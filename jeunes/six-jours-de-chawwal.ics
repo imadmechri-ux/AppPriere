@@ -1,0 +1,1315 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Rahim//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Rahim · Six jours de Chawwâl
+X-WR-TIMEZONE:Europe/Paris
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:jeune-20270310@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270309T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mercredi 10 mars · 2 Chawwâl 1448. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270311@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270310T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:jeudi 11 mars · 3 Chawwâl 1448. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270312@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270311T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:vendredi 12 mars · 4 Chawwâl 1448. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270313@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270312T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:samedi 13 mars · 5 Chawwâl 1448. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270314@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270313T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:dimanche 14 mars · 6 Chawwâl 1448. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270315@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270314T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:lundi 15 mars · 7 Chawwâl 1448. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270316@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270315T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mardi 16 mars · 8 Chawwâl 1448. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270317@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270316T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mercredi 17 mars · 9 Chawwâl 1448. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270318@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270317T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:jeudi 18 mars · 10 Chawwâl 1448. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270319@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270318T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:vendredi 19 mars · 11 Chawwâl 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270320@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270319T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:samedi 20 mars · 12 Chawwâl 1448. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270321@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270320T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:dimanche 21 mars · 13 Chawwâl 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270322@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270321T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:lundi 22 mars · 14 Chawwâl 1448. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270323@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270322T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mardi 23 mars · 15 Chawwâl 1448. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270324@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270323T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mercredi 24 mars · 16 Chawwâl 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270325@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270324T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:jeudi 25 mars · 17 Chawwâl 1448. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270326@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270325T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:vendredi 26 mars · 18 Chawwâl 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270327@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270326T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:samedi 27 mars · 19 Chawwâl 1448. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270328@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270327T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:dimanche 28 mars · 20 Chawwâl 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270329@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270328T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:lundi 29 mars · 21 Chawwâl 1448. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270330@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270329T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mardi 30 mars · 22 Chawwâl 1448. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270331@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270330T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mercredi 31 mars · 23 Chawwâl 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270401@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270331T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:jeudi 1 avril · 24 Chawwâl 1448. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270402@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270401T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:vendredi 2 avril · 25 Chawwâl 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270403@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270402T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:samedi 3 avril · 26 Chawwâl 1448. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270404@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270403T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:dimanche 4 avril · 27 Chawwâl 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270405@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270404T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:lundi 5 avril · 28 Chawwâl 1448. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270406@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270405T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mardi 6 avril · 29 Chawwâl 1448. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270407@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270406T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mercredi 7 avril · 30 Chawwâl 1448. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280227@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280226T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:dimanche 27 février · 2 Chawwâl 1449. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280228@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280227T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:lundi 28 février · 3 Chawwâl 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280229@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280228T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mardi 29 février · 4 Chawwâl 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280301@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280229T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mercredi 1 mars · 5 Chawwâl 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280302@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280301T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:jeudi 2 mars · 6 Chawwâl 1449. Pensez à l'intention et au 
+ suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280303@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280302T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:vendredi 3 mars · 7 Chawwâl 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280304@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280303T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:samedi 4 mars · 8 Chawwâl 1449. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280305@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280304T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:dimanche 5 mars · 9 Chawwâl 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280306@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280305T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:lundi 6 mars · 10 Chawwâl 1449. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280307@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280306T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mardi 7 mars · 11 Chawwâl 1449. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280308@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280307T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mercredi 8 mars · 12 Chawwâl 1449. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280309@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280308T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:jeudi 9 mars · 13 Chawwâl 1449. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280310@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280309T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:vendredi 10 mars · 14 Chawwâl 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280311@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280310T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:samedi 11 mars · 15 Chawwâl 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280312@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280311T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:dimanche 12 mars · 16 Chawwâl 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280313@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280312T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:lundi 13 mars · 17 Chawwâl 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280314@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280313T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mardi 14 mars · 18 Chawwâl 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280315@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280314T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mercredi 15 mars · 19 Chawwâl 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280316@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280315T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:jeudi 16 mars · 20 Chawwâl 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280317@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280316T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:vendredi 17 mars · 21 Chawwâl 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280318@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280317T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:samedi 18 mars · 22 Chawwâl 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280319@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280318T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:dimanche 19 mars · 23 Chawwâl 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280320@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280319T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:lundi 20 mars · 24 Chawwâl 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280321@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280320T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mardi 21 mars · 25 Chawwâl 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280322@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280321T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mercredi 22 mars · 26 Chawwâl 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280323@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280322T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:jeudi 23 mars · 27 Chawwâl 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280324@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280323T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:vendredi 24 mars · 28 Chawwâl 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280325@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280324T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:samedi 25 mars · 29 Chawwâl 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280326@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280325T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:dimanche 26 mars · 30 Chawwâl 1449. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290215@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290214T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:jeudi 15 février · 2 Chawwâl 1450. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290216@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290215T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:vendredi 16 février · 3 Chawwâl 1450. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290217@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290216T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:samedi 17 février · 4 Chawwâl 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290218@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290217T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:dimanche 18 février · 5 Chawwâl 1450. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290219@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290218T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:lundi 19 février · 6 Chawwâl 1450. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290220@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290219T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mardi 20 février · 7 Chawwâl 1450. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290221@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290220T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mercredi 21 février · 8 Chawwâl 1450. Pensez à l'intentio
+ n et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290222@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290221T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:jeudi 22 février · 9 Chawwâl 1450. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290223@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290222T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:vendredi 23 février · 10 Chawwâl 1450. Pensez à l'intenti
+ on et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290224@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290223T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:samedi 24 février · 11 Chawwâl 1450. Pensez à l'intention
+  et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290225@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290224T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:dimanche 25 février · 12 Chawwâl 1450. Pensez à l'intenti
+ on et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290226@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290225T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:lundi 26 février · 13 Chawwâl 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290227@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290226T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mardi 27 février · 14 Chawwâl 1450. Pensez à l'intention 
+ et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290228@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290227T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mercredi 28 février · 15 Chawwâl 1450. Pensez à l'intenti
+ on et au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290301@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290228T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:jeudi 1 mars · 16 Chawwâl 1450. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290302@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290301T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:vendredi 2 mars · 17 Chawwâl 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290303@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290302T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:samedi 3 mars · 18 Chawwâl 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290304@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290303T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:dimanche 4 mars · 19 Chawwâl 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290305@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290304T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:lundi 5 mars · 20 Chawwâl 1450. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290306@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290305T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mardi 6 mars · 21 Chawwâl 1450. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290307@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290306T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mercredi 7 mars · 22 Chawwâl 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290308@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290307T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:jeudi 8 mars · 23 Chawwâl 1450. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290309@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290308T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:vendredi 9 mars · 24 Chawwâl 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290310@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290309T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:samedi 10 mars · 25 Chawwâl 1450. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290311@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290310T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:dimanche 11 mars · 26 Chawwâl 1450. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290312@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290311T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:lundi 12 mars · 27 Chawwâl 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290313@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290312T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mardi 13 mars · 28 Chawwâl 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290314@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290313T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:mercredi 14 mars · 29 Chawwâl 1450. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290315@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290314T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé (Six jours de Chawwâl)
+DESCRIPTION:jeudi 15 mars · 30 Chawwâl 1450. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé (Six jours de Chawwâl)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR

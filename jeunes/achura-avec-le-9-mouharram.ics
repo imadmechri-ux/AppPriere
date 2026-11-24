@@ -1,0 +1,100 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Rahim//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Rahim · 'Âchûrâ\, avec le 9 Mouharram
+X-WR-TIMEZONE:Europe/Paris
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:jeune-20270614@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270613T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé ('Âchûrâ\, avec le 9 Mouharram)
+DESCRIPTION:lundi 14 juin · 9 Mouharram 1449. Pensez à l'intention et a
+ u suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé ('Âchûrâ\, avec le 9 Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20270615@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20270614T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé ('Âchûrâ\, avec le 9 Mouharram)
+DESCRIPTION:mardi 15 juin · 10 Mouharram 1449. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé ('Âchûrâ\, avec le 9 Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280602@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280601T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé ('Âchûrâ\, avec le 9 Mouharram)
+DESCRIPTION:vendredi 2 juin · 9 Mouharram 1450. Pensez à l'intention et
+  au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé ('Âchûrâ\, avec le 9 Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20280603@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20280602T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé ('Âchûrâ\, avec le 9 Mouharram)
+DESCRIPTION:samedi 3 juin · 10 Mouharram 1450. Pensez à l'intention et 
+ au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé ('Âchûrâ\, avec le 9 Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290522@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290521T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé ('Âchûrâ\, avec le 9 Mouharram)
+DESCRIPTION:mardi 22 mai · 9 Mouharram 1451. Pensez à l'intention et au
+  suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé ('Âchûrâ\, avec le 9 Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jeune-20290523@rahim
+DTSTAMP:20261124T060351Z
+DTSTART;TZID=Europe/Paris:20290522T200000
+DURATION:PT15M
+SUMMARY:Demain : jeûne recommandé ('Âchûrâ\, avec le 9 Mouharram)
+DESCRIPTION:mercredi 23 mai · 10 Mouharram 1451. Pensez à l'intention e
+ t au suhoor.
+URL:https://imadmechri-ux.github.io/AppPriere/#calendrier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Demain : jeûne recommandé ('Âchûrâ\, avec le 9 Mouharram)
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR
