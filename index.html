@@ -119,6 +119,18 @@ nav a.on svg{background:var(--accent-soft)}
 .day .f{height:4px;width:16px;border-radius:2px;background:transparent}
 .day .f.y{background:var(--gold)}
 .sum{color:var(--muted);font-size:14px;margin-top:10px}
+.ev{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}
+.ev:last-child{border-bottom:0}
+.ev .dt{flex:none;width:58px;text-align:center;border-radius:12px;background:var(--bg);border:1px solid var(--line);padding:6px 0}
+.ev .dt b{display:block;font-family:var(--f-display);font-size:22px;line-height:1.1}
+.ev .dt span{font-size:12px;color:var(--muted);text-transform:uppercase}
+.ev .tx{flex:1;min-width:0}
+.ev .tx b{display:block;font-size:16px}
+.ev .tx .h{color:var(--accent);font-size:13px;font-weight:600;margin:2px 0 4px}
+.ev .tx p{margin:0;color:var(--muted);font-size:14px;line-height:1.4}
+.ev.big .dt{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.ev.big .dt span{color:var(--accent-ink);opacity:.85}
+.ev .in{font-size:13px;color:var(--gold);font-weight:600;white-space:nowrap}
 
 /* Qibla */
 .dialwrap{display:flex;flex-direction:column;align-items:center;gap:10px}
@@ -356,6 +368,21 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
     <div id="k-body" class="stack"></div>
   </section>
 
+  <!-- CALENDRIER -->
+  <section class="view" id="v-calendrier">
+    <div class="next">
+      <div><div class="lbl">Aujourd'hui</div><div class="name" id="c-hij" style="font-size:24px"></div></div>
+      <div><div class="at" id="c-greg"></div></div>
+    </div>
+    <div class="card" id="c-today" hidden style="border-color:var(--gold)"></div>
+    <div class="card"><div class="label">Jeûnes recommandés par la Sunna</div><div id="c-fast"></div>
+      <div class="label" style="margin-top:14px">Jours où l'on ne jeûne pas</div>
+      <p class="note" style="margin:6px 0 0;line-height:1.45">Les jours des deux Aïds (Al-Bukhârî, Muslim) et les jours de Tachrîq, 11, 12 et 13 Dhou al-Hijja (Muslim). Le Prophète a aussi déconseillé de jeûner le vendredi seul, sans le jour d'avant ou d'après (Al-Bukhârî, Muslim).</p></div>
+    <div class="card"><div class="label">Prochaines fêtes et dates importantes</div><div id="c-list"></div></div>
+    <div class="card"><div class="label" id="c-y2"></div><div id="c-year"></div></div>
+    <p class="note" style="padding:0 4px">Dates calculées selon le calendrier Umm al-Qura. Elles peuvent varier d'un jour selon l'observation de la lune : vous pouvez ajuster la date hégirienne dans Réglages.</p>
+  </section>
+
   <!-- TASBIH -->
   <section class="view" id="v-tasbih">
     <div class="phrase" id="ph"></div>
@@ -426,6 +453,7 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
     <div class="tiles">
       <a class="tile" href="#qibla"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><div><b>Qibla</b><span>Direction de la Kaaba</span></div></a>
       <a class="tile" href="#tasbih"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="18" cy="9" r="2"/><circle cx="17" cy="16" r="2"/><circle cx="7" cy="16" r="2"/><circle cx="6" cy="9" r="2"/><path d="M12 19v3"/></svg><div><b>Tasbih</b><span>Compteur de dhikr</span></div></a>
+      <a class="tile" href="#calendrier"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4M14.5 13.2a3 3 0 1 0 0 4.6 2.4 2.4 0 1 1 0-4.6z"/></svg><div><b>Calendrier</b><span>Fêtes et dates hégiriennes</span></div></a>
       <a class="tile" href="#savoir"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></svg><div><b>Savoir</b><span>Hadiths et thèmes</span></div></a>
       <a class="tile" href="#donnees"><svg viewBox="0 0 24 24"><path d="M4 7c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3zM4 7v10c0 1.7 3.6 3 8 3s8-1.3 8-3V7M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg><div><b>Réglages</b><span>Ville, thème, rappels</span></div></a>
     </div>
@@ -1342,13 +1370,79 @@ const TJ=(()=>{const MODEL="https://huggingface.co/HisnLabs/tajweed-v2/resolve/m
   return{ready,entry,analyze,isReady:()=>!!sess,MAXS}})();
 
 /* ---------- routing ---------- */
-const VIEWS=["prieres","qibla","coran","duas","savoir","tasbih","donnees","plus"],UNDER_PLUS=["qibla","tasbih","savoir","donnees"];
+const VIEWS=["prieres","qibla","coran","duas","savoir","tasbih","calendrier","donnees","plus"],UNDER_PLUS=["qibla","tasbih","savoir","calendrier","donnees"];
 function route(){try{lrnStop();if(act)act.stop();ma.pause()}catch(e){}let h=location.hash.slice(1);if(!VIEWS.includes(h))h="prieres";
   VIEWS.forEach(v=>$("v-"+v).classList.toggle("on",v===h));
   const tab=UNDER_PLUS.includes(h)?"plus":h;document.querySelectorAll("#nav a").forEach(a=>{const on=a.getAttribute("href")==="#"+tab;a.classList.toggle("on",on);if(on)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
   if(h==="prieres"){sel=today();renderPrayers()}else{sel=today();renderHead()}
-  if(h==="qibla")renderQibla();if(h==="coran"&&$("q-read").hidden)renderList();if(h==="coran")fillTafsir();if(h==="duas")renderDuas();if(h==="savoir")renderSavoir();if(h==="tasbih")renderTasbih();if(h==="donnees"){renderData();applyTheme()}
+  if(h==="qibla")renderQibla();if(h==="coran"&&$("q-read").hidden)renderList();if(h==="coran")fillTafsir();if(h==="duas")renderDuas();if(h==="savoir")renderSavoir();if(h==="tasbih")renderTasbih();if(h==="calendrier")renderCal();if(h==="donnees"){renderData();applyTheme()}
   $("main").scrollTop=0;updBack()}
+
+/* ---------- Calendrier hégirien ---------- */
+const HEV=[
+ [1,1,"Nouvel an hégirien","Début de l'année musulmane, en souvenir de l'émigration (Hijra) du Prophète de La Mecque à Médine.",1],
+ [1,9,"Tâsû'â","Veille de 'Âchûrâ : il est recommandé de jeûner ce jour avec le suivant."],
+ [1,10,"'Âchûrâ","Jour où Allah sauva Moïse et son peuple. Le jeûne de ce jour est fortement recommandé.",1],
+ [3,12,"Mawlid","Date retenue par beaucoup pour la naissance du Prophète. Sa célébration fait l'objet d'avis différents selon les savants."],
+ [7,1,"Début de Rajab","L'un des quatre mois sacrés."],
+ [7,27,"Isrâ' et Mi'râj","Date souvent retenue pour le voyage nocturne du Prophète vers Jérusalem puis son ascension. La date exacte est discutée."],
+ [8,15,"Mi-Cha'bân","Nuit du milieu de Cha'bân, à l'approche du Ramadan."],
+ [9,1,"Début du Ramadan","Premier jour du jeûne du mois de Ramadan. La date dépend de l'observation du croissant.",1],
+ [9,21,"Dix dernières nuits","Début des dix dernières nuits du Ramadan, où l'on recherche la Nuit du Destin, surtout les nuits impaires."],
+ [9,27,"Nuit du Destin (27e nuit)","Nuit meilleure que mille mois. Beaucoup la recherchent particulièrement la 27e nuit, qui commence la veille au soir.",1],
+ [10,1,"Aïd al-Fitr","Fête de la rupture du jeûne. Zakât al-Fitr à verser avant la prière de l'Aïd.",1],
+ [10,2,"Six jours de Chawwâl","Début de la période pour jeûner les six jours de Chawwâl, recommandés après le Ramadan."],
+ [12,1,"Dix jours de Dhou al-Hijja","Les jours les plus méritoires de l'année : dhikr, jeûne et bonnes œuvres."],
+ [12,8,"Jour de Tarwiya","Les pèlerins se rendent à Minâ : début du Hajj."],
+ [12,9,"Jour de 'Arafat","Jour du Hajj par excellence. Le jeûne est recommandé pour ceux qui ne font pas le pèlerinage.",1],
+ [12,10,"Aïd al-Adha","Fête du sacrifice, en souvenir d'Ibrâhîm. Suivie des jours de Tachrîq (11 à 13).",1]];
+const HM=["Mouharram","Safar","Rabî' al-Awwal","Rabî' ath-Thânî","Joumâdâ al-Oûlâ","Joumâdâ ath-Thâniya","Rajab","Cha'bân","Ramadan","Chawwâl","Dhou al-Qa'da","Dhou al-Hijja"];
+let HFMT=null;
+function hparts(d){try{HFMT=HFMT||new Intl.DateTimeFormat("fr-FR-u-ca-islamic-umalqura",{day:"numeric",month:"numeric",year:"numeric"});
+  const o={};for(const p of HFMT.formatToParts(addDays(d,+S.hadj)))o[p.type]=p.value;return{d:+o.day,m:+o.month,y:parseInt(o.year)}}catch(e){return null}}
+function hevents(from,days){const out=[];for(let i=0;i<days;i++){const d=addDays(from,i),h=hparts(d);if(!h)break;
+  for(const e of HEV)if(e[0]===h.m&&e[1]===h.d)out.push({d,h,e,i})}return out}
+function evRow(x){const r=el("div","ev"+(x.e[4]?" big":"")),dt=el("div","dt");
+  dt.append(el("b","num",x.d.getDate()),el("span",null,new Intl.DateTimeFormat("fr-FR",{month:"short"}).format(x.d).replace(".","")));
+  const tx=el("div","tx"),top=el("div");top.style.cssText="display:flex;justify-content:space-between;gap:8px;align-items:baseline";
+  top.append(el("b",null,x.e[2]),el("span","in",x.i===0?"Aujourd'hui":x.i===1?"Demain":"dans "+x.i+" j"));
+  tx.append(top,el("div","h",new Intl.DateTimeFormat("fr-FR",{weekday:"long",day:"numeric",month:"long",year:"numeric"}).format(x.d)+" · "+x.h.d+" "+HM[x.h.m-1]+" "+x.h.y),el("p",null,x.e[3]));
+  r.append(dt,tx);return r}
+const FASTS=[
+ ["Jour de 'Arafat","Le 9 Dhou al-Hijja. Son jeûne efface les péchés de l'année passée et de l'année à venir (Muslim). Pour ceux qui ne font pas le pèlerinage.",(d,h)=>h.m===12&&h.d===9],
+ ["'Âchûrâ, avec le 9 Mouharram","Le 10 Mouharram. Son jeûne efface les péchés de l'année passée (Muslim). Le Prophète voulait y joindre le 9 (Muslim).",(d,h)=>h.m===1&&(h.d===9||h.d===10)],
+ ["Six jours de Chawwâl","Après l'Aïd al-Fitr, consécutifs ou non. Avec le Ramadan, c'est comme jeûner toute l'année (Muslim).",(d,h)=>h.m===10&&h.d>=2],
+ ["Lundi et jeudi","Les œuvres sont présentées à Allah ces jours-là, et le Prophète aimait qu'elles le soient alors qu'il jeûnait (At-Tirmidhî). Il est né un lundi (Muslim).",(d,h)=>d.getDay()===1||d.getDay()===4,1],
+ ["Jours blancs : 13, 14 et 15","Trois jours chaque mois, les nuits de pleine lune. Jeûner trois jours par mois équivaut à jeûner toute l'année (Al-Bukhârî, Muslim ; An-Nasâ'î).",(d,h)=>h.d>=13&&h.d<=15,1],
+ ["Neuf premiers jours de Dhou al-Hijja","Aucun jour où les bonnes œuvres sont plus aimées d'Allah que ces dix jours (Al-Bukhârî). Le Prophète jeûnait les neuf premiers (Abû Dâwud).",(d,h)=>h.m===12&&h.d<=9],
+ ["Mois de Mouharram","Le meilleur jeûne après le Ramadan est celui du mois d'Allah, Mouharram (Muslim).",(d,h)=>h.m===1],
+ ["Mois de Cha'bân","Le Prophète ne jeûnait dans aucun mois plus qu'en Cha'bân (Al-Bukhârî, Muslim).",(d,h)=>h.m===8],
+ ["Jeûne de Dâwud","Un jour sur deux : le jeûne le plus aimé d'Allah (Al-Bukhârî, Muslim). Pour qui en a la force.",null]];
+const NOFAST=(h)=>(h.m===10&&h.d===1)||(h.m===12&&h.d>=10&&h.d<=13)||h.m===9;
+function nextFast(rule,from){for(let i=0;i<400;i++){const d=addDays(from,i),h=hparts(d);if(!h)return null;
+  if(!NOFAST(h)&&rule(d,h)){let n=1;if(i===0)return{d,i,n};return{d,i,n}}}return null}
+function renderFasts(t){const F=$("c-fast");F.textContent="";const th=hparts(t),todayHits=[];
+  for(const[n,txt,rule,often]of FASTS){const r=el("div","ev"),tx=el("div","tx"),top=el("div");
+    top.style.cssText="display:flex;justify-content:space-between;gap:8px;align-items:baseline";
+    let when="Quand vous le pouvez";
+    if(rule){const x=nextFast(rule,t);if(x){if(x.i===0)todayHits.push(n);
+      when=x.i===0?"Aujourd'hui":x.i===1?"Demain":new Intl.DateTimeFormat("fr-FR",{weekday:"short",day:"numeric",month:"short"}).format(x.d)+(often?"":" · dans "+x.i+" j")}}
+    top.append(el("b",null,n),el("span","in",when));tx.append(top,el("p",null,txt));
+    const ic=el("div","dt");ic.innerHTML='<b style="font-size:18px">☾</b>';ic.querySelector("b").setAttribute("aria-hidden","true");
+    r.append(ic,tx);if(when==="Aujourd'hui")r.classList.add("big");F.append(r)}
+  const T0=$("c-today");T0.hidden=!todayHits.length;T0.textContent="";
+  if(todayHits.length){T0.append(el("div","label","Aujourd'hui"),el("b",null,"Jour de jeûne recommandé"),el("p","note",todayHits.join(" · ")));
+    const b=el("button","btn ghost allbtn");const st=()=>{const x=entry(keyOf(t));b.textContent=x.f?"Jeûne noté ✓":"Noter mon jeûne du jour"};st();
+    b.onclick=()=>{const x=entry(keyOf(t),true);x.f=x.f?0:1;save();st()};T0.append(b)}}
+function renderCal(){const t=today(),h=hparts(t);renderFasts(t);
+  $("c-hij").textContent=h?h.d+" "+HM[h.m-1]+" "+h.y:hijri(t);
+  $("c-greg").textContent=new Intl.DateTimeFormat("fr-FR",{weekday:"long",day:"numeric",month:"long"}).format(t);
+  const L=$("c-list");L.textContent="";const nx=hevents(t,120);
+  if(!nx.length)L.append(el("p","note","Aucun événement dans les 4 prochains mois."));else nx.slice(0,4).forEach(x=>L.append(evRow(x)));
+  const Y=$("c-year");Y.textContent="";const all=hevents(t,370);
+  $("c-y2").textContent="Toute l'année à venir";
+  all.slice(Math.min(4,nx.length)).forEach(x=>Y.append(evRow(x)));
+  if(!h)L.append(el("p","note","Le calendrier hégirien n'est pas disponible sur cet appareil."))}
 
 /* ---------- retour à portée du pouce + geste retour du téléphone ---------- */
 function curView(){const h=location.hash.slice(1);return VIEWS.includes(h)?h:"prieres"}
