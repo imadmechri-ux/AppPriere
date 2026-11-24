@@ -381,7 +381,11 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
       <div><div class="at" id="c-greg"></div></div>
     </div>
     <div class="card" id="c-today" hidden style="border-color:var(--gold)"></div>
-    <div class="card"><div class="label">Jeûnes recommandés par la Sunna</div><div id="c-fast"></div>
+    <div class="card"><div class="label">Jeûnes recommandés par la Sunna</div>
+      <p class="note" style="margin:6px 0 4px">Classés par prochaine date. Touchez « Rappel » pour recevoir une alerte dans votre calendrier la veille, à 20 h.</p>
+      <div id="c-fast"></div>
+      <button class="btn allbtn" id="c-ics-all">Rappels la veille pour tous ces jeûnes (12 mois)</button>
+      <p class="note" style="margin:6px 0 0">Les mois de Mouharram et de Cha'bân ont leur propre bouton, pour éviter un rappel chaque soir du mois.</p>
       <div class="label" style="margin-top:14px">Jours où l'on ne jeûne pas</div>
       <p class="note" style="margin:6px 0 0;line-height:1.45">Les jours des deux Aïds (Al-Bukhârî, Muslim) et les jours de Tachrîq, 11, 12 et 13 Dhou al-Hijja (Muslim). Le Prophète a aussi déconseillé de jeûner le vendredi seul, sans le jour d'avant ou d'après (Al-Bukhârî, Muslim).</p></div>
     <div class="card"><div class="label">Prochaines fêtes et dates importantes</div><div id="c-list"></div></div>
@@ -1440,19 +1444,36 @@ const FASTS=[
 const NOFAST=(h)=>(h.m===10&&h.d===1)||(h.m===12&&h.d>=10&&h.d<=13)||h.m===9;
 function nextFast(rule,from){for(let i=0;i<400;i++){const d=addDays(from,i),h=hparts(d);if(!h)return null;
   if(!NOFAST(h)&&rule(d,h)){let n=1;if(i===0)return{d,i,n};return{d,i,n}}}return null}
-function renderFasts(t){const F=$("c-fast");F.textContent="";const th=hparts(t),todayHits=[];
-  for(const[n,txt,rule,often]of FASTS){const r=el("div","ev"),tx=el("div","tx"),top=el("div");
+/* dates de jeûne sur 12 mois : [{d, noms[]}] triées */
+function fastDays(from,rules){const out=[];for(let i=1;i<=366;i++){const d=addDays(from,i),h=hparts(d);if(!h)break;if(NOFAST(h))continue;
+  const hit=rules.filter(f=>f[2](d,h)).map(f=>f[0]);if(hit.length)out.push({d,h,hit})}return out}
+function fastIcs(rules,name){const t0=today(),days=fastDays(t0,rules);if(!days.length){say("Aucune date à ajouter.");return}
+  const app=location.href.split("#")[0]+"#calendrier",now=new Date(),z=d=>d.getUTCFullYear()+pad(d.getUTCMonth()+1)+pad(d.getUTCDate())+"T"+pad(d.getUTCHours())+pad(d.getUTCMinutes())+"00Z",
+    loc=d=>d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate()),esc=x=>x.replace(/[\\,;]/g,m=>"\\"+m),
+    L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Rahim//FR","CALSCALE:GREGORIAN","X-WR-CALNAME:Rahim · jeûnes"];
+  for(const x of days){const eve=addDays(x.d,-1),sum="Demain : jeûne recommandé ("+x.hit.join(", ")+")",
+      desc=new Intl.DateTimeFormat("fr-FR",{weekday:"long",day:"numeric",month:"long"}).format(x.d)+" · "+x.h.d+" "+HM[x.h.m-1]+" "+x.h.y+". Pensez à l'intention et au suhoor.";
+    L.push("BEGIN:VEVENT","UID:jeune-"+loc(x.d)+"@rahim","DTSTAMP:"+z(now),"DTSTART:"+loc(eve)+"T200000","DURATION:PT15M","SUMMARY:"+esc(sum),"DESCRIPTION:"+esc(desc),"URL:"+app,
+      "BEGIN:VALARM","ACTION:DISPLAY","DESCRIPTION:"+esc(sum),"TRIGGER:PT0S","END:VALARM","END:VEVENT")}
+  L.push("END:VCALENDAR");deliver("rahim-jeunes-"+name+".ics",L.join("\r\n"),"text/calendar")}
+const slug=x=>x.toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+function renderFasts(t){const F=$("c-fast");F.textContent="";const todayHits=[];
+  const items=FASTS.map(f=>({f,x:f[2]?nextFast(f[2],t):null})).sort((a,b)=>(a.x?a.x.i:1e4)-(b.x?b.x.i:1e4));
+  for(const{f,x}of items){const[n,txt,rule,often]=f,r=el("div","ev"),tx=el("div","tx"),top=el("div");
     top.style.cssText="display:flex;justify-content:space-between;gap:8px;align-items:baseline";
     let when="Quand vous le pouvez";
-    if(rule){const x=nextFast(rule,t);if(x){if(x.i===0)todayHits.push(n);
-      when=x.i===0?"Aujourd'hui":x.i===1?"Demain":new Intl.DateTimeFormat("fr-FR",{weekday:"short",day:"numeric",month:"short"}).format(x.d)+(often?"":" · dans "+x.i+" j")}}
+    if(x){if(x.i===0)todayHits.push(n);
+      when=x.i===0?"Aujourd'hui":x.i===1?"Demain":new Intl.DateTimeFormat("fr-FR",{weekday:"short",day:"numeric",month:"short"}).format(x.d)+(often?"":" · dans "+x.i+" j")}
     top.append(el("b",null,n),el("span","in",when));tx.append(top,el("p",null,txt));
+    if(rule){const rb=el("button","chip","🔔 Rappel la veille");rb.style.marginTop="8px";rb.setAttribute("aria-label","Ajouter à mon calendrier un rappel la veille de chaque jour : "+n);
+      rb.onclick=()=>{fastIcs([f],slug(n));rb.textContent="✓ Fichier calendrier ouvert"};tx.append(rb)}
     const ic=el("div","dt");ic.innerHTML='<b style="font-size:18px">☾</b>';ic.querySelector("b").setAttribute("aria-hidden","true");
     r.append(ic,tx);if(when==="Aujourd'hui")r.classList.add("big");F.append(r)}
   const T0=$("c-today");T0.hidden=!todayHits.length;T0.textContent="";
   if(todayHits.length){T0.append(el("div","label","Aujourd'hui"),el("b",null,"Jour de jeûne recommandé"),el("p","note",todayHits.join(" · ")));
     const b=el("button","btn ghost allbtn");const st=()=>{const x=entry(keyOf(t));b.textContent=x.f?"Jeûne noté ✓":"Noter mon jeûne du jour"};st();
     b.onclick=()=>{const x=entry(keyOf(t),true);x.f=x.f?0:1;save();st()};T0.append(b)}}
+$("c-ics-all").onclick=e=>{fastIcs(FASTS.filter(f=>f[2]&&!/^Mois de/.test(f[0])),"tous");e.target.textContent="✓ Fichier calendrier ouvert"};
 function renderCal(){const t=today(),h=hparts(t);renderFasts(t);
   $("c-hij").textContent=h?h.d+" "+HM[h.m-1]+" "+h.y:hijri(t);
   $("c-greg").textContent=new Intl.DateTimeFormat("fr-FR",{weekday:"long",day:"numeric",month:"long"}).format(t);
