@@ -1477,7 +1477,13 @@ function renderFasts(t){const F=$("c-fast");F.textContent="";const todayHits=[];
     b.onclick=()=>{const x=entry(keyOf(t),true);x.f=x.f?0:1;save();st()};T0.append(b)}}
 /* calendrier : fichiers hébergés avec l'appli (dossier jeunes/), ouverts par Safari qui propose « Tout ajouter » */
 const calURL=n=>new URL("jeunes/"+n+".ics",location.href.split("#")[0]).href;
-function addCal(n){const u=calURL(n),w=window.open(u,"_blank");if(!w)location.href=u}
+// iPhone : seul Safari sait ajouter un .ics au Calendrier. Depuis Chrome, Google ou une appli, on rouvre le lien dans Safari.
+const IOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1),
+  NOT_SAFARI=/CriOS|FxiOS|EdgiOS|OPiOS|GSA\/|YaBrowser|DuckDuckGo|FBAN|FBAV|Instagram|Line\//.test(navigator.userAgent);
+function addCal(n){const u=calURL(n);
+  if(IOS&&NOT_SAFARI){location.href=u.replace(/^https:/,"x-safari-https:");return}
+  if(IOS){location.href=u;return}
+  const w=window.open(u,"_blank");if(!w)location.href=u}
 $("c-ics-all").onclick=e=>{addCal("tous");e.target.textContent="✓ Ouvert dans le calendrier"};
 $("c-sub").onclick=()=>{location.href=calURL("tous").replace(/^https?:/,"webcal:")};
 function renderCal(){const t=today(),h=hparts(t);renderFasts(t);
