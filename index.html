@@ -102,6 +102,7 @@ nav a.on svg{background:var(--accent-soft)}
 .chk[aria-pressed="true"]{background:var(--accent);border-color:var(--accent)}
 .chk[aria-pressed="true"] svg{opacity:1}
 .spacer{width:34px;flex:none}
+.allbtn{display:block;width:100%;margin-top:6px;min-height:46px}
 .switch{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .tog{width:52px;height:30px;border-radius:999px;border:1.5px solid var(--line);background:var(--bg);position:relative;flex:none;padding:0}
 .tog::after{content:"";position:absolute;top:3px;left:3px;width:21px;height:21px;border-radius:50%;background:var(--muted);transition:transform .15s}
@@ -247,7 +248,7 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
       <div><div class="lbl">Prochaine prière</div><div class="name" id="nx-name"></div></div>
       <div><div class="cd num" id="nx-cd"></div><div class="at num" id="nx-at"></div></div>
     </div>
-    <div class="card rows" id="rows"></div>
+    <div class="card" style="padding:4px 14px 14px"><div class="rows" id="rows" style="padding:0"></div><button class="btn ghost allbtn" id="all"></button></div>
     <div class="card switch">
       <div><b>Jeûne</b><div class="note" id="fast-note">Marquer ce jour comme jeûné</div></div>
       <button class="tog" id="fast" aria-pressed="false" aria-label="Jour de jeûne"></button>
@@ -547,6 +548,8 @@ function renderPrayers(){
       b.setAttribute("aria-label",name+(e.p[i]?" : faite":" : marquer comme faite"));
       b.onclick=()=>{const x=entry(k,true);x.p[i]=x.p[i]?0:1;save();renderPrayers()};r.append(b)}
     rows.append(r)}
+  const all=e.p.every(v=>v);$("all").textContent=all?"Tout décocher":"Tout cocher";
+  $("all").setAttribute("aria-label",all?"Décocher les 5 prières de ce jour":"Cocher les 5 prières de ce jour");
   $("fast").setAttribute("aria-pressed",e.f?"true":"false");
   $("fast-note").textContent=isToday?"Marquer aujourd'hui comme jeûné":"Marquer ce jour comme jeûné";
   const w=$("week");w.textContent="";let done=0,fasts=0;
@@ -558,6 +561,7 @@ function renderPrayers(){
     b.onclick=()=>{sel=d;renderPrayers()};w.append(b)}
   $("sum").textContent=done+" prières sur 35 cette semaine · "+fasts+(fasts>1?" jours de jeûne":" jour de jeûne")+(saveOK?"":" · enregistrement indisponible ici");
   tick()}
+$("all").onclick=()=>{const x=entry(keyOf(sel),true),v=x.p.every(y=>y)?0:1;x.p=x.p.map(()=>v);save();renderPrayers()};
 $("fast").onclick=()=>{const x=entry(keyOf(sel),true);x.f=x.f?0:1;save();renderPrayers()};
 
 /* ---------- Qibla ---------- */
