@@ -580,7 +580,7 @@ function tick(){const n=nextPrayer(),ms=n.at-new Date(),h=Math.floor(ms/36e5),m=
 function renderPrayers(){
   renderHead();
   const t=T(sel),k=keyOf(sel),e=entry(k),isToday=k===keyOf(today()),n=nextPrayer(),rows=$("rows");rows.textContent="";
-  const list=[["Fajr"+(t.imsak?" (18°)":""),t.fajr,0],...(t.imsak?[["Début du jeûne (15°)",t.imsak,-1]]:[]),["Lever du soleil",t.sunrise,-1],["Dhuhr",t.dhuhr,1],["Asr",t.asr,2],["Maghrib",t.maghrib,3],["Isha",t.isha,4]];
+  const list=[...(t.imsak?[["Début du jeûne (15°)",t.imsak,-1]]:[]),["Fajr"+(t.imsak?" (18°)":""),t.fajr,0],["Lever du soleil",t.sunrise,-1],["Dhuhr",t.dhuhr,1],["Asr",t.asr,2],["Maghrib",t.maghrib,3],["Isha",t.isha,4]];
   for(const[name,at,i]of list){
     const r=el("div","row"+(i<0?" sun":"")+(isToday&&!n.tomorrow&&i===n.i?" cur":""));
     r.append(el("div","n",name),el("div","t num",hm(at)));
