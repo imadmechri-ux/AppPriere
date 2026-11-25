@@ -1522,7 +1522,12 @@ setInterval(()=>{if($("v-prieres").classList.contains("on")){const k=keyOf(today
 </script>
 <script>
 /* Offline shell: only where the host allows a service worker. */
-try{if("serviceWorker" in navigator&&location.protocol==="https:"||location.hostname==="127.0.0.1")navigator.serviceWorker.register("sw.js").catch(function(){})}catch(e){}
+try{if("serviceWorker" in navigator&&location.protocol==="https:"||location.hostname==="127.0.0.1")navigator.serviceWorker.register("sw.js",{updateViaCache:"none"}).then(function(reg){
+  // vérifie s'il y a une mise à jour à chaque retour dans l'appli, et recharge une fois la nouvelle version prête
+  var chk=function(){try{reg.update()}catch(e){}};chk();
+  document.addEventListener("visibilitychange",function(){if(!document.hidden)chk()});
+  var had=!!navigator.serviceWorker.controller,done=false;
+  navigator.serviceWorker.addEventListener("controllerchange",function(){if(had&&!done){done=true;location.reload()}})}).catch(function(){})}catch(e){}
 </script>
 </body>
 </html>
