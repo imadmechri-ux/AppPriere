@@ -96,6 +96,24 @@ nav a.on svg{background:var(--accent-soft)}
 .row .t{font-family:var(--f-display);font-size:19px;font-weight:500}
 .row.cur .n,.row.cur .t{color:var(--accent)}
 .row.sun .n,.row.sun .t{color:var(--muted);font-weight:400}
+.bell{width:40px;height:40px;border-radius:50%;border:0;background:transparent;display:grid;place-items:center;flex:none;padding:0;color:var(--muted)}
+.bell svg{width:21px;height:21px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.bell.on{color:var(--accent)}
+#sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.42);z-index:50;display:flex;align-items:flex-end;justify-content:center}
+#sheet-bg[hidden]{display:none}
+.sheet{background:var(--surface);color:var(--ink);width:100%;max-width:560px;border-radius:22px 22px 0 0;padding:10px 16px calc(18px + env(safe-area-inset-bottom));max-height:88vh;overflow:auto}
+.sheet .grab{width:40px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 10px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;min-height:58px;padding:8px 12px;margin:6px 0;border:1.5px solid var(--line);border-radius:14px;background:transparent;color:var(--ink);text-align:left;cursor:pointer}
+.opt[aria-checked="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.opt .rd{width:20px;height:20px;border-radius:50%;border:2px solid var(--line);flex:none;box-sizing:border-box}
+.opt[aria-checked="true"] .rd{border:6px solid var(--accent)}
+.opt .tx{flex:1}.opt .tx b{display:block;font-size:16px}.opt .tx span{font-size:13px;color:var(--muted)}
+.play{width:42px;height:42px;border-radius:50%;border:0;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;flex:none;padding:0}
+.play svg{width:18px;height:18px;fill:currentColor}
+#adh-bar{position:fixed;left:12px;right:12px;top:calc(10px + env(safe-area-inset-top));z-index:60;max-width:540px;margin:0 auto;background:var(--accent);color:var(--accent-ink);border-radius:18px;padding:12px 14px;display:flex;align-items:center;gap:12px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+#adh-bar[hidden]{display:none}
+#adh-bar .tx{flex:1}#adh-bar b{display:block;font-size:17px}
+#adh-bar button{border:0;border-radius:999px;padding:10px 16px;background:var(--accent-ink);color:var(--accent);font-weight:700}
 .chk{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--line);background:transparent;display:grid;
   place-items:center;flex:none;padding:0}
 .chk svg{width:18px;height:18px;stroke:var(--accent-ink);stroke-width:2.6;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:0}
@@ -438,10 +456,15 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
       <div class="label" style="margin-top:6px">Couleurs</div>
       <div class="rbar" id="palettes"></div>
     </div>
+    <div class="card stack" id="adh-card">
+      <h2 style="font-size:18px">Adhan</h2>
+      <div class="note">Le type de rappel se choisit pour chaque prière dans l'onglet Prières, avec la cloche à côté de l'heure.</div>
+      <div id="adh-set" class="stack"></div>
+    </div>
     <div class="card stack">
       <h2 style="font-size:18px">Rappels</h2>
-      <div class="note">Une page web ne peut pas envoyer de notification quand elle est fermée. Les rappels passent donc par le calendrier du téléphone, qui sonne même hors ligne : chaque jour à l'heure du Fajr (calculée pour votre ville, sur un an) et chaque soir à 23 h.</div>
-      <button class="btn" id="ics">Ajouter les rappels à mon calendrier</button>
+      <div class="note">Une page web ne peut pas envoyer de notification quand elle est fermée. Quand Rahim est ouvert, il joue l'adhan ou le bip choisi pour chaque prière. Quand il est fermé, ce sont les alertes du calendrier qui prennent le relais, avec le son d'alerte du téléphone : ce bouton y ajoute, sur un an et pour votre ville, les prières dont le rappel n'est pas « Aucune notification » (avec le rappel avant la prière s'il est choisi), et les invocations du soir à 23 h. Refaites-le après avoir changé vos réglages.</div>
+      <button class="btn" id="ics">Mettre mes rappels dans le calendrier</button>
     </div>
     <div class="card stack">
       <h2 style="font-size:18px">Mes données</h2>
@@ -458,7 +481,7 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
       <div id="msg" role="status"></div>
       <button class="btn warn" id="wipe">Effacer toutes mes données</button>
     </div>
-    <div class="note">Récitation : Mishary Rashid al-Afasy (mp3quran.net, quran.com, archive.org). Invocations du matin et du soir : texte et audio du recueil Hisn al-Muslim (projet Adhkar-json, lecture de Hamad al-Duraihim). Hadiths : projet libre hadith-api (fawazahmed0). Tafsir : Al-Mukhtasar en français (projet tafsir_api). Minutage mot à mot : projet quran-align (CC BY 4.0), audio everyayah.com. Texte du Coran : jeu de données libre quran-json (arabe othmani, phonétique Tanzil, traduction française de M. Hamidullah), gardé sur l'appareil une fois chargé.</div>
+    <div class="note">Récitation : Mishary Rashid al-Afasy (mp3quran.net, quran.com, archive.org). Invocations du matin et du soir : texte et audio du recueil Hisn al-Muslim (projet Adhkar-json, lecture de Hamad al-Duraihim). Hadiths : projet libre hadith-api (fawazahmed0). Tafsir : Al-Mukhtasar en français (projet tafsir_api). Adhan : enregistrements de Mishary al-Afasy, Nasser al-Qatami, La Mecque et Malek Chebae (Fajr), recueil libre Athan-MP3 (abodehq). Minutage mot à mot : projet quran-align (CC BY 4.0), audio everyayah.com. Texte du Coran : jeu de données libre quran-json (arabe othmani, phonétique Tanzil, traduction française de M. Hamidullah), gardé sur l'appareil une fois chargé.</div>
   </section>
   <section class="view" id="v-plus">
     <h2 style="font-size:24px">Plus</h2>
@@ -472,6 +495,8 @@ textarea{min-height:110px;font-family:ui-monospace,Menlo,monospace;font-size:12p
   </section>
 </main>
 
+<div id="sheet-bg" hidden><div class="sheet" role="dialog" aria-modal="true" id="sheet"></div></div>
+<div id="adh-bar" hidden role="alert"><div class="tx"><b id="adh-t"></b><span id="adh-s"></span></div><button type="button" id="adh-x">OK</button></div>
 <div id="bbar" hidden><button type="button" id="bbtn"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg><span id="bbtn-t">Retour</span></button></div>
 <nav id="nav">
   <a href="#prieres"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Prières</a>
@@ -494,7 +519,8 @@ const TARGETS=[33,99,100,0];
 
 /* ---------- state ---------- */
 const DEF=()=>({v:1,theme:"auto",loc:{name:"Sartrouville",lat:48.9372,lng:2.1594},method:"MF",asr:1,hadj:0,log:{},
-  tasbih:{count:0,target:33,phrase:0,total:0},quran:{s:0,v:0,ar:1,ph:1,fr:1,tf:0,size:1},duas:{fav:[],day:"",cnt:{}},learn:{plan:null,v:{},mask:"all",rep:1,rate:1}});
+  tasbih:{count:0,target:33,phrase:0,total:0},quran:{s:0,v:0,ar:1,ph:1,fr:1,tf:0,size:1},duas:{fav:[],day:"",cnt:{}},learn:{plan:null,v:{},mask:"all",rep:1,rate:1},pal:"sapin",
+    adhan:{fajr:"notif",dhuhr:"notif",asr:"notif",maghrib:"notif",isha:"notif",voice:"afasy",fajrSp:1,pre:0}});
 let S=DEF();
 function merge(d){const b=DEF();if(!d||typeof d!=="object")return b;
   for(const k of Object.keys(b)){if(d[k]==null)continue;
@@ -585,7 +611,7 @@ function renderPrayers(){
     const r=el("div","row"+(i<0?" sun":"")+(isToday&&!n.tomorrow&&i===n.i?" cur":""));
     r.append(el("div","n",name),el("div","t num",hm(at)));
     if(i<0)r.append(el("span","spacer"));
-    else{const b=el("button","chk");b.innerHTML=CHECK;b.setAttribute("aria-pressed",e.p[i]?"true":"false");
+    else{r.append(adhBell(i));const b=el("button","chk");b.innerHTML=CHECK;b.setAttribute("aria-pressed",e.p[i]?"true":"false");
       b.setAttribute("aria-label",name+(e.p[i]?" : faite":" : marquer comme faite"));
       b.onclick=()=>{const x=entry(k,true);x.p[i]=x.p[i]?0:1;save();renderPrayers()};r.append(b)}
     rows.append(r)}
@@ -1209,7 +1235,10 @@ $("ics").onclick=()=>{const z=d=>d.getUTCFullYear()+pad(d.getUTCMonth()+1)+pad(d
   const app=location.href.split("#")[0]+"#duas",now=z(new Date()),t0=today(),L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Rahim//FR","CALSCALE:GREGORIAN"];
   const ev=(uid,start,sum,extra)=>L.push("BEGIN:VEVENT","UID:"+uid+"@carnet-priere","DTSTAMP:"+now,start,"DURATION:PT10M","SUMMARY:"+sum,"URL:"+app,...(extra||[]),
     "BEGIN:VALARM","ACTION:DISPLAY","DESCRIPTION:"+sum,"TRIGGER:PT0S","END:VALARM","END:VEVENT");
-  for(let i=0;i<365;i++){const d=addDays(t0,i);ev("fajr-"+keyOf(d),"DTSTART:"+z(T(d).fajr),"Fajr · invocations du matin")}
+  const A=S.adhan,pre=+A.pre||0,on=ADH_KEYS.map(k=>A[k]&&A[k]!=="off");
+    for(let i=0;i<365;i++){const d=addDays(t0,i),f=five(T(d));
+      f.forEach((at,j)=>{if(!on[j])return;ev(ADH_KEYS[j]+"-"+keyOf(d),"DTSTART:"+z(at),j===0?"Fajr · invocations du matin":PR[j],
+        pre?["BEGIN:VALARM","ACTION:DISPLAY","DESCRIPTION:"+PR[j]+" dans "+pre+" min","TRIGGER:-PT"+pre+"M","END:VALARM"]:[])})}
   ev("soir-23h","DTSTART:"+keyOf(t0).replace(/-/g,"")+"T230000","Invocations du soir",["RRULE:FREQ=DAILY"]);
   L.push("END:VCALENDAR");deliver("rahim-rappels.ics",L.join("\r\n"),"text/calendar")};
 $("exp-json").onclick=()=>deliver("rahim-"+stamp()+".json",JSON.stringify(Object.assign({exported:new Date().toISOString()},S),null,1));
@@ -1394,6 +1423,85 @@ const TJ=(()=>{const MODEL="https://huggingface.co/HisnLabs/tajweed-v2/resolve/m
   async function analyze(blob,e){const x=await decode(blob),h=await hear(x);
     return{words:IMAM.listen(IMAM.makeRef(e),h.heard,{probs:h.probs,times:h.times,tempo,minProb:.3,minProbJali:.7}),heard:h.heard,cut:x.length>=MAXS*16000}}
   return{ready,entry,analyze,isReady:()=>!!sess,MAXS}})();
+
+
+/* ---------- Adhan et rappels : choix par prière, son joué quand l'appli est ouverte ---------- */
+const ADH_KEYS=["fajr","dhuhr","asr","maghrib","isha"];
+const ADH_TYPES=[["off","Aucune notification","Ni message ni son"],["notif","Notification","Un message s'affiche, sans son"],["bip","Bip","Trois bips discrets"],
+  ["court","Adhan court","Le premier « Allahu akbar » (environ 15 s)"],["adhan","Adhan complet","L'appel en entier (environ 4 min)"]];
+const ADH_VOICES=[["afasy","Mishary al-Afasy"],["qatami","Nasser al-Qatami"],["mecque","La Mecque"]];
+const ADH_ICON={off:'<path d="M9 18a3 3 0 0 0 6 0M6 8a6 6 0 0 1 9.5-4.9M18 8c0 3 .7 5.2 1.5 6.5H8.5M3 3l18 18"/>',
+  notif:'<path d="M9 18a3 3 0 0 0 6 0M6 8a6 6 0 1 1 12 0c0 3.5.9 5.8 2 7H4c1.1-1.2 2-3.5 2-7z"/>',
+  bip:'<path d="M9 18a3 3 0 0 0 6 0M6 8a6 6 0 1 1 12 0c0 3.5.9 5.8 2 7H4c1.1-1.2 2-3.5 2-7z"/><path d="M20.5 3.5l1.5-1.5M3.5 3.5L2 2"/>',
+  court:'<path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 9.5a3.5 3.5 0 0 1 0 5"/>',
+  adhan:'<path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 9.5a3.5 3.5 0 0 1 0 5M19 7a7 7 0 0 1 0 10"/>'};
+const PLAY_ICON='<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>',STOP_ICON='<svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>';
+const adhA=new Audio();adhA.preload="none";let adhCtx=null,adhPlayingBtn=null,adhPrimed=false;
+const adhType=i=>S.adhan[ADH_KEYS[i]]||"notif";
+function adhSrc(type,i){const v=ADH_VOICES.some(x=>x[0]===S.adhan.voice)?S.adhan.voice:"afasy";
+  return type==="court"?"sons/court-"+v+".m4a":(i===0&&S.adhan.fajrSp?"sons/adhan-fajr.m4a":"sons/adhan-"+v+".m4a")}
+function adhUnlock(){try{if(!adhCtx){const AC=window.AudioContext||window.webkitAudioContext;if(AC)adhCtx=new AC()}if(adhCtx&&adhCtx.state==="suspended")adhCtx.resume()}catch(e){}
+  if(!adhPrimed){adhPrimed=true;adhA.muted=true;adhA.src="sons/court-afasy.m4a";adhA.play().then(()=>{adhA.pause();adhA.muted=false}).catch(()=>{adhA.muted=false})}}
+document.addEventListener("pointerdown",adhUnlock,{capture:true,passive:true});
+function adhBeep(){adhUnlock();const c=adhCtx;if(!c)return;[0,.45,.9].forEach(t=>{const o=c.createOscillator(),g=c.createGain();o.type="sine";o.frequency.value=880;
+  g.gain.setValueAtTime(0,c.currentTime+t);g.gain.linearRampToValueAtTime(.35,c.currentTime+t+.02);g.gain.exponentialRampToValueAtTime(.001,c.currentTime+t+.3);
+  o.connect(g).connect(c.destination);o.start(c.currentTime+t);o.stop(c.currentTime+t+.32)})}
+function adhStop(){try{adhA.pause()}catch(e){}if(adhPlayingBtn){adhPlayingBtn.innerHTML=PLAY_ICON;adhPlayingBtn=null}}
+function adhPlay(type,i,btn){adhStop();if(type==="bip"){adhBeep();return}if(type!=="court"&&type!=="adhan")return;
+  adhA.muted=false;adhA.src=adhSrc(type,i);adhA.currentTime=0;adhA.play().catch(()=>{});
+  if(btn){btn.innerHTML=STOP_ICON;adhPlayingBtn=btn}
+  try{if("mediaSession" in navigator)navigator.mediaSession.metadata=new MediaMetadata({title:"Adhan · "+PR[i],artist:(ADH_VOICES.find(x=>x[0]===S.adhan.voice)||ADH_VOICES[0])[1],album:"Rahim"})}catch(e){}}
+adhA.addEventListener("ended",()=>{adhStop();if(adhBarSound)adhHide()});
+/* bell beside each prayer, bottom sheet to choose */
+function adhBell(i){const t=adhType(i),b=el("button","bell"+(t==="off"?"":" on"));b.innerHTML='<svg viewBox="0 0 24 24">'+ADH_ICON[t]+"</svg>";
+  b.setAttribute("aria-label","Rappel de "+PR[i]+" : "+ADH_TYPES.find(x=>x[0]===t)[1]);b.onclick=()=>adhSheet(i);return b}
+function adhSheet(i){const sh=$("sheet"),bg=$("sheet-bg");sh.textContent="";sh.append(el("div","grab"));
+  const h=el("h2",null,"Rappel · "+PR[i]);h.style.fontSize="20px";sh.append(h);
+  const draw=()=>{sh.querySelectorAll(".opt").forEach(o=>o.setAttribute("aria-checked",o.dataset.t===adhType(i)?"true":"false"))};
+  ADH_TYPES.forEach(([k,lab,desc])=>{const o=el("div","opt");o.dataset.t=k;o.setAttribute("role","radio");o.tabIndex=0;
+    const tx=el("div","tx");tx.append(el("b",null,k==="adhan"&&i===0&&S.adhan.fajrSp?"Adhan du Fajr":lab),el("span",null,desc));o.append(el("span","rd"),tx);
+    if(k==="bip"||k==="court"||k==="adhan"){const p=el("button","play");p.innerHTML=PLAY_ICON;p.setAttribute("aria-label","Écouter");
+      p.onclick=e=>{e.stopPropagation();if(adhPlayingBtn===p)adhStop();else adhPlay(k,i,p)};o.append(p)}
+    o.onclick=()=>{S.adhan[ADH_KEYS[i]]=k;save();draw();renderPrayers()};sh.append(o)});
+  const all=el("button","btn ghost","Appliquer ce choix aux 5 prières");all.style.width="100%";all.style.marginTop="6px";
+  all.onclick=()=>{const t=adhType(i);ADH_KEYS.forEach(k=>S.adhan[k]=t);save();renderPrayers();adhClose()};
+  const ok=el("button","btn","Fermer");ok.style.width="100%";ok.style.marginTop="8px";ok.onclick=adhClose;
+  sh.append(all,ok,el("div","note","Le son est joué quand Rahim est ouvert. Appli fermée : mettez vos rappels dans le calendrier (Plus › Réglages)."));
+  draw();bg.hidden=false}
+function adhClose(){adhStop();$("sheet-bg").hidden=true}
+$("sheet-bg").addEventListener("click",e=>{if(e.target.id==="sheet-bg")adhClose()});
+/* settings card */
+function adhSettings(){const B=$("adh-set");if(!B)return;B.textContent="";
+  const row=(label,opts,get,set)=>{const r=el("div","rbar");r.append(el("span","label",label));
+    opts.forEach(([t,v])=>{const b=el("button","chip",t);b.setAttribute("aria-pressed",get()===v?"true":"false");b.onclick=()=>{set(v);save();adhSettings()};r.append(b)});return r};
+  B.append(row("Muezzin",ADH_VOICES.map(([k,n])=>[n,k]),()=>S.adhan.voice,v=>{S.adhan.voice=v}));
+  const tr=el("div","rbar"),t1=el("button","play"),t2=el("button","play");t1.innerHTML=t2.innerHTML=PLAY_ICON;
+  t1.setAttribute("aria-label","Écouter l'adhan");t2.setAttribute("aria-label","Écouter l'adhan court");
+  t1.onclick=()=>{if(adhPlayingBtn===t1)adhStop();else adhPlay("adhan",1,t1)};t2.onclick=()=>{if(adhPlayingBtn===t2)adhStop();else adhPlay("court",1,t2)};
+  tr.append(el("span","note","Écouter l'adhan"),t1,el("span","note","l'adhan court"),t2);B.append(tr);
+  const sw=el("div","switch");sw.style.cssText="display:flex;align-items:center;gap:12px;padding:6px 0";
+  const d=el("div");d.style.flex="1";d.append(el("b",null,"Adhan spécial du Fajr"),el("div","note","Avec « As-salâtu khayrun min an-nawm » (voix de Malek Chebae)"));
+  const tg=el("button","tog");tg.setAttribute("aria-pressed",S.adhan.fajrSp?"true":"false");tg.setAttribute("aria-label","Adhan spécial du Fajr");
+  tg.onclick=()=>{S.adhan.fajrSp=S.adhan.fajrSp?0:1;save();adhSettings()};sw.append(d,tg);B.append(sw);
+  B.append(row("Rappel avant la prière",[["Aucun",0],["5 min",5],["10 min",10],["15 min",15],["30 min",30]],()=>+S.adhan.pre||0,v=>{S.adhan.pre=v}))}
+/* in-app banner and scheduler */
+let adhBarSound=false,adhBarT=0;
+function adhShow(title,sub,sound){$("adh-t").textContent=title;$("adh-s").textContent=sub||"";$("adh-x").textContent=sound?"Arrêter":"OK";
+  adhBarSound=sound;$("adh-bar").hidden=false;clearTimeout(adhBarT);if(!sound)adhBarT=setTimeout(adhHide,60000)}
+function adhHide(){$("adh-bar").hidden=true;adhBarSound=false}
+$("adh-x").onclick=()=>{adhStop();adhHide()};
+const ADH_SEEN="rahim-adhan-vu";
+function adhSeen(k){try{const o=JSON.parse(localStorage.getItem(ADH_SEEN)||"{}");if(o[k])return true;o[k]=1;
+  const d=keyOf(today());Object.keys(o).forEach(x=>{if(!x.startsWith(d))delete o[x]});localStorage.setItem(ADH_SEEN,JSON.stringify(o))}catch(e){}return false}
+function adhTick(){const now=Date.now(),d=today(),f=five(T(d)),pre=+S.adhan.pre||0;
+  f.forEach((at,i)=>{const t=adhType(i);if(t==="off")return;const late=now-at.getTime(),k=keyOf(d)+":"+i;
+    if(late>=0&&late<15*60000&&!adhSeen(k)){const fresh=late<120000,snd=fresh&&(t==="court"||t==="adhan");
+      adhShow("C'est l'heure de "+PR[i],"Il est "+hm(at)+(fresh?"":" — depuis "+Math.round(late/60000)+" min"),snd);
+      if(fresh&&t!=="notif")adhPlay(t,i)}
+    if(pre){const lp=now-(at.getTime()-pre*60000),kp=k+"p";
+      if(lp>=0&&lp<pre*60000&&!adhSeen(kp)){adhShow(PR[i]+" dans "+Math.max(1,Math.round((at-now)/60000))+" min","À "+hm(at),false);if(lp<120000&&t!=="notif")adhBeep()}}})}
+setInterval(adhTick,10000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)adhTick()});setTimeout(adhTick,1500);
+adhSettings();
 
 /* ---------- routing ---------- */
 const VIEWS=["prieres","qibla","coran","duas","savoir","tasbih","calendrier","donnees","plus"],UNDER_PLUS=["qibla","tasbih","savoir","calendrier","donnees"];

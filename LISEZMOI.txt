@@ -22,3 +22,8 @@ Correction de prononciation (onglet Coran, mode Réciter) :
   téléchargé une seule fois (23 Mo) puis gardé sur l'appareil ; l'analyse se fait sur le téléphone.
 - Dossier tajwid/ : prononciation attendue de chaque verset (riwaya Hafs), générée avec quran-transcript (MIT).
 - Dossier ort/ : moteur d'exécution ONNX Runtime Web (MIT).
+
+Adhan (onglet Prières, cloche à côté de chaque heure ; Plus › Réglages › Adhan) :
+- Pour chaque prière : aucune notification, notification, bip, adhan court ou adhan complet.
+- Sons dans sons/ (AAC mono 64 kb/s) tirés du recueil Athan-MP3 (github.com/abodehq/Athan-MP3).
+- Le son est joué quand l'appli est ouverte ; appli fermée, les alertes viennent du calendrier (bouton « Mettre mes rappels dans le calendrier »).
